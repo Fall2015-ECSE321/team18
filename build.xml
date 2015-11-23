@@ -75,7 +75,7 @@
 		<junit fork="yes" printsummary="withOutAndErr">
 			<formatter type="xml"/>
 			<test name="test.DemoTest" todir="${junit.output.dir}"/>
-			<classpath refid="TravisExercise.classpath"/>
+			<classpath refid="SoccerStats.classpath"/>
 		</junit>
 		<junitreport todir="${junit.output.dir}">
 			<fileset dir="${junit.output.dir}">
