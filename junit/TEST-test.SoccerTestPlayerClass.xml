@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="0" hostname="Aperture" name="test.DemoTest" skipped="0" tests="1" time="0.0" timestamp="2015-11-23T21:18:15">
+<testsuite errors="0" failures="0" hostname="Aperture" name="test.SoccerTestPlayerClass" skipped="0" tests="10" time="0.081" timestamp="2015-11-24T03:52:29">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="env.USERDOMAIN_ROAMINGPROFILE" value="Aperture" />
@@ -21,6 +21,7 @@
     <property name="user.language" value="en" />
     <property name="ant.file.SoccerStats" value="C:\Users\Demetrios\Documents\GitHub\team18\build.xml" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\bin" />
+    <property name="junitdir" value="junit" />
     <property name="ant.project.default-target" value="compile" />
     <property name="srcdir" value="C:\Users\Demetrios\Documents\GitHub\team18\src\soccer" />
     <property name="ant.project.name" value="SoccerStats" />
@@ -71,8 +72,8 @@
     <property name="user.script" value="" />
     <property name="user.home" value="C:\Users\Demetrios" />
     <property name="env.ProgramData" value="C:\ProgramData" />
-    <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
     <property name="env.SESSIONNAME" value="Console" />
+    <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="classdir" value="C:\Users\Demetrios\Documents\GitHub\team18\build" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
@@ -81,12 +82,12 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.SoccerTestPlayerClass skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.SoccerTestPlayerClass.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher7941987712263579630.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit7718489148825256890.properties" />
     <property name="java.class.path" value="C:\Users\Demetrios\Documents\GitHub\team18\build;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-launcher.jar;C:\Program Files\apache-ant-1.9.6\lib\ant.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit4.jar" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.DemoTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.DemoTest.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher1699115609806241449.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit2853954078611774213.properties" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ant.file.type" value="file" />
-    <property name="env.windir" value="C:\WINDOWS" />
     <property name="env.LOGONSERVER" value="\\APERTURE" />
+    <property name="env.windir" value="C:\WINDOWS" />
     <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
     <property name="java.vm.specification.version" value="1.8" />
     <property name="sun.os.patch.level" value="" />
@@ -101,8 +102,8 @@
     <property name="env.SystemRoot" value="C:\WINDOWS" />
     <property name="env.FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer" />
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
-    <property name="env.ANT_CMD_LINE_ARGS" value=" test" />
     <property name="os.arch" value="amd64" />
+    <property name="env.ANT_CMD_LINE_ARGS" value=" test" />
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
     <property name="user.dir" value="C:\Users\Demetrios\Documents\GitHub\team18" />
     <property name="env.LOCALAPPDATA" value="C:\Users\Demetrios\AppData\Local" />
@@ -123,14 +124,16 @@
     <property name="ant.project.invoked-targets" value="test" />
     <property name="env.PROCESSOR_LEVEL" value="6" />
   </properties>
-  <error message="test.DemoTest" type="java.lang.ClassNotFoundException">java.lang.ClassNotFoundException: test.DemoTest
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at java.lang.Class.forName0(Native Method)
-	at java.lang.Class.forName(Class.java:264)
-</error>
+  <testcase classname="test.SoccerTestPlayerClass" name="playerTestConstructor10" time="0.001" />
+  <testcase classname="test.SoccerTestPlayerClass" name="playerTestConstructor1" time="0.0" />
+  <testcase classname="test.SoccerTestPlayerClass" name="playerTestConstructor2" time="0.0" />
+  <testcase classname="test.SoccerTestPlayerClass" name="playerTestConstructor3" time="0.0" />
+  <testcase classname="test.SoccerTestPlayerClass" name="playerTestConstructor4" time="0.0" />
+  <testcase classname="test.SoccerTestPlayerClass" name="playerTestConstructor5" time="0.0" />
+  <testcase classname="test.SoccerTestPlayerClass" name="playerTestConstructor6" time="0.0" />
+  <testcase classname="test.SoccerTestPlayerClass" name="playerTestConstructor7" time="0.0" />
+  <testcase classname="test.SoccerTestPlayerClass" name="playerTestConstructor8" time="0.0" />
+  <testcase classname="test.SoccerTestPlayerClass" name="playerTestConstructor9" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

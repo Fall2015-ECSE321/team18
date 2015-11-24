@@ -11,6 +11,7 @@
 	<property name="blddir" location="build" />
 	<property name="classdir" location="${blddir}" />
 	<property name="jardir" value="${blddir}/jar" />
+	<property name="junitdir" value="junit" />
 
 	<path id="JUnit 4.libraryclasspath">
 		<pathelement location="${libraries}/org.junit_4.11.0.v201303080030/junit.jar"/>
@@ -74,7 +75,7 @@
 		<mkdir dir="${junit.output.dir}"/>
 		<junit fork="yes" printsummary="withOutAndErr">
 			<formatter type="xml"/>
-			<test name="test.DemoTest" todir="${junit.output.dir}"/>
+			<test name="test.SoccerTestPlayerClass" todir="${junit.output.dir}"/>
 			<classpath refid="SoccerStats.classpath"/>
 		</junit>
 		<junitreport todir="${junit.output.dir}">
