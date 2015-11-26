@@ -90,21 +90,21 @@ public class Team {
 
 	public String toString() {
 		String returnString = "";
-		returnString += "\nTeam:\t\t\t" + name ;
-		returnString += "\nuniqueID:\t\t\t" + uniqueID ;
-		returnString += "\ngamesPlayed:\t\t" + gamesPlayed ;
-		returnString += "\npoints:\t\t\t" + shots ;
-		returnString += "\nwins:\t\t\t" + wins ;
-		returnString += "\nlosses:\t\t\t" + losses ;
-		returnString += "\ndraws:\t\t\t" + draws ;
-		returnString += "\nshots:\t\t\t" + shots ;
-		returnString += "\ngoalsFor:\t\t\t" + goalsFor ;
-		returnString += "\ngoalsAgainst:\t\t" + goalsAgainst ;
-		returnString += "\nredCards:\t\t\t" + redCards ;
-		returnString += "\nyellowCards:\t\t" + yellowCards ;
-		returnString += "\npenaltyKicks:\t\t" + penaltyKicks ;
+		returnString += "\nTeam:               \t" + name ;
+		returnString += "\nuniqueID:           \t" + uniqueID ;
+		returnString += "\ngamesPlayed:        \t" + gamesPlayed ;
+		returnString += "\npoints:             \t" + shots ;
+		returnString += "\nwins:               \t" + wins ;
+		returnString += "\nlosses:             \t" + losses ;
+		returnString += "\ndraws:              \t" + draws ;
+		returnString += "\nshots:              \t" + shots ;
+		returnString += "\ngoalsFor:           \t" + goalsFor ;
+		returnString += "\ngoalsAgainst:       \t" + goalsAgainst ;
+		returnString += "\nredCards:           \t" + redCards ;
+		returnString += "\nyellowCards:        \t" + yellowCards ;
+		returnString += "\npenaltyKicks:       \t" + penaltyKicks ;
 		returnString += "\nmatchResultsApplied:\t" + matchResultsApplied.size() ;
-		returnString += "\nplayers:\t\t\t" + players.size() ;
+		returnString += "\nplayers:            \t" + players.size() ;
 		return returnString;
 	}
 

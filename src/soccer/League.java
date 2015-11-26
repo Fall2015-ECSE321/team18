@@ -32,9 +32,9 @@ public class League {
 
 	public String toString() {
 		String returnString = "";
-		returnString += "\nLeague:\t\t\t" + name ;
-		returnString += "\nuniqueID:\t\t\t" + uniqueID ;
-		returnString += "\nteams:\t\t\t" + teams.size() ;
+		returnString += "\nLeague:  \t\t" + name ;
+		returnString += "\nuniqueID:\t\t" + uniqueID ;
+		returnString += "\nteams:   \t\t" + teams.size() ;
 		return returnString;
 	}
 
