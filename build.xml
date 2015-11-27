@@ -71,7 +71,9 @@
 		<mkdir dir="${junit.output.dir}"/>
 		<junit fork="yes" printsummary="withOutAndErr">
 			<formatter type="xml"/>
-			<test name="test.SoccerTestPlayerClass" todir="${junit.output.dir}"/>
+			<test name="test.PlayerClass" todir="${junit.output.dir}"/>
+			<test name="test.TeamClass" todir="${junit.output.dir}"/>
+			<test name="test.LeagueClass" todir="${junit.output.dir}"/>
 			<classpath refid="SoccerStats.classpath"/>
 		</junit>
 		<junitreport todir="${junit.output.dir}">

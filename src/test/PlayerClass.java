@@ -4,15 +4,23 @@ import static org.junit.Assert.*;
 
 import org.junit.*;
 
-import soccer.Player;
+import soccer.*;
 
-public class SoccerTestPlayerClass {
+public class PlayerClass {
 
-	String firstName = "Ricky";
-	String lastName = "Bobby";
-	int number = 7;
-	Player p1 = new Player(firstName, lastName, number);
+	String firstName;
+	String lastName;
+	int number;
+	Player p1;
 
+	@Before
+	public void main() {
+		firstName = "Ricky";
+		lastName = "Bobby";
+		number = 7;
+		p1 = new Player(firstName, lastName, number);
+	}
+	
 	@Test
 	public void playerTestConstructor1() {
 	    assertEquals("test constructor: firstName", firstName, p1.getFirstName());
