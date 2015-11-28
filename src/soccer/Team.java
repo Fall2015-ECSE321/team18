@@ -1,7 +1,9 @@
 package soccer;
+
 import java.util.UUID;
 import java.util.ArrayList;
 import java.util.List;
+
 public class Team {
 
 	private String uniqueID;

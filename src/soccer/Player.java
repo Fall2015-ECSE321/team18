@@ -1,7 +1,9 @@
 package soccer;
+
 import java.util.UUID;
 import java.util.ArrayList;
 import java.util.List;
+
 public class Player {
 
 	private String uniqueID;
@@ -27,6 +29,10 @@ public class Player {
 
 	public String getUniqueID() {
 		return uniqueID;
+	}
+
+	public String getFullName() {
+		return firstName + " " + lastName;
 	}
 
 	public String getFirstName() {
@@ -71,16 +77,16 @@ public class Player {
 
 	public String toString() {
 		String returnString = "";
-		returnString += "\nPlayer:            \t" + firstName + " " + lastName ;
-		returnString += "\nuniqueID:          \t" + uniqueID ;
-		returnString += "\nnumber:            \t" + number ;
-		returnString += "\ngamesPlayed:       \t" + gamesPlayed ;
-		returnString += "\nshots:             \t" + shots ;
-		returnString += "\ngoals:             \t" + goals ;
-		returnString += "\nyellowCards:       \t" + yellowCards ;
-		returnString += "\nredCards:          \t" + redCards ;
-		returnString += "\npenaltyKicks:      \t" + penaltyKicks ;
-		returnString += "\nmatchEventsApplied:\t" + matchEventsApplied.size() ;
+		returnString += "\nPlayer:            \t" + getFullName();
+		returnString += "\nuniqueID:          \t" + uniqueID;
+		returnString += "\nnumber:            \t" + number;
+		returnString += "\ngamesPlayed:       \t" + gamesPlayed;
+		returnString += "\nshots:             \t" + shots;
+		returnString += "\ngoals:             \t" + goals;
+		returnString += "\nyellowCards:       \t" + yellowCards;
+		returnString += "\nredCards:          \t" + redCards;
+		returnString += "\npenaltyKicks:      \t" + penaltyKicks;
+		returnString += "\nmatchEventsApplied:\t" + matchEventsApplied.size();
 		return returnString;
 	}
 

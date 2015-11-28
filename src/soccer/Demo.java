@@ -11,11 +11,13 @@ public class Demo {
     Player p2 = new Player("Ricky2", "Bobby2", 2);
     Player p3 = new Player("Ricky3", "Bobby3", 3);
     Player p4 = new Player("Ricky4", "Bobby4", 4);
+    Goalie p5 = new Goalie("Ricky5", "Bobby5", 5);
 
     System.out.println(p1.toString());
     System.out.println(p2.toString());
     System.out.println(p3.toString());
     System.out.println(p4.toString());
+    System.out.println(p5.toString());
 
 
     Team t1 = new Team("Habs");
@@ -24,15 +26,17 @@ public class Demo {
     System.out.println(t1.addPlayer(p2));
     System.out.println(t1.addPlayer(p3));
     System.out.println(t1.addPlayer(p4));
+    System.out.println(t1.addPlayer(p5));
 
     System.out.println(t1.addPlayer(p1));
     System.out.println(t1.addPlayer(p2));
     System.out.println(t1.addPlayer(p3));
     System.out.println(t1.addPlayer(p4));
+    System.out.println(t1.addPlayer(p5));
 
     System.out.println(t1.toString());
 
-    //System.out.println(t1.getPlayers().toString());
+    System.out.println(t1.getPlayers().toString());
 
     Team t2 = new Team("Habs2");
     t2.addPlayer(p1);
