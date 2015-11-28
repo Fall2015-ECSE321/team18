@@ -12,6 +12,7 @@ public class Demo {
     Player p3 = new Player("Ricky3", "Bobby3", 3);
     Player p4 = new Player("Ricky4", "Bobby4", 4);
     Goalie p5 = new Goalie("Ricky5", "Bobby5", 5);
+    Goalie p6 = new Goalie("Ricky6", "Bobby6", 6);
 
     System.out.println(p1.toString());
     System.out.println(p2.toString());
@@ -41,10 +42,8 @@ public class Demo {
     Team t2 = new Team("Habs2");
     t2.addPlayer(p1);
     t2.addPlayer(p2);
-    t2.addPlayer(p3);
 
     Team t3 = new Team("Habs3");
-    t3.addPlayer(p2);
     t3.addPlayer(p3);
     t3.addPlayer(p4);
 
@@ -97,6 +96,14 @@ public class Demo {
 	System.out.println(ie1.unpublishMatchEvent());
    	System.out.println(p1.toString());
    	System.out.println(p5.toString());
+
+
+
+   	Match m1 = new Match();
+   	System.out.println(m1.toString());
+   	m1.setSubscribedHomeTeam(t2);
+   	m1.setSubscribedAwayTeam(t3);
+   	System.out.println(m1.toString());
 
 
 
