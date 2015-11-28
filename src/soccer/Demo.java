@@ -65,5 +65,41 @@ public class Demo {
 
     System.out.println(l.getTeams().toString());
 
+    ShotEvent se1 = new ShotEvent();
+    System.out.println(se1.toString());
+    se1.setSubscribedPlayer(p1);
+    se1.setScored(true);
+    se1.setSubscribedGoalie(p5);
+    System.out.println(se1.toString());
+
+    InfractionEvent ie1 = new InfractionEvent();
+    System.out.println(ie1.toString());
+    ie1.setSubscribedPlayer(p1);
+    ie1.setYellowCard(true);
+    ie1.setRedCard(true);
+    ie1.setPenaltyKick(true);
+    System.out.println(ie1.toString());
+
+
+
+    System.out.println("\nupdate:");
+
+    se1.publishMatchEvent();
+   	System.out.println(p1.toString());
+   	System.out.println(p5.toString());
+
+    ie1.publishMatchEvent();
+    System.out.println(p1.toString());
+
+    System.out.println("\nrevert update:");
+
+	System.out.println(se1.unpublishMatchEvent());
+	System.out.println(ie1.unpublishMatchEvent());
+   	System.out.println(p1.toString());
+   	System.out.println(p5.toString());
+
+
+
+    System.out.println("\n\n\n\nend of Demo");
   }
 }

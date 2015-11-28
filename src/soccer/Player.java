@@ -16,7 +16,7 @@ public class Player {
 	private int redCards;
 	private int yellowCards;
 	private int penaltyKicks;
-	private List<String> matchEventsApplied;
+	private List<MatchEvent> matchEventsApplied;
 
 	public Player(String firstName, String lastName, int number) {
 		this.firstName = firstName;
@@ -24,7 +24,7 @@ public class Player {
 		this.number = number;
 
 		uniqueID = UUID.randomUUID().toString();
-		matchEventsApplied = new ArrayList<String>();
+		matchEventsApplied = new ArrayList<MatchEvent>();
 	}
 
 	public String getUniqueID() {
@@ -71,7 +71,7 @@ public class Player {
 		return penaltyKicks;
 	}
 
-	public List<String> getMatchEventsApplied() {
+	public List<MatchEvent> getMatchEventsApplied() {
 		return matchEventsApplied;
 	}
 
@@ -90,12 +90,70 @@ public class Player {
 		return returnString;
 	}
 
-	// public String updatePlayer(playerShot shotEvent) {
-	// 	return "";
-	// }
+	public String updatePlayer(ShotEvent event) {
+		if (matchEventsApplied.contains(event)) {
+			return "This ShotEvent has already been published to this player";
+		}
+		else {
+			matchEventsApplied.add(event);
+			shots++;
+			if (event.getScored()) {
+				goals++;
+			}
+			return "published ShotEvent";
+		}
+	}
 
-	// public String updatePlayer(playerInfraction infractionEvent) {
-	// 	return "";
-	// }
+	public String revertUpdatePlayer(ShotEvent event) {
+		if (matchEventsApplied.contains(event)) {
+			matchEventsApplied.remove(event);
+			shots--;
+			if (event.getScored()) {
+				goals--;
+			}
+			return "retracted published ShotEvent";
+		}
+		else {
+			return "This ShotEvent has not been published to this player";
+		}
+	}
+
+	public String updatePlayer(InfractionEvent event) {
+		if (matchEventsApplied.contains(event)) {
+			return "This InfractionEvent has already been published to this player";
+		}
+		else {
+			matchEventsApplied.add(event);
+			if (event.getRedCard()) {
+				redCards++;
+			}
+			if (event.getYellowCard()) {
+				yellowCards++;
+			}
+			if (event.getPenaltyKick()) {
+				penaltyKicks++;
+			}
+			return "published ShotEvent";
+		}
+	}
+
+	public String revertUpdatePlayer(InfractionEvent event) {
+		if (matchEventsApplied.contains(event)) {
+			matchEventsApplied.remove(event);
+			if (event.getRedCard()) {
+				redCards--;
+			}
+			if (event.getYellowCard()) {
+				yellowCards--;
+			}
+			if (event.getPenaltyKick()) {
+				penaltyKicks--;
+			}
+			return "retracted published ShotEvent";
+		}
+		else {
+			return "This InfractionEvent has not been published to this player";
+		}
+	}
 
 }

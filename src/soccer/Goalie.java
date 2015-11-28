@@ -25,12 +25,37 @@ public class Goalie extends Player{
 		return returnString;
 	}
 
-	// public String updatePlayer(playerShot shotEvent) {
-	// 	return "";
-	// }
+	public String updateGoalie(ShotEvent event) {
+		if (super.getMatchEventsApplied().contains(event)) {
+			return "This ShotEvent has already been published to this goalie";
+		}
+		else {
+			super.getMatchEventsApplied().add(event);
+			if (event.getScored()) {
+				goalsAllowed++;
+			}
+			else {
+				saves++;
+			}
+			return "published ShotEvent";
+		}
+	}
 
-	// public String updatePlayer(playerInfraction infractionEvent) {
-	// 	return "";
-	// }
+	public String revertUpdateGoalie(ShotEvent event) {
+		if (super.getMatchEventsApplied().contains(event)) {
+			super.getMatchEventsApplied().remove(event);
+			if (event.getScored()) {
+				goalsAllowed--;
+			}
+			else {
+				saves--;
+			}
+			return "published ShotEvent";
+		}
+		else {
+			return "This ShotEvent has not been published to this goalie";
+		}
+	}
+
 
 }

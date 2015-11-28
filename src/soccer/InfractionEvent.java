@@ -1,6 +1,6 @@
 package soccer;
 
-public class InfractionEvent {
+public class InfractionEvent extends MatchEvent{
 
 	private boolean redCard;
 	private boolean yellowCard;
@@ -38,15 +38,31 @@ public class InfractionEvent {
 	}
 
 	public String publishMatchEvent() {
-		return "published";
+		if (super.getSubscribedPlayer() != null) {
+			super.getSubscribedPlayer().updatePlayer(this);
+			return "InfractionEvent was published";
+		}
+		else {
+			return "InfractionEvent was not published";
+		}
+	}
+
+	public String unpublishMatchEvent() {
+		if (super.getSubscribedPlayer() != null) {
+			super.getSubscribedPlayer().revertUpdatePlayer(this);
+			return "InfractionEvent was unpublished";
+		}
+		else {
+			return "InfractionEvent remained published";
+		}
 	}
 
 	public String toString() {
 		String returnString = "\nInfractionEvent:";
 		returnString += super.toString();
-		returnString += "\nRedCard:  \t" + redCard;
-		returnString += "\nYellowCard:  \t" + yellowCard;
-		returnString += "\nPenaltyKick:  \t" + penaltyKick;
+		returnString += "\nRedCard:    \t" + redCard;
+		returnString += "\nYellowCard: \t" + yellowCard;
+		returnString += "\nPenaltyKick:\t" + penaltyKick;
 		return returnString;
 	}
 

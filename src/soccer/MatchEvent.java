@@ -11,21 +11,28 @@ abstract public class MatchEvent {
 		uniqueID = UUID.randomUUID().toString(); 
 	}
 
-	public Player getPlayer() {
+	public Player getSubscribedPlayer() {
 		return subscribedPlayer;
 	}
 
-	public String setPlayer(Player newPlayer) {
+	public String setSubscribedPlayer(Player newPlayer) {
 		subscribedPlayer = newPlayer;
 		return "Player " + subscribedPlayer.getFullName() + " succesfully subscribed to MatchEvent.";
 	}
 
 	abstract public String publishMatchEvent();
 
+	abstract public String unpublishMatchEvent();
+
 	public String toString() {
 		String returnString = "";
-		returnString += "\nuniqueID:\t" + uniqueID ;
-		returnString += "\nPlayer:  \t" + subscribedPlayer.getFullName();
+		returnString += "\nuniqueID:   \t" + uniqueID ;
+		if (subscribedPlayer != null) {
+			returnString += "\nPlayer:     \t" + subscribedPlayer.getFullName();
+		}
+		else {
+			returnString += "\nPlayer:     \tNot set";
+		}
 		return returnString;
 	}
 
