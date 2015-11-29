@@ -39,7 +39,7 @@ public class InfractionEvent extends MatchEvent{
 
 	public String publishMatchEvent() {
 		if (super.getSubscribedPlayer() != null) {
-			super.getSubscribedPlayer().updatePlayer(this);
+			super.getSubscribedPlayer().applyMatchEvent(this);
 			return "InfractionEvent was published";
 		}
 		else {
@@ -49,7 +49,7 @@ public class InfractionEvent extends MatchEvent{
 
 	public String unpublishMatchEvent() {
 		if (super.getSubscribedPlayer() != null) {
-			super.getSubscribedPlayer().revertUpdatePlayer(this);
+			super.getSubscribedPlayer().unapplyMatchEvent(this);
 			return "InfractionEvent was unpublished";
 		}
 		else {

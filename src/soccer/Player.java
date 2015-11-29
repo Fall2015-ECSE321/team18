@@ -90,7 +90,7 @@ public class Player {
 		return returnString;
 	}
 
-	public String updatePlayer(ShotEvent event) {
+	public String applyMatchEvent(ShotEvent event) {
 		if (matchEventsApplied.contains(event)) {
 			return "This ShotEvent has already been published to this player";
 		}
@@ -104,7 +104,7 @@ public class Player {
 		}
 	}
 
-	public String revertUpdatePlayer(ShotEvent event) {
+	public String unapplyMatchEvent(ShotEvent event) {
 		if (matchEventsApplied.contains(event)) {
 			matchEventsApplied.remove(event);
 			shots--;
@@ -118,7 +118,7 @@ public class Player {
 		}
 	}
 
-	public String updatePlayer(InfractionEvent event) {
+	public String applyMatchEvent(InfractionEvent event) {
 		if (matchEventsApplied.contains(event)) {
 			return "This InfractionEvent has already been published to this player";
 		}
@@ -137,7 +137,7 @@ public class Player {
 		}
 	}
 
-	public String revertUpdatePlayer(InfractionEvent event) {
+	public String unapplyMatchEvent(InfractionEvent event) {
 		if (matchEventsApplied.contains(event)) {
 			matchEventsApplied.remove(event);
 			if (event.getRedCard()) {

@@ -29,8 +29,8 @@ public class ShotEvent extends MatchEvent{
 
 	public String publishMatchEvent() {
 		if (super.getSubscribedPlayer() != null && subscribedGoalie != null) {
-			super.getSubscribedPlayer().updatePlayer(this);
-			subscribedGoalie.updateGoalie(this);
+			super.getSubscribedPlayer().applyMatchEvent(this);
+			subscribedGoalie.applyMatchEvent(this);
 			return "ShotEvent was published";
 		}
 		else {
@@ -40,8 +40,8 @@ public class ShotEvent extends MatchEvent{
 
 	public String unpublishMatchEvent() {
 		if (super.getSubscribedPlayer() != null && subscribedGoalie != null) {
-			super.getSubscribedPlayer().revertUpdatePlayer(this);
-			subscribedGoalie.revertUpdateGoalie(this);
+			super.getSubscribedPlayer().unapplyMatchEvent(this);
+			subscribedGoalie.unapplyMatchEvent(this);
 			return "ShotEvent was unpublished";
 		}
 		else {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Aperture" id="0" name="LeagueClass" package="test" skipped="0" tests="2" time="0.078" timestamp="2015-11-28T04:00:37">
+  <testsuite errors="0" failures="0" hostname="Aperture" id="0" name="LeagueClass" package="test" skipped="0" tests="2" time="0.233" timestamp="2015-11-29T04:12:35">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -102,7 +102,7 @@
 
           <property name="os.version" value="6.3" />
 
-          <property name="env.=ExitCode" value="00000001" />
+          <property name="env.=ExitCode" value="00000000" />
 
           <property name="env.ProgramW6432" value="C:\Program Files" />
 
@@ -164,7 +164,7 @@
 
           <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.LeagueClass skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.LeagueClass.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher6888967541319060490.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit1886878848175222747.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.LeagueClass skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.LeagueClass.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher4559173617942598756.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit4815220689737439924.properties" />
 
           <property name="java.class.path" value="C:\Users\Demetrios\Documents\GitHub\team18\build;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-launcher.jar;C:\Program Files\apache-ant-1.9.6\lib\ant.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit4.jar" />
 
@@ -248,16 +248,16 @@
 
       </properties>
 
-      <testcase classname="test.LeagueClass" name="leagueTestConstructor1" time="0.043" />
+      <testcase classname="test.LeagueClass" name="leagueTestConstructor1" time="0.164" />
 
-      <testcase classname="test.LeagueClass" name="leagueTestConstructor2" time="0.001" />
+      <testcase classname="test.LeagueClass" name="leagueTestConstructor2" time="0.0" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Aperture" id="1" name="PlayerClass" package="test" skipped="0" tests="11" time="0.087" timestamp="2015-11-28T04:00:37">
+  <testsuite errors="0" failures="0" hostname="Aperture" id="1" name="PlayerClass" package="test" skipped="0" tests="11" time="0.096" timestamp="2015-11-29T04:12:34">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -359,7 +359,7 @@
 
           <property name="os.version" value="6.3" />
 
-          <property name="env.=ExitCode" value="00000001" />
+          <property name="env.=ExitCode" value="00000000" />
 
           <property name="env.ProgramW6432" value="C:\Program Files" />
 
@@ -421,7 +421,7 @@
 
           <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.PlayerClass skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.PlayerClass.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher4907749865654512495.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit1468418539595735914.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.PlayerClass skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.PlayerClass.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher5168016462763647828.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit1529771590776677842.properties" />
 
           <property name="java.class.path" value="C:\Users\Demetrios\Documents\GitHub\team18\build;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-launcher.jar;C:\Program Files\apache-ant-1.9.6\lib\ant.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit4.jar" />
 
@@ -505,7 +505,7 @@
 
       </properties>
 
-      <testcase classname="test.PlayerClass" name="playerTestConstructor10" time="0.043" />
+      <testcase classname="test.PlayerClass" name="playerTestConstructor10" time="0.041" />
 
       <testcase classname="test.PlayerClass" name="playerTestConstructor11" time="0.0" />
 
@@ -532,7 +532,7 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Aperture" id="2" name="TeamClass" package="test" skipped="0" tests="15" time="0.097" timestamp="2015-11-28T04:00:37">
+  <testsuite errors="0" failures="0" hostname="Aperture" id="2" name="TeamClass" package="test" skipped="0" tests="15" time="0.112" timestamp="2015-11-29T04:12:35">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -634,7 +634,7 @@
 
           <property name="os.version" value="6.3" />
 
-          <property name="env.=ExitCode" value="00000001" />
+          <property name="env.=ExitCode" value="00000000" />
 
           <property name="env.ProgramW6432" value="C:\Program Files" />
 
@@ -696,7 +696,7 @@
 
           <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.TeamClass skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.TeamClass.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher8821285343435796139.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit705316233639887665.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.TeamClass skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.TeamClass.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher9083341930599354959.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit7346120579623465043.properties" />
 
           <property name="java.class.path" value="C:\Users\Demetrios\Documents\GitHub\team18\build;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-launcher.jar;C:\Program Files\apache-ant-1.9.6\lib\ant.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit4.jar" />
 
@@ -780,7 +780,7 @@
 
       </properties>
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor1" time="0.041" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor1" time="0.042" />
 
       <testcase classname="test.TeamClass" name="teamTestConstructor2" time="0.0" />
 
@@ -790,23 +790,23 @@
 
       <testcase classname="test.TeamClass" name="teamTestConstructor5" time="0.0" />
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor6" time="0.0" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor6" time="0.001" />
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor7" time="0.0" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor7" time="0.001" />
 
       <testcase classname="test.TeamClass" name="teamTestConstructor8" time="0.0" />
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor9" time="0.001" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor9" time="0.0" />
 
       <testcase classname="test.TeamClass" name="teamTestConstructor10" time="0.0" />
 
       <testcase classname="test.TeamClass" name="teamTestConstructor11" time="0.0" />
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor12" time="0.0" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor12" time="0.001" />
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor13" time="0.001" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor13" time="0.0" />
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor14" time="0.0" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor14" time="0.001" />
 
       <testcase classname="test.TeamClass" name="teamTestConstructor15" time="0.0" />
 

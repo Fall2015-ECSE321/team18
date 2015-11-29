@@ -46,7 +46,7 @@
 		<mkdir dir="${jardir}"/>
 		<jar destfile="${jardir}/SoccerStats.jar" basedir="${classdir}">
 			<manifest>
-				<attribute name="Main-Class" value="soccer.Demo" />
+				<attribute name="Main-Class" value="soccer.Demo0" />
 			</manifest>
 		</jar>
 	</target>
@@ -58,8 +58,16 @@
 	</target>
 
 
-	<target name="run" depends="compile">
-		<java classname="soccer.Demo" fork="true">
+	<target name="runDemo0" depends="compile">
+		<java classname="soccer.Demo0" fork="true">
+			<classpath>
+				<path location="${classdir}" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="runDemo1" depends="compile">
+		<java classname="soccer.Demo1" fork="true">
 			<classpath>
 				<path location="${classdir}" />
 			</classpath>

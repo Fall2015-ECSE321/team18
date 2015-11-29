@@ -1,10 +1,10 @@
 package soccer;
-public class Demo {
+public class Demo0 {
 
   public static void main(String argv[]) {
 
 
-    System.out.println("This is the Soccer Stats Application Demo");
+    System.out.println("This is the Soccer Stats Application Demo0");
 
 
     Player p1 = new Player("Ricky1", "Bobby1", 1);
@@ -42,10 +42,12 @@ public class Demo {
     Team t2 = new Team("Habs2");
     t2.addPlayer(p1);
     t2.addPlayer(p2);
+    t2.addPlayer(p5);
 
     Team t3 = new Team("Habs3");
     t3.addPlayer(p3);
     t3.addPlayer(p4);
+    t3.addPlayer(p6);
 
 
 
@@ -66,14 +68,14 @@ public class Demo {
 
     ShotEvent se1 = new ShotEvent();
     System.out.println(se1.toString());
-    se1.setSubscribedPlayer(p1);
+    se1.setSubscribedPlayer(p5);
     se1.setScored(true);
-    se1.setSubscribedGoalie(p5);
+    se1.setSubscribedGoalie(p6);
     System.out.println(se1.toString());
 
     InfractionEvent ie1 = new InfractionEvent();
     System.out.println(ie1.toString());
-    ie1.setSubscribedPlayer(p1);
+    ie1.setSubscribedPlayer(p5);
     ie1.setYellowCard(true);
     ie1.setRedCard(true);
     ie1.setPenaltyKick(true);
@@ -83,19 +85,19 @@ public class Demo {
 
     System.out.println("\nupdate:");
 
-    se1.publishMatchEvent();
-   	System.out.println(p1.toString());
+    System.out.println("\n" + se1.publishMatchEvent());
    	System.out.println(p5.toString());
+   	System.out.println(p6.toString());
 
-    ie1.publishMatchEvent();
-    System.out.println(p1.toString());
+    System.out.println("\n" + ie1.publishMatchEvent());
+    System.out.println(p5.toString());
 
     System.out.println("\nrevert update:");
 
-	System.out.println(se1.unpublishMatchEvent());
-	System.out.println(ie1.unpublishMatchEvent());
-   	System.out.println(p1.toString());
+	System.out.println("\n" + se1.unpublishMatchEvent());
+	System.out.println("\n" + ie1.unpublishMatchEvent());
    	System.out.println(p5.toString());
+   	System.out.println(p6.toString());
 
 
 
@@ -104,6 +106,22 @@ public class Demo {
    	m1.setSubscribedHomeTeam(t2);
    	m1.setSubscribedAwayTeam(t3);
    	System.out.println(m1.toString());
+
+   	System.out.println("\n" + m1.addMatchEvent(se1));
+   	System.out.println(m1.toString());
+
+   	System.out.println("\n" + m1.addMatchEvent(ie1));
+   	System.out.println(m1.toString());
+
+   	System.out.println("\n" + m1.removeMatchEvent(se1));
+   	System.out.println(m1.toString());
+
+   	System.out.println("\n" + m1.removeMatchEvent(ie1));
+   	System.out.println(m1.toString());
+
+
+
+
 
 
 

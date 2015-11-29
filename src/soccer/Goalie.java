@@ -25,35 +25,45 @@ public class Goalie extends Player{
 		return returnString;
 	}
 
-	public String updateGoalie(ShotEvent event) {
-		if (super.getMatchEventsApplied().contains(event)) {
-			return "This ShotEvent has already been published to this goalie";
-		}
-		else {
-			super.getMatchEventsApplied().add(event);
-			if (event.getScored()) {
-				goalsAllowed++;
+	public String applyMatchEvent(ShotEvent event) {
+		if (this == event.getSubscribedGoalie()) {
+			if (super.getMatchEventsApplied().contains(event)) {
+				return "This ShotEvent has already been published to this goalie";
 			}
 			else {
-				saves++;
+				super.getMatchEventsApplied().add(event);
+				if (event.getScored()) {
+					goalsAllowed++;
+				}
+				else {
+					saves++;
+				}
+				return "published ShotEvent";
 			}
-			return "published ShotEvent";
+		}
+		else {
+			return super.applyMatchEvent(event);
 		}
 	}
 
-	public String revertUpdateGoalie(ShotEvent event) {
-		if (super.getMatchEventsApplied().contains(event)) {
-			super.getMatchEventsApplied().remove(event);
-			if (event.getScored()) {
-				goalsAllowed--;
+	public String unapplyMatchEvent(ShotEvent event) {
+		if (this == event.getSubscribedGoalie()) {
+			if (super.getMatchEventsApplied().contains(event)) {
+				super.getMatchEventsApplied().remove(event);
+				if (event.getScored()) {
+					goalsAllowed--;
+				}
+				else {
+					saves--;
+				}
+				return "published ShotEvent";
 			}
 			else {
-				saves--;
+				return "This ShotEvent has not been published to this goalie";
 			}
-			return "published ShotEvent";
-		}
+		} 
 		else {
-			return "This ShotEvent has not been published to this goalie";
+			return super.unapplyMatchEvent(event);
 		}
 	}
 
