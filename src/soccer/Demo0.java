@@ -1,4 +1,7 @@
 package soccer;
+
+import persistence.PersistenceXStream;
+
 public class Demo0 {
 
   public static void main(String argv[]) {
@@ -94,8 +97,8 @@ public class Demo0 {
 
     System.out.println("\nrevert update:");
 
-	System.out.println("\n" + se1.unpublishMatchEvent());
-	System.out.println("\n" + ie1.unpublishMatchEvent());
+    System.out.println("\n" + se1.unpublishMatchEvent());
+    System.out.println("\n" + ie1.unpublishMatchEvent());
    	System.out.println(p5.toString());
    	System.out.println(p6.toString());
 
@@ -126,6 +129,9 @@ public class Demo0 {
     System.out.println(t3.toString());
     System.out.println(t3.getPlayers().toString());
 
+    System.out.println("xstream:");
+    PersistenceXStream.saveToXMLwithXStream(l);
+
     System.out.println("\n" + m1.unendMatch());
     System.out.println("\n" + m1.unendMatch());
     System.out.println(t2.toString());
@@ -139,6 +145,6 @@ public class Demo0 {
 
 
 
-    System.out.println("\n\n\n\nend of Demo");
+    System.out.println("\n\n\n\nend of Demo with xs");
   }
 }
