@@ -120,10 +120,18 @@ public class Demo0 {
    	// System.out.println(m1.toString());
 
     System.out.println("\n" + m1.endMatch());
-
+    System.out.println("\n" + m1.endMatch());
     System.out.println(t2.toString());
-
+    System.out.println(t2.getPlayers().toString());
     System.out.println(t3.toString());
+    System.out.println(t3.getPlayers().toString());
+
+    System.out.println("\n" + m1.unendMatch());
+    System.out.println("\n" + m1.unendMatch());
+    System.out.println(t2.toString());
+    System.out.println(t2.getPlayers().toString());
+    System.out.println(t3.toString());
+    System.out.println(t3.getPlayers().toString());
 
 
 

@@ -42,6 +42,10 @@ public class Match {
 		return "AwayTeam " + subscribedAwayTeam.getName() + " succesfully subscribed to Match.";
 	}
 
+	public MatchResult getMatchResult() {
+		return matchResult;
+	}
+
 	public String addMatchEvent(ShotEvent event) {
 		if (matchEvents.contains(event)) {
 			return "MatchEvent already added to Match";
@@ -136,14 +140,44 @@ public class Match {
 		}
 	}
 
+	public String unendMatch() {
+		if (complete) {
+			complete = false;
+			unpublishTeamStats();
+			unpublishPlayerStats();
+			//season.publishSeason();
+			//season.getLeague().publishToRankings()
+			return "Match was succesfully unended";
+		}
+		else {
+			return "Match is not ended";
+		}
+	}
+
 	public String publishPlayerStats() {
+		for (MatchEvent event : matchEvents) {
+			event.publishMatchEvent();
+		}
 		return "Match was published to every player on HomeTeam and AwayTeam";
+	}
+
+	public String unpublishPlayerStats() {
+		for (MatchEvent event : matchEvents) {
+			event.unpublishMatchEvent();
+		}
+		return "Match was unpublished from every player on HomeTeam and AwayTeam";
 	}
 
 	public String publishTeamStats() {
 		subscribedHomeTeam.applyMatchResult(true, matchResult);
 		subscribedAwayTeam.applyMatchResult(false, matchResult);
 		return "Match was published to HomeTeam and AwayTeam";
+	}
+
+	public String unpublishTeamStats() {
+		subscribedHomeTeam.unapplyMatchResult(true, matchResult);
+		subscribedAwayTeam.unapplyMatchResult(false, matchResult);
+		return "Match was unpublished from HomeTeam and AwayTeam";
 	}
 
 	public String toString() {

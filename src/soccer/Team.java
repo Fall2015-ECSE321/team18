@@ -158,4 +158,35 @@ public class Team {
 		}
 	}
 
+	public String unapplyMatchResult(boolean isHomeTeam, MatchResult result) {
+		if (matchResultsApplied.contains(result)) {
+			matchResultsApplied.remove(result);
+			gamesPlayed--;
+			int teamPoints = result.getPoints(isHomeTeam);
+			int opposingTeamPoints = result.getPoints(!isHomeTeam);
+			goalsFor -= teamPoints;
+			goalsAgainst -= opposingTeamPoints;
+			if (teamPoints == opposingTeamPoints) {
+				draws--;
+				points -= 1;
+			}
+			else if (teamPoints > opposingTeamPoints) {
+				wins--;
+				points -= 3;
+			}
+			else if (teamPoints < opposingTeamPoints) {
+				losses--;
+			}
+			shotsFor -= result.getShots(isHomeTeam);
+			shotsAgainst -= result.getShots(!isHomeTeam);
+			yellowCards -= result.getYellowCards(isHomeTeam);
+			redCards -= result.getRedCards(isHomeTeam);
+			penaltyKicks -= result.getPenaltyKicks(isHomeTeam);
+			return "unapplied MatchResult to Home Team " + name;
+		}
+		else {
+			return "Error this match has not been applied to this team";
+		}
+	}
+
 }
