@@ -13,20 +13,21 @@ public class Team {
 	private int wins;
 	private int losses;
 	private int draws;
-	private int shots;
+	private int shotsFor;
+	private int shotsAgainst;
 	private int goalsFor;
 	private int goalsAgainst;
 	private int yellowCards;
 	private int redCards;
 	private int penaltyKicks;
-	private List<String> matchResultsApplied;
+	private List<MatchResult> matchResultsApplied;
 	private List<Player> players;
 
 	public Team(String name) {
 		this.name = name;
 
 		uniqueID = UUID.randomUUID().toString();
-		matchResultsApplied = new ArrayList<String>();
+		matchResultsApplied = new ArrayList<MatchResult>();
 		players = new ArrayList<Player>();
 	}
 
@@ -58,8 +59,12 @@ public class Team {
 		return draws;
 	}
 
-	public int getShots() {
-		return shots;
+	public int getShotsFor() {
+		return shotsFor;
+	}
+
+	public int getShotsAgainst() {
+		return shotsAgainst;
 	}
 
 	public int getGoalsFor() {
@@ -82,7 +87,7 @@ public class Team {
 		return penaltyKicks;
 	}
 
-	public List<String> getMatchResultsApplied() {
+	public List<MatchResult> getMatchResultsApplied() {
 		return matchResultsApplied;
 	}
 
@@ -95,11 +100,12 @@ public class Team {
 		returnString += "\nTeam:               \t" + name ;
 		returnString += "\nuniqueID:           \t" + uniqueID ;
 		returnString += "\ngamesPlayed:        \t" + gamesPlayed ;
-		returnString += "\npoints:             \t" + shots ;
+		returnString += "\npoints:             \t" + points ;
 		returnString += "\nwins:               \t" + wins ;
 		returnString += "\nlosses:             \t" + losses ;
 		returnString += "\ndraws:              \t" + draws ;
-		returnString += "\nshots:              \t" + shots ;
+		returnString += "\nshotsFor:           \t" + shotsFor ;
+		returnString += "\nshotsAgainst:       \t" + shotsAgainst ;
 		returnString += "\ngoalsFor:           \t" + goalsFor ;
 		returnString += "\ngoalsAgainst:       \t" + goalsAgainst ;
 		returnString += "\nredCards:           \t" + redCards ;
@@ -121,8 +127,35 @@ public class Team {
 	}
 
 
-	// public String updateTeam(matchResult result) {
-	// 	return "";
-	// }
+	public String applyMatchResult(boolean isHomeTeam, MatchResult result) {
+		if (matchResultsApplied.contains(result)) {
+			return "Error this match has already been applied to this team";
+		}
+		else {
+			matchResultsApplied.add(result);
+			gamesPlayed++;
+			int teamPoints = result.getPoints(isHomeTeam);
+			int opposingTeamPoints = result.getPoints(!isHomeTeam);
+			goalsFor += teamPoints;
+			goalsAgainst += opposingTeamPoints;
+			if (teamPoints == opposingTeamPoints) {
+				draws++;
+				points += 1;
+			}
+			else if (teamPoints > opposingTeamPoints) {
+				wins++;
+				points += 3;
+			}
+			else if (teamPoints < opposingTeamPoints) {
+				losses++;
+			}
+			shotsFor += result.getShots(isHomeTeam);
+			shotsAgainst += result.getShots(!isHomeTeam);
+			yellowCards += result.getYellowCards(isHomeTeam);
+			redCards += result.getRedCards(isHomeTeam);
+			penaltyKicks += result.getPenaltyKicks(isHomeTeam);
+			return "applied MatchResult to Home Team " + name;
+		}
+	}
 
 }

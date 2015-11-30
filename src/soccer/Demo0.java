@@ -113,11 +113,17 @@ public class Demo0 {
    	System.out.println("\n" + m1.addMatchEvent(ie1));
    	System.out.println(m1.toString());
 
-   	System.out.println("\n" + m1.removeMatchEvent(se1));
-   	System.out.println(m1.toString());
+   	// System.out.println("\n" + m1.removeMatchEvent(se1));
+   	// System.out.println(m1.toString());
 
-   	System.out.println("\n" + m1.removeMatchEvent(ie1));
-   	System.out.println(m1.toString());
+   	// System.out.println("\n" + m1.removeMatchEvent(ie1));
+   	// System.out.println(m1.toString());
+
+    System.out.println("\n" + m1.endMatch());
+
+    System.out.println(t2.toString());
+
+    System.out.println(t3.toString());
 
 
 

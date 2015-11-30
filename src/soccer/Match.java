@@ -11,13 +11,13 @@ public class Match {
 	private Team subscribedAwayTeam;
 	private List<MatchEvent> matchEvents;
 	private MatchResult matchResult;
-	private boolean completed;
+	private boolean complete;
 
 	public 	Match() {
 		uniqueID = UUID.randomUUID().toString(); 
 		matchEvents = new ArrayList<MatchEvent>();
 		matchResult = new MatchResult();
-		completed = false;
+		complete = false;
 	}
 
 	public Team getSubscribedHomeTeam() {
@@ -84,13 +84,14 @@ public class Match {
 
 	public String removeMatchEvent(ShotEvent event) {
 		if (matchEvents.contains(event)) {
+			matchEvents.remove(event);
 			if (subscribedHomeTeam.getPlayers().contains(event.getSubscribedPlayer()) && subscribedAwayTeam.getPlayers().contains(event.getSubscribedGoalie())) {
 				matchResult.unapplyEvent(0, event);
-				return "removed MatchEvent";
+				return "removed ShotEvent";
 			}
 			else if (subscribedAwayTeam.getPlayers().contains(event.getSubscribedPlayer()) && subscribedHomeTeam.getPlayers().contains(event.getSubscribedGoalie())) {
 				matchResult.unapplyEvent(1, event);
-				return "removed MatchEvent";
+				return "removed ShotEvent";
 			}
 			else {
 				return "MatchEvent player is not on home or away team";
@@ -103,13 +104,14 @@ public class Match {
 
 	public String removeMatchEvent(InfractionEvent event) {
 		if (matchEvents.contains(event)) {
+			matchEvents.remove(event);
 			if (subscribedHomeTeam.getPlayers().contains(event.getSubscribedPlayer())) {
 				matchResult.unapplyEvent(0, event);
-				return "removed MatchEvent";
+				return "removed InfractionEvent";
 			}
 			else if (subscribedAwayTeam.getPlayers().contains(event.getSubscribedPlayer())) {
 				matchResult.unapplyEvent(1, event);
-				return "removed MatchEvent";
+				return "removed InfractionEvent";
 			}
 			else {
 				return "MatchEvent player is not on home or away team";
@@ -120,9 +122,34 @@ public class Match {
 		}
 	}
 
+	public String endMatch() {
+		if (!complete) {
+			complete = true;
+			publishTeamStats();
+			publishPlayerStats();
+			//season.publishSeason();
+			//season.getLeague().publishToRankings()
+			return "Match was succesfully ended";
+		}
+		else {
+			return "Match is already ended";
+		}
+	}
+
+	public String publishPlayerStats() {
+		return "Match was published to every player on HomeTeam and AwayTeam";
+	}
+
+	public String publishTeamStats() {
+		subscribedHomeTeam.applyMatchResult(true, matchResult);
+		subscribedAwayTeam.applyMatchResult(false, matchResult);
+		return "Match was published to HomeTeam and AwayTeam";
+	}
+
 	public String toString() {
 		String returnString = "\nMatch:";
 		returnString += "\nuniqueID:   \t" + uniqueID ;
+		returnString += "\ncomplete:   \t" + complete ;
 		if (subscribedHomeTeam != null) {
 			returnString += "\nHomeTeam:   \t" + subscribedHomeTeam.getName();
 		}

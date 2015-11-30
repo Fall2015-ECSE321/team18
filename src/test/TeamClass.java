@@ -62,8 +62,13 @@ public class TeamClass {
 	}
 
 	@Test
-	public void teamTestConstructor8() {
-	    assertEquals("test constructor: shots", 0, t1.getShots());
+	public void teamTestConstructorShotsForField() {
+	    assertEquals("test constructor: shotsFor", 0, t1.getShotsFor());
+	}
+
+	@Test
+	public void teamTestConstructorShotsAgainstField() {
+	    assertEquals("test constructor: shotsAgainst", 0, t1.getShotsAgainst());
 	}
 
 	@Test

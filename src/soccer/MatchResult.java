@@ -31,6 +31,55 @@ public class MatchResult {
 		awayPenaltyKicks = 0;
 	}
 
+
+	public int getPoints(boolean isHomeTeam) {
+		if (isHomeTeam) {
+			return homePoints;
+		}
+		else {
+			return awayPoints;
+		}
+	}
+
+	public int getShots(boolean isHomeTeam) {
+		if (isHomeTeam) {
+			return homeShots;
+		}
+		else {
+			return awayShots;
+		}
+	}
+
+	public int getYellowCards(boolean isHomeTeam) {
+		if (isHomeTeam) {
+			return homeYellowCards;
+		}
+		else {
+			return awayYellowCards;
+		}
+	}
+
+	public int getRedCards(boolean isHomeTeam) {
+		if (isHomeTeam) {
+			return homeRedCards;
+		}
+		else {
+			return awayRedCards;
+		}
+	}
+	
+	public int getPenaltyKicks(boolean isHomeTeam) {
+		if (isHomeTeam) {
+			return homePenaltyKicks;
+		}
+		else {
+			return awayPenaltyKicks;
+		}
+	}
+
+
+
+
 	public String applyEvent(int team, ShotEvent event) {
 		if (team == 0) {
 			homeShots++;
