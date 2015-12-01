@@ -22,10 +22,16 @@
 		<pathelement location="${libraries}/xpp3_min-1.1.4c.jar"/>
 		<pathelement location="${libraries}/xstream-1.4.7.jar"/>
 	</path>
+	<path id="Swing classpath">
+		<pathelement location="${libraries}/miglayout15-swing.jar"/>
+		<pathelement location="${libraries}/jgoodies-forms-1.8.0.jar"/>
+		<pathelement location="${libraries}/jgoodies-common-1.8.0.jar"/>
+	</path>
 	<path id="SoccerStats.classpath">
 		<pathelement location="${blddir}"/>
 		<path refid="JUnit 4.libraryclasspath"/>
 		<path refid="XStream classpath"/>
+		<path refid="Swing classpath"/>
 	</path>
 
 
@@ -45,12 +51,15 @@
 			<src path="src"/>
 			<classpath refid="SoccerStats.classpath"/>
 		</javac>
+		<copy todir="${classdir}/images" >  
+        <fileset dir="src/images" includes="**"/>  
+ </copy>
 	</target>
 
 
-	<target name="link" depends="compile">
+	<target name="linkDemo" depends="compile">
 		<mkdir dir="${jardir}"/>
-		<jar destfile="${jardir}/SoccerStats.jar" basedir="${classdir}">
+		<jar destfile="${jardir}/SoccerStatsDemo.jar" basedir="${classdir}">
 			<manifest>
 				<attribute name="Main-Class" value="soccer.Demo0" />
 				<!-- <attribute name="Class-Path" value="${libraries}"/> -->
@@ -64,8 +73,32 @@
 	</target>
 
 
-	<target name="runjar" depends="link">
-		<java jar="${jardir}/SoccerStats.jar" fork="true">
+	<target name="runjarDemo" depends="linkDemo">
+		<java jar="${jardir}/SoccerStatsDemo.jar" fork="true">
+		</java>
+	</target>
+	
+	<target name="linkApp" depends="compile">
+		<mkdir dir="${jardir}"/>
+		<jar destfile="${jardir}/SoccerStatsApp.jar" basedir="${classdir}">
+			<manifest>
+				<attribute name="Main-Class" value="soccer.ApplicationWindow" />
+				<!-- <attribute name="Class-Path" value="${libraries}"/> -->
+			</manifest>
+			<!-- <zipgroupfileset excludes="META-INF/*.SF" dir="${libraries}" includes="**/*.jar"  /> -->
+			<fileset dir="${blddir}"/>
+            <zipfileset excludes="META-INF/*.SF" src="${libraries}/xmlpull-1.1.3.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${libraries}/xpp3_min-1.1.4c.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${libraries}/xstream-1.4.7.jar"/>
+			<zipfileset excludes="META-INF/*.SF" src="${libraries}/miglayout15-swing.jar"/>
+			<zipfileset excludes="META-INF/*.SF" src="${libraries}/jgoodies-forms-1.8.0.jar"/>
+			<zipfileset excludes="META-INF/*.SF" src="${libraries}/jgoodies-common-1.8.0.jar"/>
+		</jar>
+	</target>
+
+
+	<target name="runjarApp" depends="linkApp">
+		<java jar="${jardir}/SoccerStatsApp.jar" fork="true">
 		</java>
 	</target>
 
