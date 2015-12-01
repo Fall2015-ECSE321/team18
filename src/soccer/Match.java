@@ -158,12 +158,24 @@ public class Match {
 		for (MatchEvent event : matchEvents) {
 			event.publishMatchEvent();
 		}
+		for (Player player : subscribedHomeTeam.getPlayers()) {
+			player.playedMatch();
+		}
+		for (Player player : subscribedAwayTeam.getPlayers()) {
+			player.playedMatch();
+		}
 		return "Match was published to every player on HomeTeam and AwayTeam";
 	}
 
 	public String unpublishPlayerStats() {
 		for (MatchEvent event : matchEvents) {
 			event.unpublishMatchEvent();
+		}
+		for (Player player : subscribedHomeTeam.getPlayers()) {
+			player.unplayedMatch();
+		}
+		for (Player player : subscribedAwayTeam.getPlayers()) {
+			player.unplayedMatch();
 		}
 		return "Match was unpublished from every player on HomeTeam and AwayTeam";
 	}

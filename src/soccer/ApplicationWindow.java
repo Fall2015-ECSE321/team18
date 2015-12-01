@@ -13,6 +13,7 @@ import java.awt.GridLayout;
 public class ApplicationWindow extends JFrame {
 
 	private JPanel contentPane;
+	private Season season;
 
 	/**
 	 * Launch the application.
@@ -60,19 +61,22 @@ public class ApplicationWindow extends JFrame {
 	    revalidate();
 	}
 	
-
+	public void changePanel(TeamRankingsPanel newPanel) {
+	    contentPane.removeAll();
+	    contentPane.add(newPanel);
+	    revalidate();
+	}
 	
-//	public void changePanel(LoginPanel newPanel) {
-//	    contentPane.removeAll();
-//	    contentPane.add(newPanel);
-//	    update(getGraphics());
-//	}
-//	
-//	public void changePanel(ViewModeMenuPanel newPanel) {
-//	    contentPane.removeAll();
-//	    contentPane.add(newPanel);
-//	    update(getGraphics());
-//	}
+	public void changePanel(PlayerRankingsPanel newPanel) {
+	    contentPane.removeAll();
+	    contentPane.add(newPanel);
+	    revalidate();
+	}
+
+
+	public Season getSeason() {
+		return season;
+	}
 
 	/**
 	 * Create the frame.
@@ -85,16 +89,21 @@ public class ApplicationWindow extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		HomeMenuPanel homeMenuPanel = new HomeMenuPanel(this);
-		contentPane.add(homeMenuPanel);
 		
 		
-		Season s1 = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
-		League l = s1.getLeague();
-		System.out.println(s1.toString());
-		System.out.println(s1.getMatches().toString());
+		
+		season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+		
+		//testing 
+		League l = season.getLeague();
+		System.out.println(season.toString());
+		System.out.println(season.getMatches().toString());
 		System.out.println(l.toString());
 		System.out.println(l.getTeams().toString());
+		
+		
+		HomeMenuPanel homeMenuPanel = new HomeMenuPanel(this);
+		changePanel(homeMenuPanel);
 	}
 
 }

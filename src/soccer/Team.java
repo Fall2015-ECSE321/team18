@@ -115,6 +115,26 @@ public class Team {
 		returnString += "\nplayers:            \t" + players.size() ;
 		return returnString;
 	}
+	
+
+	public String[] getTeamStats() {
+		String[] teamStats = new String[14];
+		teamStats[0] = "" + name;
+		teamStats[1] = "" + gamesPlayed;
+		teamStats[2] = "" + points;	
+		teamStats[3] = "" + wins;
+		teamStats[4] = "" + losses;
+		teamStats[5] = "" + draws;
+		teamStats[6] = "" + shotsFor;
+		teamStats[7] = "" + shotsAgainst;
+		teamStats[8] = "" + goalsFor;
+		teamStats[9] = "" + goalsAgainst;
+		teamStats[10] = "" + redCards;
+		teamStats[11] = "" + yellowCards;
+		teamStats[12] = "" + penaltyKicks;
+		teamStats[13] = "" + players.size();
+		return teamStats;	
+	}
 
 	public String addPlayer(Player newPlayer) {
 		if (players.contains(newPlayer)) {
@@ -188,5 +208,7 @@ public class Team {
 			return "Error this match has not been applied to this team";
 		}
 	}
+	
+	
 
 }

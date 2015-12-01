@@ -90,6 +90,28 @@ public class Player {
 		return returnString;
 	}
 
+	public String[] getPlayerStats() {
+		String[] teamStats = new String[9];
+		teamStats[0] = "" + firstName;
+		teamStats[1] = "" + lastName;
+		teamStats[2] = "" + number;
+		teamStats[3] = "" + gamesPlayed;	
+		teamStats[4] = "" + shots;
+		teamStats[5] = "" + goals;
+		teamStats[6] = "" + redCards;
+		teamStats[7] = "" + yellowCards;
+		teamStats[8] = "" + penaltyKicks;
+		return teamStats;	
+	}
+
+	public void playedMatch() {
+		gamesPlayed++;
+	}
+
+	public void unplayedMatch() {
+		gamesPlayed--;
+	}
+
 	public String applyMatchEvent(ShotEvent event) {
 		if (matchEventsApplied.contains(event)) {
 			return "This ShotEvent has already been published to this player";

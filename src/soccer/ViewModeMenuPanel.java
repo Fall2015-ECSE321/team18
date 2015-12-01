@@ -7,7 +7,9 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+
 import net.miginfocom.swing.MigLayout;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -35,10 +37,21 @@ public class ViewModeMenuPanel extends JPanel {
 		add(button1, "cell 1 2,grow");
 		
 		JButton button2 = new JButton("Team Rankings");
+		button2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TeamRankingsPanel newPanel = new TeamRankingsPanel(parentFrame);
+				parentFrame.changePanel(newPanel);
+			}
+		});
 		add(button2, "cell 1 3,grow");
 		
 		JButton button3 = new JButton("Player Rankings");
-		button3.setDisabledIcon(null);
+		button3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PlayerRankingsPanel newPanel = new PlayerRankingsPanel(parentFrame);
+				parentFrame.changePanel(newPanel);
+			}
+		});
 		add(button3, "cell 1 4,grow");
 
 	}
