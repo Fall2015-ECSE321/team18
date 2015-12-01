@@ -51,7 +51,7 @@ public class Goalie extends Player{
 	 * 
 	 * @param event		A ShotEvent Object describing a shot on net
 	 * 
-	 * @return			Returns a String for whether a method succeeded or not
+	 * @return			Returns a String for whether the method succeeded or not
 	 */
 	public String applyMatchEvent(ShotEvent event) {
 		if (this == event.getSubscribedGoalie()) {
@@ -80,7 +80,7 @@ public class Goalie extends Player{
 	 * 
 	 * @param event		A ShotEvent Object describing a shot on net
 	 * 
-	 * @return			Returns a String for whether a method succeeded or not
+	 * @return			Returns a String for whether the method succeeded or not
 	 */
 	public String unapplyMatchEvent(ShotEvent event) {
 		if (this == event.getSubscribedGoalie()) {
