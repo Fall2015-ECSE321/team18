@@ -2,6 +2,12 @@ package soccer;
 
 import java.util.UUID;
 
+/** This class keeps track of the amount of shots, goals, and infractions for both
+ * teams involved in a match.
+ * 
+ * @author Team 18
+ *
+ */
 public class MatchResult {
 
 	private String uniqueID;
@@ -17,6 +23,9 @@ public class MatchResult {
 	private int awayPenaltyKicks;
 
 
+	/**	Constructor method. Sets a unique ID and initializes all fields.
+	 * 
+	 */
 	public 	MatchResult() {
 		uniqueID = UUID.randomUUID().toString(); 
 		homePoints = 0;
@@ -31,7 +40,7 @@ public class MatchResult {
 		awayPenaltyKicks = 0;
 	}
 
-
+	// getters
 	public int getPoints(boolean isHomeTeam) {
 		if (isHomeTeam) {
 			return homePoints;
@@ -80,6 +89,15 @@ public class MatchResult {
 
 
 
+	/** This method increments the respective team's shot counter when a
+	 * ShotEvent takes place. If the shot was scored, it also increments the
+	 * respective team's score.
+	 *
+	 * @see soccer.ShotEvent#getScored()
+	 * @param team		
+	 * @param event
+	 * @return
+	 */
 	public String applyEvent(int team, ShotEvent event) {
 		if (team == 0) {
 			homeShots++;
@@ -96,6 +114,13 @@ public class MatchResult {
 		return "applied ShotEvent to MatchResult";
 	}
 
+	/**	This method increments the respective team's infraction counters when an
+	 * InfractionEvent takes place.
+	 * 
+	 * @param team
+	 * @param event
+	 * @return
+	 */
 	public String applyEvent(int team, InfractionEvent event) {
 		if (team == 0) {
 			if (event.getRedCard()) {
@@ -122,6 +147,14 @@ public class MatchResult {
 		return "applied InfractionEvent to MatchResult";
 	}
 
+	/** This method decrements the respective team's shot counter with respect to the
+	 * ShotEvent involved. If the shot was scored, it also decrements the
+	 * respective team's score.
+	 * 
+	 * @param team
+	 * @param event
+	 * @return
+	 */
 	public String unapplyEvent(int team, ShotEvent event) {
 		if (team == 0) {
 			homeShots--;
@@ -138,6 +171,13 @@ public class MatchResult {
 		return "removed ShotEvent from MatchResult";
 	}
 
+	/** This method decrements the respective team's infraction counters when an
+	 * InfractionEvent needs to undone.
+	 * 
+	 * @param team
+	 * @param event
+	 * @return
+	 */
 	public String unapplyEvent(int team, InfractionEvent event) {
 		if (team == 0) {
 			if (event.getRedCard()) {
@@ -168,6 +208,16 @@ public class MatchResult {
 
 	
 
+	/** This method lists all the MatchResult fields and their respective
+	 * values. Fields consist of uniqueID; homePoints; homeShots; homeYellowCards;
+	 * homeRedCards; homePenalyKicks; awayPoints; awayShots; awayYellowCards; awayRedCards;
+	 * awayPenaltyKicks.
+	 * 
+	 * @see java.lang.Object#toString()
+	 * 
+	 * @return		Returns a String listing all the MatchResult fields and their respective
+	 * 				values.
+	 */
 	public String toString() {
 		String returnString = "\nMatchResult:";
 		returnString += "\nuniqueID:        \t" + uniqueID;

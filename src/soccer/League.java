@@ -2,6 +2,14 @@ package soccer;
 import java.util.UUID;
 import java.util.ArrayList;
 import java.util.List;
+
+
+/** This class contains private fields belonging to a League as well as methods
+ * that would modify the League.
+ * 
+ * @author Team 18
+ *
+ */
 public class League {
 
 	private String uniqueID;
@@ -10,6 +18,10 @@ public class League {
 	//private playerRanking playerRankingSubscriber;
 	private List<Team> teams;
 
+	/** Constructor method; sets League name and gives it a unique ID.
+	 * 
+	 * @param name		Intended League name
+	 */
 	public League(String name) {
 		this.name = name;
 
@@ -17,6 +29,7 @@ public class League {
 		teams = new ArrayList<Team>();
 	}
 
+	// getters
 	public String getUniqueID() {
 		return uniqueID;
 	}
@@ -30,6 +43,13 @@ public class League {
 	}
 
 
+	/** Lists the League's fields as string. Fields include the League name,
+	 * its unique ID, and the number of teams currently registered in the League.
+	 * 
+	 * @see java.lang.Object#toString()
+	 * 
+	 * @return		returns a list of the League's fields
+	 */
 	public String toString() {
 		String returnString = "";
 		returnString += "\nLeague:  \t\t" + name ;
@@ -38,6 +58,10 @@ public class League {
 		return returnString;
 	}
 
+	/** Registers a team into the League. 
+	 * @param newTeam	The intended team name to be added in the league
+	 * @return			Returns a string to indicate whether the method succeeded or not 
+	 */
 	public String addTeam(Team newTeam) {
 		if (teams.contains(newTeam)) {
 			return "ERROR; This team already exists in League.";
@@ -48,6 +72,9 @@ public class League {
 		}
 	}
 
+	/**	Not yet implemented
+	 * @return
+	 */
 	public String publishToRankings() {
 		return "";
 	}
