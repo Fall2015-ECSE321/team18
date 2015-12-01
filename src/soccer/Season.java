@@ -39,6 +39,16 @@ public class Season {
 	public List<Match> getMatches() {
 		return matches;
 	}
+	
+	public String addMatch(Match match) {
+		if (matches.contains(match)) {
+			return "this match has already been added to the season";
+		}
+		else {
+			matches.add(match);
+			return "this match was succesfully added to the season";
+		}
+	}
 
 	public String toString() {
 		String returnString = "Season";

@@ -1,15 +1,13 @@
 package soccer;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Toolkit;
-import net.miginfocom.swing.MigLayout;
-import java.awt.FlowLayout;
-import java.awt.CardLayout;
+
+import persistence.PersistenceXStream;
+
 import java.awt.GridLayout;
 
 public class ApplicationWindow extends JFrame {
@@ -44,7 +42,19 @@ public class ApplicationWindow extends JFrame {
 	    revalidate();
 	}
 	
-	public void changePanel(LoginPanel newPanel) {
+	public void changePanel(HomeMenuPanel newPanel) {
+	    contentPane.removeAll();
+	    contentPane.add(newPanel);
+	    revalidate();
+	}
+	
+	public void changePanel(AdministratorLoginPanel newPanel) {
+	    contentPane.removeAll();
+	    contentPane.add(newPanel);
+	    revalidate();
+	}
+	
+	public void changePanel(ScorekeeperLoginPanel newPanel) {
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
@@ -69,18 +79,22 @@ public class ApplicationWindow extends JFrame {
 	 */
 	public ApplicationWindow() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 509, 1127);
+		setBounds(100, 100, 600, 800);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		LoginPanel loginPanel = new LoginPanel(this);
-		contentPane.add(loginPanel);
-//		contentPane.remove(loginPanel);
-//		ViewModeMenuPanel newPanel = new ViewModeMenuPanel(this);
-//		contentPane.add(newPanel);
-		//changePanel();
+		HomeMenuPanel homeMenuPanel = new HomeMenuPanel(this);
+		contentPane.add(homeMenuPanel);
+		
+		
+		Season s1 = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+		League l = s1.getLeague();
+		System.out.println(s1.toString());
+		System.out.println(s1.getMatches().toString());
+		System.out.println(l.toString());
+		System.out.println(l.getTeams().toString());
 	}
 
 }

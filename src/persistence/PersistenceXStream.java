@@ -12,7 +12,6 @@ public class PersistenceXStream {
 	private static String filename = "data.xml";
 	
 	public static boolean saveToXMLwithXStream(Object obj){
-		System.out.println("got here");
 		xstream.setMode(XStream.ID_REFERENCES);
 		String xml = xstream.toXML(obj); //save our XML file
 		

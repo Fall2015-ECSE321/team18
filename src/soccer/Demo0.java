@@ -9,7 +9,9 @@ public class Demo0 {
 
     System.out.println("This is the Soccer Stats Application Demo0");
 
-
+    League l = new League("BigLeagues");
+    Season s1 = new Season("2015", l);
+    
     Player p1 = new Player("Ricky1", "Bobby1", 1);
     Player p2 = new Player("Ricky2", "Bobby2", 2);
     Player p3 = new Player("Ricky3", "Bobby3", 3);
@@ -54,7 +56,7 @@ public class Demo0 {
 
 
 
-    League l = new League("BigLeagues");
+    
 
     System.out.println(l.addTeam(t1));
     System.out.println(l.addTeam(t2));
@@ -105,6 +107,7 @@ public class Demo0 {
 
 
    	Match m1 = new Match();
+   	s1.addMatch(m1);
    	System.out.println(m1.toString());
    	m1.setSubscribedHomeTeam(t2);
    	m1.setSubscribedAwayTeam(t3);
@@ -130,7 +133,7 @@ public class Demo0 {
     System.out.println(t3.getPlayers().toString());
 
     System.out.println("xstream:");
-    PersistenceXStream.saveToXMLwithXStream(l);
+    PersistenceXStream.saveToXMLwithXStream(s1);
 
     System.out.println("\n" + m1.unendMatch());
     System.out.println("\n" + m1.unendMatch());

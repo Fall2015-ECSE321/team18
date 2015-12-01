@@ -10,17 +10,26 @@ import javax.swing.JButton;
 import net.miginfocom.swing.MigLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JSplitPane;
+import javax.swing.JLabel;
+import java.awt.Dimension;
+import java.awt.SystemColor;
+import java.awt.Font;
 
-public class ViewModeMenuPanel extends JPanel {
+public class ScorekeeperLoginPanel extends JPanel {
 
 	ApplicationWindow parentFrame;
+	private JTextField textField_1;
+	private JPasswordField passwordField;
 	/**
 	 * Create the panel.
 	 */
-	public ViewModeMenuPanel(ApplicationWindow parentFrame) {
+	public ScorekeeperLoginPanel(ApplicationWindow parentFrame) {
 		this.parentFrame = parentFrame;
 		setOpaque(false);
-		setLayout(new MigLayout("", "[100.00px,grow,left][278.00,grow 60,center][100.00,grow,right]", "[35.00][82.00px,grow][60][60][60][97.00,grow]"));
+		setLayout(new MigLayout("", "[100.00px,grow,left][278.00,grow,center][100.00,grow,right]", "[35.00][82.00px,grow][34][34][][39.00][97.00,grow]"));
 		
 		JButton button0 = new JButton("Return to Home Screen");
 		button0.addActionListener(new ActionListener() {
@@ -31,15 +40,28 @@ public class ViewModeMenuPanel extends JPanel {
 		});
 		add(button0, "cell 1 0,grow");
 		
-		JButton button1 = new JButton("Season Display");
-		add(button1, "cell 1 2,grow");
+		JLabel lblUsername = new JLabel("Username");
+		lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblUsername.setForeground(SystemColor.text);
+		lblUsername.setPreferredSize(new Dimension(60, 14));
+		add(lblUsername, "flowx,cell 1 2,alignx left");
 		
-		JButton button2 = new JButton("Team Rankings");
-		add(button2, "cell 1 3,grow");
+		JLabel lblNewLabel = new JLabel("Password");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel.setForeground(SystemColor.text);
+		lblNewLabel.setPreferredSize(new Dimension(60, 14));
+		add(lblNewLabel, "flowx,cell 1 3");
 		
-		JButton button3 = new JButton("Player Rankings");
+		JButton button3 = new JButton("Login as Scorekeeper");
 		button3.setDisabledIcon(null);
-		add(button3, "cell 1 4,grow");
+		add(button3, "cell 1 5,grow");
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		add(textField_1, "cell 1 2,grow");
+		
+		passwordField = new JPasswordField();
+		add(passwordField, "cell 1 3,grow");
 
 	}
 
