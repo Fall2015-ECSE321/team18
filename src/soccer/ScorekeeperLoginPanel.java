@@ -53,7 +53,12 @@ public class ScorekeeperLoginPanel extends JPanel {
 		add(lblNewLabel, "flowx,cell 1 3");
 		
 		JButton button3 = new JButton("Login as Scorekeeper");
-		button3.setDisabledIcon(null);
+		button3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ScorekeeperModeMenuPanel newPanel = new ScorekeeperModeMenuPanel(parentFrame);
+				parentFrame.changePanel(newPanel);
+			}
+		});
 		add(button3, "cell 1 5,grow");
 		
 		textField_1 = new JTextField();

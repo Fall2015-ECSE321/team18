@@ -121,6 +121,15 @@
 		</java>
 	</target>
 
+	<target name="runDemo2" depends="compile">
+		<java classname="soccer.Demo2" fork="true">
+			<classpath refid="SoccerStats.classpath"/>
+			<!-- <classpath>
+				<path location="${classdir}" />
+			</classpath> -->
+		</java>
+	</target>
+
 
 	<target name="test" depends="compile">
 		<mkdir dir="${junit.output.dir}"/>

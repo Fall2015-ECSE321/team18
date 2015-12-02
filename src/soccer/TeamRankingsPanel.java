@@ -35,18 +35,30 @@ public class TeamRankingsPanel extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public TeamRankingsPanel(ApplicationWindow parentFrame) {
+	public TeamRankingsPanel(ApplicationWindow parentFrame, int returnLocation) {
 		this.parentFrame = parentFrame;
 		setLayout(new MigLayout("", "[100.00px,grow][278.00,grow,center][100.00,grow]", "[35px:n][562.00][204.00px:n][46.00,grow][791.00]"));
 		
-		JButton ReturnButton = new JButton("Return to Menu");
-		ReturnButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				ViewModeMenuPanel newPanel = new ViewModeMenuPanel(parentFrame);
-				parentFrame.changePanel(newPanel);
-			}
-		});
-		add(ReturnButton, "cell 1 0,grow");
+		if (returnLocation == 0) {
+			JButton ReturnButton = new JButton("Return to Menu");
+			ReturnButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					ViewModeMenuPanel newPanel = new ViewModeMenuPanel(parentFrame);
+					parentFrame.changePanel(newPanel);
+				}
+			});
+			add(ReturnButton, "cell 1 0,grow");
+		}
+		else if (returnLocation == 1) {
+			JButton ReturnButton = new JButton("Return to Scorekeeper Menu");
+			ReturnButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					ScorekeeperModeMenuPanel newPanel = new ScorekeeperModeMenuPanel(parentFrame);
+					parentFrame.changePanel(newPanel);
+				}
+			});
+			add(ReturnButton, "cell 1 0,grow");
+		}
 		
 		
 

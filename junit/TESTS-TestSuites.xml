@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="Aperture" id="0" name="LeagueClass" package="test" skipped="0" tests="2" time="0.089" timestamp="2015-12-01T12:11:03">
+  <testsuite errors="0" failures="0" hostname="DK_Lenovo" id="0" name="LeagueClass" package="test" skipped="0" tests="2" time="0.146" timestamp="2015-12-02T02:54:56">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
-          <property name="env.USERDOMAIN_ROAMINGPROFILE" value="Aperture" />
+          <property name="env.USERDOMAIN_ROAMINGPROFILE" value="DK_LENOVO" />
 
           <property name="sun.java.launcher" value="SUN_STANDARD" />
 
@@ -16,9 +16,9 @@
 
           <property name="env.FP_NO_HOST_CHECK" value="NO" />
 
-          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes" />
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes" />
 
-          <property name="env.COMPUTERNAME" value="APERTURE" />
+          <property name="env.COMPUTERNAME" value="DK_LENOVO" />
 
           <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
 
@@ -28,9 +28,9 @@
 
           <property name="java.vm.specification.vendor" value="Oracle Corporation" />
 
-          <property name="ant.home" value="C:\Program Files\apache-ant-1.9.6\bin\.." />
+          <property name="ant.home" value="C:\apache-ant-1.9.1\bin\.." />
 
-          <property name="java.runtime.version" value="1.8.0_45-b14" />
+          <property name="java.runtime.version" value="1.8.0_60-b27" />
 
           <property name="env.HOMEPATH" value="\Users\Demetrios" />
 
@@ -38,23 +38,23 @@
 
           <property name="user.language" value="en" />
 
-          <property name="ant.file.SoccerStats" value="C:\Users\Demetrios\Documents\GitHub\team18\build.xml" />
+          <property name="ant.file.SoccerStats" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build.xml" />
 
-          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\bin" />
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
 
           <property name="junitdir" value="junit" />
 
           <property name="ant.project.default-target" value="compile" />
 
-          <property name="srcdir" value="C:\Users\Demetrios\Documents\GitHub\team18\src\soccer" />
+          <property name="srcdir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\src\soccer" />
 
           <property name="ant.project.name" value="SoccerStats" />
 
-          <property name="java.version" value="1.8.0_45" />
+          <property name="java.version" value="1.8.0_60" />
 
-          <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" />
+          <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 69 Stepping 1, GenuineIntel" />
 
-          <property name="user.timezone" value="America/New_York" />
+          <property name="user.timezone" value="" />
 
           <property name="env.TEMP" value="C:\Users\DEMETR~1\AppData\Local\Temp" />
 
@@ -62,7 +62,7 @@
 
           <property name="libraries" value="lib" />
 
-          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\endorsed" />
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\endorsed" />
 
           <property name="env._JAVACMD" value="java.exe" />
 
@@ -82,9 +82,9 @@
 
           <property name="user.country" value="CA" />
 
-          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_45\jre" />
+          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_60\jre" />
 
-          <property name="env.PSModulePath" value="C:\Users\Demetrios\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\" />
+          <property name="env.PSModulePath" value="C:\Users\Demetrios\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\windows\system32\WindowsPowerShell\v1.0\Modules\" />
 
           <property name="env.APPDATA" value="C:\Users\Demetrios\AppData\Roaming" />
 
@@ -92,13 +92,13 @@
 
           <property name="java.vm.info" value="mixed mode" />
 
-          <property name="env.ComSpec" value="C:\WINDOWS\system32\cmd.exe" />
+          <property name="env.ComSpec" value="C:\windows\system32\cmd.exe" />
 
           <property name="env.OS" value="Windows_NT" />
 
           <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files" />
 
-          <property name="ant.file" value="C:\Users\Demetrios\Documents\GitHub\team18\build.xml" />
+          <property name="ant.file" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build.xml" />
 
           <property name="os.version" value="6.3" />
 
@@ -110,9 +110,9 @@
 
           <property name="path.separator" value=";" />
 
-          <property name="jardir" value="C:\Users\Demetrios\Documents\GitHub\team18\build/jar" />
+          <property name="jardir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build/jar" />
 
-          <property name="java.vm.version" value="25.45-b02" />
+          <property name="java.vm.version" value="25.60-b23" />
 
           <property name="ant.file.type.SoccerStats" value="file" />
 
@@ -120,21 +120,21 @@
 
           <property name="env.USERPROFILE" value="C:\Users\Demetrios" />
 
-          <property name="ant.library.dir" value="C:\Program Files\apache-ant-1.9.6\lib" />
+          <property name="ant.library.dir" value="C:\apache-ant-1.9.1\lib" />
 
           <property name="junit.output.dir" value="junit" />
+
+          <property name="env.JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_60\bin" />
 
           <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
 
           <property name="env.TMP" value="C:\Users\DEMETR~1\AppData\Local\Temp" />
 
-          <property name="env.FPS_BROWSER_USER_PROFILE_STRING" value="Default" />
-
           <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
 
           <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
 
-          <property name="sun.stdout.encoding" value="cp437" />
+          <property name="sun.stdout.encoding" value="cp850" />
 
           <property name="user.script" value="" />
 
@@ -148,11 +148,11 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="classdir" value="C:\Users\Demetrios\Documents\GitHub\team18\build" />
+          <property name="classdir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build" />
 
           <property name="java.vendor.url" value="http://java.oracle.com/" />
 
-          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\apache-ant-1.9.6\bin;C:\Program Files\mingw-w64\x86_64-5.1.0-win32-seh-rt_v4-rev0\mingw64\bin;C:\Program Files\Java\jdk1.8.0_45\bin;C:\ProgramData\Oracle\Java\javapath;C:\Python27;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Calibre2\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\Git\cmd;C:\Program Files (x86)\EaseUS\Todo Backup\bin\x64\;." />
+          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\apache-ant-1.9.1\bin;C:\Program Files\mingw-w64\x86_64-4.9.2-win32-seh-rt_v3-rev1\mingw64\bin;C:\lcc\include64;C:\lcc\include;C:\lcc\lib64;C:\lcc\lib;C:\lcc\bin;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\;." />
 
           <property name="env.NUMBER_OF_PROCESSORS" value="4" />
 
@@ -160,19 +160,19 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.1 compiled on May 15 2013" />
 
-          <property name="java.class.path" value="C:\Users\Demetrios\Documents\GitHub\team18\build;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\xmlpull-1.1.3.1.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\xpp3_min-1.1.4c.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\xstream-1.4.7.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\miglayout15-swing.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\jgoodies-forms-1.8.0.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\jgoodies-common-1.8.0.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-launcher.jar;C:\Program Files\apache-ant-1.9.6\lib\ant.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit4.jar" />
+          <property name="java.class.path" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\xmlpull-1.1.3.1.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\xpp3_min-1.1.4c.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\xstream-1.4.7.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\miglayout15-swing.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\jgoodies-forms-1.8.0.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\jgoodies-common-1.8.0.jar;C:\apache-ant-1.9.1\lib\ant-launcher.jar;C:\apache-ant-1.9.1\lib\ant.jar;C:\apache-ant-1.9.1\lib\ant-junit.jar;C:\apache-ant-1.9.1\lib\ant-junit4.jar" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.LeagueClass skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.LeagueClass.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher7736358499704767019.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit969297057937229470.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.LeagueClass filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\gitworkspace\team18\junit\TEST-test.LeagueClass.xml crashfile=C:\Users\Demetrios\Documents\gitworkspace\team18\junitvmwatcher3204962469355060662.properties propsfile=C:\Users\Demetrios\Documents\gitworkspace\team18\junit3967636408079054385.properties" />
 
           <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
 
           <property name="ant.file.type" value="file" />
 
-          <property name="env.windir" value="C:\WINDOWS" />
+          <property name="env.windir" value="C:\windows" />
 
-          <property name="env.LOGONSERVER" value="\\APERTURE" />
+          <property name="env.LOGONSERVER" value="\\MicrosoftAccount" />
 
           <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
 
@@ -182,23 +182,21 @@
 
           <property name="sun.cpu.endian" value="little" />
 
-          <property name="env.ANT_HOME" value="C:\Program Files\apache-ant-1.9.6\bin\.." />
+          <property name="env.ANT_HOME" value="C:\apache-ant-1.9.1\bin\.." />
 
           <property name="env.ProgramFiles" value="C:\Program Files" />
 
           <property name="java.io.tmpdir" value="C:\Users\DEMETR~1\AppData\Local\Temp\" />
 
-          <property name="env.PROCESSOR_REVISION" value="3a09" />
+          <property name="env.PROCESSOR_REVISION" value="4501" />
 
           <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
 
-          <property name="blddir" value="C:\Users\Demetrios\Documents\GitHub\team18\build" />
+          <property name="blddir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build" />
 
           <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
 
-          <property name="env.SystemRoot" value="C:\WINDOWS" />
-
-          <property name="env.FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer" />
+          <property name="env.SystemRoot" value="C:\windows" />
 
           <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
 
@@ -206,9 +204,9 @@
 
           <property name="os.arch" value="amd64" />
 
-          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\windows\Sun\Java\lib\ext" />
 
-          <property name="user.dir" value="C:\Users\Demetrios\Documents\GitHub\team18" />
+          <property name="user.dir" value="C:\Users\Demetrios\Documents\gitworkspace\team18" />
 
           <property name="env.LOCALAPPDATA" value="C:\Users\Demetrios\AppData\Local" />
 
@@ -218,13 +216,13 @@
 
           <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL" />
 
-          <property name="env.Path" value="C:\Program Files\apache-ant-1.9.6\bin;C:\Program Files\mingw-w64\x86_64-5.1.0-win32-seh-rt_v4-rev0\mingw64\bin;C:\Program Files\Java\jdk1.8.0_45\bin;C:\ProgramData\Oracle\Java\javapath;C:\Python27;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Calibre2\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\Git\cmd;C:\Program Files (x86)\EaseUS\Todo Backup\bin\x64\" />
+          <property name="env.Path" value="C:\apache-ant-1.9.1\bin;C:\Program Files\mingw-w64\x86_64-4.9.2-win32-seh-rt_v3-rev1\mingw64\bin;C:\lcc\include64;C:\lcc\include;C:\lcc\lib64;C:\lcc\lib;C:\lcc\bin;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\" />
 
-          <property name="basedir" value="C:\Users\Demetrios\Documents\GitHub\team18" />
+          <property name="basedir" value="C:\Users\Demetrios\Documents\gitworkspace\team18" />
 
           <property name="ant.java.version" value="1.8" />
 
-          <property name="ant.core.lib" value="C:\Program Files\apache-ant-1.9.6\lib\ant.jar" />
+          <property name="ant.core.lib" value="C:\apache-ant-1.9.1\lib\ant.jar" />
 
           <property name="env.USERNAME" value="Demetrios" />
 
@@ -232,34 +230,36 @@
 
           <property name="file.encoding" value="Cp1252" />
 
-          <property name="sun.stderr.encoding" value="cp437" />
+          <property name="sun.stderr.encoding" value="cp850" />
 
-          <property name="env.USERDOMAIN" value="Aperture" />
+          <property name="env.USERDOMAIN" value="DK_LENOVO" />
 
           <property name="java.specification.version" value="1.8" />
 
-          <property name="env.=C:" value="C:\Users\Demetrios\Documents\GitHub\team18" />
+          <property name="env.=C:" value="C:\Users\Demetrios\Documents\gitworkspace\team18" />
 
           <property name="ant.project.invoked-targets" value="test" />
+
+          <property name="env.VBOX_MSI_INSTALL_PATH" value="c:\Program Files\Oracle\VirtualBox\" />
 
           <property name="env.PROCESSOR_LEVEL" value="6" />
 
       </properties>
 
-      <testcase classname="test.LeagueClass" name="leagueTestConstructor1" time="0.045" />
+      <testcase classname="test.LeagueClass" name="leagueTestConstructor1" time="0.07" />
 
-      <testcase classname="test.LeagueClass" name="leagueTestConstructor2" time="0.0" />
+      <testcase classname="test.LeagueClass" name="leagueTestConstructor2" time="0.001" />
 
       <system-out><![CDATA[]]></system-out>
 
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Aperture" id="1" name="PlayerClass" package="test" skipped="0" tests="11" time="0.128" timestamp="2015-12-01T12:11:02">
+  <testsuite errors="0" failures="0" hostname="DK_Lenovo" id="1" name="PlayerClass" package="test" skipped="0" tests="11" time="0.197" timestamp="2015-12-02T02:54:54">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
-          <property name="env.USERDOMAIN_ROAMINGPROFILE" value="Aperture" />
+          <property name="env.USERDOMAIN_ROAMINGPROFILE" value="DK_LENOVO" />
 
           <property name="sun.java.launcher" value="SUN_STANDARD" />
 
@@ -271,9 +271,9 @@
 
           <property name="env.FP_NO_HOST_CHECK" value="NO" />
 
-          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes" />
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes" />
 
-          <property name="env.COMPUTERNAME" value="APERTURE" />
+          <property name="env.COMPUTERNAME" value="DK_LENOVO" />
 
           <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
 
@@ -283,9 +283,9 @@
 
           <property name="java.vm.specification.vendor" value="Oracle Corporation" />
 
-          <property name="ant.home" value="C:\Program Files\apache-ant-1.9.6\bin\.." />
+          <property name="ant.home" value="C:\apache-ant-1.9.1\bin\.." />
 
-          <property name="java.runtime.version" value="1.8.0_45-b14" />
+          <property name="java.runtime.version" value="1.8.0_60-b27" />
 
           <property name="env.HOMEPATH" value="\Users\Demetrios" />
 
@@ -293,23 +293,23 @@
 
           <property name="user.language" value="en" />
 
-          <property name="ant.file.SoccerStats" value="C:\Users\Demetrios\Documents\GitHub\team18\build.xml" />
+          <property name="ant.file.SoccerStats" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build.xml" />
 
-          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\bin" />
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
 
           <property name="junitdir" value="junit" />
 
           <property name="ant.project.default-target" value="compile" />
 
-          <property name="srcdir" value="C:\Users\Demetrios\Documents\GitHub\team18\src\soccer" />
+          <property name="srcdir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\src\soccer" />
 
           <property name="ant.project.name" value="SoccerStats" />
 
-          <property name="java.version" value="1.8.0_45" />
+          <property name="java.version" value="1.8.0_60" />
 
-          <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" />
+          <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 69 Stepping 1, GenuineIntel" />
 
-          <property name="user.timezone" value="America/New_York" />
+          <property name="user.timezone" value="" />
 
           <property name="env.TEMP" value="C:\Users\DEMETR~1\AppData\Local\Temp" />
 
@@ -317,7 +317,7 @@
 
           <property name="libraries" value="lib" />
 
-          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\endorsed" />
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\endorsed" />
 
           <property name="env._JAVACMD" value="java.exe" />
 
@@ -337,9 +337,9 @@
 
           <property name="user.country" value="CA" />
 
-          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_45\jre" />
+          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_60\jre" />
 
-          <property name="env.PSModulePath" value="C:\Users\Demetrios\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\" />
+          <property name="env.PSModulePath" value="C:\Users\Demetrios\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\windows\system32\WindowsPowerShell\v1.0\Modules\" />
 
           <property name="env.APPDATA" value="C:\Users\Demetrios\AppData\Roaming" />
 
@@ -347,13 +347,13 @@
 
           <property name="java.vm.info" value="mixed mode" />
 
-          <property name="env.ComSpec" value="C:\WINDOWS\system32\cmd.exe" />
+          <property name="env.ComSpec" value="C:\windows\system32\cmd.exe" />
 
           <property name="env.OS" value="Windows_NT" />
 
           <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files" />
 
-          <property name="ant.file" value="C:\Users\Demetrios\Documents\GitHub\team18\build.xml" />
+          <property name="ant.file" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build.xml" />
 
           <property name="os.version" value="6.3" />
 
@@ -365,9 +365,9 @@
 
           <property name="path.separator" value=";" />
 
-          <property name="jardir" value="C:\Users\Demetrios\Documents\GitHub\team18\build/jar" />
+          <property name="jardir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build/jar" />
 
-          <property name="java.vm.version" value="25.45-b02" />
+          <property name="java.vm.version" value="25.60-b23" />
 
           <property name="ant.file.type.SoccerStats" value="file" />
 
@@ -375,21 +375,21 @@
 
           <property name="env.USERPROFILE" value="C:\Users\Demetrios" />
 
-          <property name="ant.library.dir" value="C:\Program Files\apache-ant-1.9.6\lib" />
+          <property name="ant.library.dir" value="C:\apache-ant-1.9.1\lib" />
 
           <property name="junit.output.dir" value="junit" />
+
+          <property name="env.JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_60\bin" />
 
           <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
 
           <property name="env.TMP" value="C:\Users\DEMETR~1\AppData\Local\Temp" />
 
-          <property name="env.FPS_BROWSER_USER_PROFILE_STRING" value="Default" />
-
           <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
 
           <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
 
-          <property name="sun.stdout.encoding" value="cp437" />
+          <property name="sun.stdout.encoding" value="cp850" />
 
           <property name="user.script" value="" />
 
@@ -403,11 +403,11 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="classdir" value="C:\Users\Demetrios\Documents\GitHub\team18\build" />
+          <property name="classdir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build" />
 
           <property name="java.vendor.url" value="http://java.oracle.com/" />
 
-          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\apache-ant-1.9.6\bin;C:\Program Files\mingw-w64\x86_64-5.1.0-win32-seh-rt_v4-rev0\mingw64\bin;C:\Program Files\Java\jdk1.8.0_45\bin;C:\ProgramData\Oracle\Java\javapath;C:\Python27;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Calibre2\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\Git\cmd;C:\Program Files (x86)\EaseUS\Todo Backup\bin\x64\;." />
+          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\apache-ant-1.9.1\bin;C:\Program Files\mingw-w64\x86_64-4.9.2-win32-seh-rt_v3-rev1\mingw64\bin;C:\lcc\include64;C:\lcc\include;C:\lcc\lib64;C:\lcc\lib;C:\lcc\bin;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\;." />
 
           <property name="env.NUMBER_OF_PROCESSORS" value="4" />
 
@@ -415,19 +415,19 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.1 compiled on May 15 2013" />
 
-          <property name="java.class.path" value="C:\Users\Demetrios\Documents\GitHub\team18\build;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\xmlpull-1.1.3.1.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\xpp3_min-1.1.4c.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\xstream-1.4.7.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\miglayout15-swing.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\jgoodies-forms-1.8.0.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\jgoodies-common-1.8.0.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-launcher.jar;C:\Program Files\apache-ant-1.9.6\lib\ant.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit4.jar" />
+          <property name="java.class.path" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\xmlpull-1.1.3.1.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\xpp3_min-1.1.4c.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\xstream-1.4.7.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\miglayout15-swing.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\jgoodies-forms-1.8.0.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\jgoodies-common-1.8.0.jar;C:\apache-ant-1.9.1\lib\ant-launcher.jar;C:\apache-ant-1.9.1\lib\ant.jar;C:\apache-ant-1.9.1\lib\ant-junit.jar;C:\apache-ant-1.9.1\lib\ant-junit4.jar" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.PlayerClass skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.PlayerClass.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher2216501336206240691.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit2955545062384421095.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.PlayerClass filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\gitworkspace\team18\junit\TEST-test.PlayerClass.xml crashfile=C:\Users\Demetrios\Documents\gitworkspace\team18\junitvmwatcher4814400458313759317.properties propsfile=C:\Users\Demetrios\Documents\gitworkspace\team18\junit7161988120526173015.properties" />
 
           <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
 
           <property name="ant.file.type" value="file" />
 
-          <property name="env.windir" value="C:\WINDOWS" />
+          <property name="env.windir" value="C:\windows" />
 
-          <property name="env.LOGONSERVER" value="\\APERTURE" />
+          <property name="env.LOGONSERVER" value="\\MicrosoftAccount" />
 
           <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
 
@@ -437,23 +437,21 @@
 
           <property name="sun.cpu.endian" value="little" />
 
-          <property name="env.ANT_HOME" value="C:\Program Files\apache-ant-1.9.6\bin\.." />
+          <property name="env.ANT_HOME" value="C:\apache-ant-1.9.1\bin\.." />
 
           <property name="env.ProgramFiles" value="C:\Program Files" />
 
           <property name="java.io.tmpdir" value="C:\Users\DEMETR~1\AppData\Local\Temp\" />
 
-          <property name="env.PROCESSOR_REVISION" value="3a09" />
+          <property name="env.PROCESSOR_REVISION" value="4501" />
 
           <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
 
-          <property name="blddir" value="C:\Users\Demetrios\Documents\GitHub\team18\build" />
+          <property name="blddir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build" />
 
           <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
 
-          <property name="env.SystemRoot" value="C:\WINDOWS" />
-
-          <property name="env.FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer" />
+          <property name="env.SystemRoot" value="C:\windows" />
 
           <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
 
@@ -461,9 +459,9 @@
 
           <property name="os.arch" value="amd64" />
 
-          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\windows\Sun\Java\lib\ext" />
 
-          <property name="user.dir" value="C:\Users\Demetrios\Documents\GitHub\team18" />
+          <property name="user.dir" value="C:\Users\Demetrios\Documents\gitworkspace\team18" />
 
           <property name="env.LOCALAPPDATA" value="C:\Users\Demetrios\AppData\Local" />
 
@@ -473,13 +471,13 @@
 
           <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL" />
 
-          <property name="env.Path" value="C:\Program Files\apache-ant-1.9.6\bin;C:\Program Files\mingw-w64\x86_64-5.1.0-win32-seh-rt_v4-rev0\mingw64\bin;C:\Program Files\Java\jdk1.8.0_45\bin;C:\ProgramData\Oracle\Java\javapath;C:\Python27;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Calibre2\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\Git\cmd;C:\Program Files (x86)\EaseUS\Todo Backup\bin\x64\" />
+          <property name="env.Path" value="C:\apache-ant-1.9.1\bin;C:\Program Files\mingw-w64\x86_64-4.9.2-win32-seh-rt_v3-rev1\mingw64\bin;C:\lcc\include64;C:\lcc\include;C:\lcc\lib64;C:\lcc\lib;C:\lcc\bin;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\" />
 
-          <property name="basedir" value="C:\Users\Demetrios\Documents\GitHub\team18" />
+          <property name="basedir" value="C:\Users\Demetrios\Documents\gitworkspace\team18" />
 
           <property name="ant.java.version" value="1.8" />
 
-          <property name="ant.core.lib" value="C:\Program Files\apache-ant-1.9.6\lib\ant.jar" />
+          <property name="ant.core.lib" value="C:\apache-ant-1.9.1\lib\ant.jar" />
 
           <property name="env.USERNAME" value="Demetrios" />
 
@@ -487,35 +485,37 @@
 
           <property name="file.encoding" value="Cp1252" />
 
-          <property name="sun.stderr.encoding" value="cp437" />
+          <property name="sun.stderr.encoding" value="cp850" />
 
-          <property name="env.USERDOMAIN" value="Aperture" />
+          <property name="env.USERDOMAIN" value="DK_LENOVO" />
 
           <property name="java.specification.version" value="1.8" />
 
-          <property name="env.=C:" value="C:\Users\Demetrios\Documents\GitHub\team18" />
+          <property name="env.=C:" value="C:\Users\Demetrios\Documents\gitworkspace\team18" />
 
           <property name="ant.project.invoked-targets" value="test" />
+
+          <property name="env.VBOX_MSI_INSTALL_PATH" value="c:\Program Files\Oracle\VirtualBox\" />
 
           <property name="env.PROCESSOR_LEVEL" value="6" />
 
       </properties>
 
-      <testcase classname="test.PlayerClass" name="playerTestConstructor10" time="0.045" />
+      <testcase classname="test.PlayerClass" name="playerTestConstructor10" time="0.079" />
 
       <testcase classname="test.PlayerClass" name="playerTestConstructor11" time="0.0" />
 
       <testcase classname="test.PlayerClass" name="playerTestConstructor1" time="0.0" />
 
-      <testcase classname="test.PlayerClass" name="playerTestConstructor2" time="0.0" />
+      <testcase classname="test.PlayerClass" name="playerTestConstructor2" time="0.001" />
 
       <testcase classname="test.PlayerClass" name="playerTestConstructor3" time="0.0" />
 
-      <testcase classname="test.PlayerClass" name="playerTestConstructor4" time="0.001" />
+      <testcase classname="test.PlayerClass" name="playerTestConstructor4" time="0.0" />
 
       <testcase classname="test.PlayerClass" name="playerTestConstructor5" time="0.001" />
 
-      <testcase classname="test.PlayerClass" name="playerTestConstructor6" time="0.0" />
+      <testcase classname="test.PlayerClass" name="playerTestConstructor6" time="0.001" />
 
       <testcase classname="test.PlayerClass" name="playerTestConstructor7" time="0.0" />
 
@@ -528,11 +528,11 @@
       <system-err><![CDATA[]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="Aperture" id="2" name="TeamClass" package="test" skipped="0" tests="16" time="0.126" timestamp="2015-12-01T12:11:03">
+  <testsuite errors="0" failures="0" hostname="DK_Lenovo" id="2" name="TeamClass" package="test" skipped="0" tests="16" time="0.214" timestamp="2015-12-02T02:54:55">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
-          <property name="env.USERDOMAIN_ROAMINGPROFILE" value="Aperture" />
+          <property name="env.USERDOMAIN_ROAMINGPROFILE" value="DK_LENOVO" />
 
           <property name="sun.java.launcher" value="SUN_STANDARD" />
 
@@ -544,9 +544,9 @@
 
           <property name="env.FP_NO_HOST_CHECK" value="NO" />
 
-          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes" />
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes" />
 
-          <property name="env.COMPUTERNAME" value="APERTURE" />
+          <property name="env.COMPUTERNAME" value="DK_LENOVO" />
 
           <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
 
@@ -556,9 +556,9 @@
 
           <property name="java.vm.specification.vendor" value="Oracle Corporation" />
 
-          <property name="ant.home" value="C:\Program Files\apache-ant-1.9.6\bin\.." />
+          <property name="ant.home" value="C:\apache-ant-1.9.1\bin\.." />
 
-          <property name="java.runtime.version" value="1.8.0_45-b14" />
+          <property name="java.runtime.version" value="1.8.0_60-b27" />
 
           <property name="env.HOMEPATH" value="\Users\Demetrios" />
 
@@ -566,23 +566,23 @@
 
           <property name="user.language" value="en" />
 
-          <property name="ant.file.SoccerStats" value="C:\Users\Demetrios\Documents\GitHub\team18\build.xml" />
+          <property name="ant.file.SoccerStats" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build.xml" />
 
-          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\bin" />
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin" />
 
           <property name="junitdir" value="junit" />
 
           <property name="ant.project.default-target" value="compile" />
 
-          <property name="srcdir" value="C:\Users\Demetrios\Documents\GitHub\team18\src\soccer" />
+          <property name="srcdir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\src\soccer" />
 
           <property name="ant.project.name" value="SoccerStats" />
 
-          <property name="java.version" value="1.8.0_45" />
+          <property name="java.version" value="1.8.0_60" />
 
-          <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel" />
+          <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 69 Stepping 1, GenuineIntel" />
 
-          <property name="user.timezone" value="America/New_York" />
+          <property name="user.timezone" value="" />
 
           <property name="env.TEMP" value="C:\Users\DEMETR~1\AppData\Local\Temp" />
 
@@ -590,7 +590,7 @@
 
           <property name="libraries" value="lib" />
 
-          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\endorsed" />
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\endorsed" />
 
           <property name="env._JAVACMD" value="java.exe" />
 
@@ -610,9 +610,9 @@
 
           <property name="user.country" value="CA" />
 
-          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_45\jre" />
+          <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_60\jre" />
 
-          <property name="env.PSModulePath" value="C:\Users\Demetrios\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\" />
+          <property name="env.PSModulePath" value="C:\Users\Demetrios\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\windows\system32\WindowsPowerShell\v1.0\Modules\" />
 
           <property name="env.APPDATA" value="C:\Users\Demetrios\AppData\Roaming" />
 
@@ -620,13 +620,13 @@
 
           <property name="java.vm.info" value="mixed mode" />
 
-          <property name="env.ComSpec" value="C:\WINDOWS\system32\cmd.exe" />
+          <property name="env.ComSpec" value="C:\windows\system32\cmd.exe" />
 
           <property name="env.OS" value="Windows_NT" />
 
           <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files" />
 
-          <property name="ant.file" value="C:\Users\Demetrios\Documents\GitHub\team18\build.xml" />
+          <property name="ant.file" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build.xml" />
 
           <property name="os.version" value="6.3" />
 
@@ -638,9 +638,9 @@
 
           <property name="path.separator" value=";" />
 
-          <property name="jardir" value="C:\Users\Demetrios\Documents\GitHub\team18\build/jar" />
+          <property name="jardir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build/jar" />
 
-          <property name="java.vm.version" value="25.45-b02" />
+          <property name="java.vm.version" value="25.60-b23" />
 
           <property name="ant.file.type.SoccerStats" value="file" />
 
@@ -648,21 +648,21 @@
 
           <property name="env.USERPROFILE" value="C:\Users\Demetrios" />
 
-          <property name="ant.library.dir" value="C:\Program Files\apache-ant-1.9.6\lib" />
+          <property name="ant.library.dir" value="C:\apache-ant-1.9.1\lib" />
 
           <property name="junit.output.dir" value="junit" />
+
+          <property name="env.JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_60\bin" />
 
           <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
 
           <property name="env.TMP" value="C:\Users\DEMETR~1\AppData\Local\Temp" />
 
-          <property name="env.FPS_BROWSER_USER_PROFILE_STRING" value="Default" />
-
           <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
 
           <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
 
-          <property name="sun.stdout.encoding" value="cp437" />
+          <property name="sun.stdout.encoding" value="cp850" />
 
           <property name="user.script" value="" />
 
@@ -676,11 +676,11 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="classdir" value="C:\Users\Demetrios\Documents\GitHub\team18\build" />
+          <property name="classdir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build" />
 
           <property name="java.vendor.url" value="http://java.oracle.com/" />
 
-          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\apache-ant-1.9.6\bin;C:\Program Files\mingw-w64\x86_64-5.1.0-win32-seh-rt_v4-rev0\mingw64\bin;C:\Program Files\Java\jdk1.8.0_45\bin;C:\ProgramData\Oracle\Java\javapath;C:\Python27;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Calibre2\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\Git\cmd;C:\Program Files (x86)\EaseUS\Todo Backup\bin\x64\;." />
+          <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\apache-ant-1.9.1\bin;C:\Program Files\mingw-w64\x86_64-4.9.2-win32-seh-rt_v3-rev1\mingw64\bin;C:\lcc\include64;C:\lcc\include;C:\lcc\lib64;C:\lcc\lib;C:\lcc\bin;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\;." />
 
           <property name="env.NUMBER_OF_PROCESSORS" value="4" />
 
@@ -688,19 +688,19 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+          <property name="ant.version" value="Apache Ant(TM) version 1.9.1 compiled on May 15 2013" />
 
-          <property name="java.class.path" value="C:\Users\Demetrios\Documents\GitHub\team18\build;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\xmlpull-1.1.3.1.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\xpp3_min-1.1.4c.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\xstream-1.4.7.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\miglayout15-swing.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\jgoodies-forms-1.8.0.jar;C:\Users\Demetrios\Documents\GitHub\team18\lib\jgoodies-common-1.8.0.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-launcher.jar;C:\Program Files\apache-ant-1.9.6\lib\ant.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit.jar;C:\Program Files\apache-ant-1.9.6\lib\ant-junit4.jar" />
+          <property name="java.class.path" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\org.junit_4.11.0.v201303080030\junit.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\xmlpull-1.1.3.1.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\xpp3_min-1.1.4c.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\xstream-1.4.7.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\miglayout15-swing.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\jgoodies-forms-1.8.0.jar;C:\Users\Demetrios\Documents\gitworkspace\team18\lib\jgoodies-common-1.8.0.jar;C:\apache-ant-1.9.1\lib\ant-launcher.jar;C:\apache-ant-1.9.1\lib\ant.jar;C:\apache-ant-1.9.1\lib\ant-junit.jar;C:\apache-ant-1.9.1\lib\ant-junit4.jar" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.TeamClass skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\GitHub\team18\junit\TEST-test.TeamClass.xml crashfile=C:\Users\Demetrios\Documents\GitHub\team18\junitvmwatcher4895729569803308200.properties propsfile=C:\Users\Demetrios\Documents\GitHub\team18\junit1042577669111102122.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner test.TeamClass filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Demetrios\Documents\gitworkspace\team18\junit\TEST-test.TeamClass.xml crashfile=C:\Users\Demetrios\Documents\gitworkspace\team18\junitvmwatcher8714017153721971625.properties propsfile=C:\Users\Demetrios\Documents\gitworkspace\team18\junit4263736975659860495.properties" />
 
           <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
 
           <property name="ant.file.type" value="file" />
 
-          <property name="env.windir" value="C:\WINDOWS" />
+          <property name="env.windir" value="C:\windows" />
 
-          <property name="env.LOGONSERVER" value="\\APERTURE" />
+          <property name="env.LOGONSERVER" value="\\MicrosoftAccount" />
 
           <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
 
@@ -710,23 +710,21 @@
 
           <property name="sun.cpu.endian" value="little" />
 
-          <property name="env.ANT_HOME" value="C:\Program Files\apache-ant-1.9.6\bin\.." />
+          <property name="env.ANT_HOME" value="C:\apache-ant-1.9.1\bin\.." />
 
           <property name="env.ProgramFiles" value="C:\Program Files" />
 
           <property name="java.io.tmpdir" value="C:\Users\DEMETR~1\AppData\Local\Temp\" />
 
-          <property name="env.PROCESSOR_REVISION" value="3a09" />
+          <property name="env.PROCESSOR_REVISION" value="4501" />
 
           <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
 
-          <property name="blddir" value="C:\Users\Demetrios\Documents\GitHub\team18\build" />
+          <property name="blddir" value="C:\Users\Demetrios\Documents\gitworkspace\team18\build" />
 
           <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
 
-          <property name="env.SystemRoot" value="C:\WINDOWS" />
-
-          <property name="env.FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer" />
+          <property name="env.SystemRoot" value="C:\windows" />
 
           <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
 
@@ -734,9 +732,9 @@
 
           <property name="os.arch" value="amd64" />
 
-          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_60\jre\lib\ext;C:\windows\Sun\Java\lib\ext" />
 
-          <property name="user.dir" value="C:\Users\Demetrios\Documents\GitHub\team18" />
+          <property name="user.dir" value="C:\Users\Demetrios\Documents\gitworkspace\team18" />
 
           <property name="env.LOCALAPPDATA" value="C:\Users\Demetrios\AppData\Local" />
 
@@ -746,13 +744,13 @@
 
           <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL" />
 
-          <property name="env.Path" value="C:\Program Files\apache-ant-1.9.6\bin;C:\Program Files\mingw-w64\x86_64-5.1.0-win32-seh-rt_v4-rev0\mingw64\bin;C:\Program Files\Java\jdk1.8.0_45\bin;C:\ProgramData\Oracle\Java\javapath;C:\Python27;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Calibre2\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\Git\cmd;C:\Program Files (x86)\EaseUS\Todo Backup\bin\x64\" />
+          <property name="env.Path" value="C:\apache-ant-1.9.1\bin;C:\Program Files\mingw-w64\x86_64-4.9.2-win32-seh-rt_v3-rev1\mingw64\bin;C:\lcc\include64;C:\lcc\include;C:\lcc\lib64;C:\lcc\lib;C:\lcc\bin;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\" />
 
-          <property name="basedir" value="C:\Users\Demetrios\Documents\GitHub\team18" />
+          <property name="basedir" value="C:\Users\Demetrios\Documents\gitworkspace\team18" />
 
           <property name="ant.java.version" value="1.8" />
 
-          <property name="ant.core.lib" value="C:\Program Files\apache-ant-1.9.6\lib\ant.jar" />
+          <property name="ant.core.lib" value="C:\apache-ant-1.9.1\lib\ant.jar" />
 
           <property name="env.USERNAME" value="Demetrios" />
 
@@ -760,21 +758,23 @@
 
           <property name="file.encoding" value="Cp1252" />
 
-          <property name="sun.stderr.encoding" value="cp437" />
+          <property name="sun.stderr.encoding" value="cp850" />
 
-          <property name="env.USERDOMAIN" value="Aperture" />
+          <property name="env.USERDOMAIN" value="DK_LENOVO" />
 
           <property name="java.specification.version" value="1.8" />
 
-          <property name="env.=C:" value="C:\Users\Demetrios\Documents\GitHub\team18" />
+          <property name="env.=C:" value="C:\Users\Demetrios\Documents\gitworkspace\team18" />
 
           <property name="ant.project.invoked-targets" value="test" />
+
+          <property name="env.VBOX_MSI_INSTALL_PATH" value="c:\Program Files\Oracle\VirtualBox\" />
 
           <property name="env.PROCESSOR_LEVEL" value="6" />
 
       </properties>
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor1" time="0.045" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor1" time="0.08" />
 
       <testcase classname="test.TeamClass" name="teamTestConstructor2" time="0.0" />
 
@@ -790,19 +790,19 @@
 
       <testcase classname="test.TeamClass" name="teamTestConstructor9" time="0.001" />
 
-      <testcase classname="test.TeamClass" name="teamTestConstructorShotsForField" time="0.001" />
+      <testcase classname="test.TeamClass" name="teamTestConstructorShotsForField" time="0.0" />
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor10" time="0.001" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor10" time="0.0" />
 
       <testcase classname="test.TeamClass" name="teamTestConstructor11" time="0.001" />
 
       <testcase classname="test.TeamClass" name="teamTestConstructor12" time="0.0" />
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor13" time="0.0" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor13" time="0.001" />
 
       <testcase classname="test.TeamClass" name="teamTestConstructor14" time="0.0" />
 
-      <testcase classname="test.TeamClass" name="teamTestConstructor15" time="0.0" />
+      <testcase classname="test.TeamClass" name="teamTestConstructor15" time="0.001" />
 
       <testcase classname="test.TeamClass" name="teamTestConstructorShotsAgainstField" time="0.001" />
 

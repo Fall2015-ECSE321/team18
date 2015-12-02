@@ -78,7 +78,18 @@ public class ApplicationWindow extends JFrame {
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
-
+	
+	public void changePanel(ScorekeeperModeMenuPanel newPanel) {
+	    contentPane.removeAll();
+	    contentPane.add(newPanel);
+	    revalidate();
+	}
+	
+	public void changePanel(ScorekeeperLiveMatchMenuPanel newPanel) {
+	    contentPane.removeAll();
+	    contentPane.add(newPanel);
+	    revalidate();
+	}
 
 	public Season getSeason() {
 		return season;

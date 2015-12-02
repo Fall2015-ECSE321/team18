@@ -15,6 +15,8 @@ public class Demo2 {
     League L1 = new League("league");
     
     Season season = new Season("W_2015-2016", L1);
+
+
     
     // A few dummy Teams
     Team a = new Team("A");
@@ -23,6 +25,13 @@ public class Demo2 {
     Team d = new Team("D");
     Team e = new Team("E");
     Team f = new Team("F");
+
+    L1.addTeam(a);
+    L1.addTeam(b);
+    L1.addTeam(c);
+    L1.addTeam(d);
+    L1.addTeam(e);
+    L1.addTeam(f);
     
     //Populating dummy Teams with Players
     addTeamPlayers(a,"A");
@@ -37,6 +46,8 @@ public class Demo2 {
     Match match2 = new Match(season);
     Match match3 = new Match(season);
     
+    season.addMatch(match1);
+
     //Set teams participating in match1
     
     match1.setSubscribedHomeTeam(a);
@@ -128,6 +139,13 @@ public class Demo2 {
     
     match1.endMatch();
     
+
+    System.out.println(season.toString());
+    System.out.println(season.getMatches().toString());
+    System.out.println(L1.toString());
+    System.out.println(L1.getTeams().toString());
+
+    PersistenceXStream.saveToXMLwithXStream(season);
     
     
     
@@ -145,8 +163,8 @@ public class Demo2 {
   		teamX.addPlayer(goalie1);
 	  
   		for (Integer i=2; i<12; i++){
-  			String firstName = "f"+ i.toString();
-  			String lastName = "l"+ i.toString();
+  			String firstName = "f"+ playerChar + i.toString();
+  			String lastName = "l"+ playerChar + i.toString();
   			int playerNum = i;
   			Player playerX = new Player(firstName, lastName, playerNum);
   		
