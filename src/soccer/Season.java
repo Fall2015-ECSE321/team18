@@ -1,6 +1,9 @@
 package soccer;
 
 import java.util.UUID;
+
+import persistence.PersistenceXStream;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,17 +61,20 @@ public class Season {
 	 * 					the season or not.
 	 */
 	public String addMatch(Match match) {
+		System.out.println("testa");
 		if (matches.contains(match)) {
 			return "this match has already been added to the season";
 		}
 		else {
 			matches.add(match);
+			publishSeason();
 			return "this match was succesfully added to the season";
 		}
 	}
 	
 	public void publishSeason() {
 		subscribedSeasonDisplay.update(matches);
+		PersistenceXStream.saveToXMLwithXStream(this);
 	}
 
 	/** This method lists the Season's fields and their values.

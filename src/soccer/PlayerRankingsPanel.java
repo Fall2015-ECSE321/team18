@@ -70,13 +70,13 @@ public class PlayerRankingsPanel extends JPanel {
 		 rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
 		 DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
 		 leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
-		 for (int i = 1; i < 9; i++)
+		 for (int i = 2; i < 9; i++)
 		 {
 		 	table.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
 		 	table.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
 		 }
-		 table.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
 		 table.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
+		 table.getColumnModel().getColumn(1).setHeaderRenderer(leftRenderer);
 		
 		
 		

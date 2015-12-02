@@ -2,6 +2,7 @@ package soccer;
 
 import java.util.UUID;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /** This class contains all private fields related to a Match object.
@@ -20,17 +21,21 @@ public class Match {
 	private MatchResult matchResult;
 	private boolean complete;
 	private Season season;
+	private Date startTime;
 
 
 	/** Constructor method. Sets unique ID, and initializes fields.
 	 * 
 	 */
-	public 	Match(Season season) {
+	public 	Match(Season season, Team homeTeam, Team awayTeam) {
 		uniqueID = UUID.randomUUID().toString(); 
+		startTime = new Date();
 		matchEvents = new ArrayList<MatchEvent>();
 		matchResult = new MatchResult();
 		complete = false;
 		this.season = season;
+		subscribedHomeTeam = homeTeam;
+		subscribedAwayTeam = awayTeam;
 	}
 
 	// Getters and setters
@@ -47,18 +52,16 @@ public class Match {
 		return matchEvents;
 	}
 
-	public String setSubscribedHomeTeam(Team homeTeam) {
-		subscribedHomeTeam = homeTeam;
-		return "HomeTeam " + subscribedHomeTeam.getName() + " succesfully subscribed to Match.";
-	}
-
-	public String setSubscribedAwayTeam(Team awayTeam) {
-		subscribedAwayTeam = awayTeam;
-		return "AwayTeam " + subscribedAwayTeam.getName() + " succesfully subscribed to Match.";
-	}
-
 	public MatchResult getMatchResult() {
 		return matchResult;
+	}
+	
+	public boolean getComplete() {
+		return complete;
+	}
+
+	public Date getStartTime() {
+		return startTime;
 	}
 
 	/**	This method adds a ShotEvent to the MatchEvent list. Does not let
@@ -292,6 +295,7 @@ public class Match {
 	public String toString() {
 		String returnString = "\nMatch:";
 		returnString += "\nuniqueID:   \t" + uniqueID ;
+		returnString += "\nstartTime:  \t" + startTime.toString() ;
 		returnString += "\ncomplete:   \t" + complete ;
 		if (subscribedHomeTeam != null) {
 			returnString += "\nHomeTeam:   \t" + subscribedHomeTeam.getName();
@@ -311,7 +315,7 @@ public class Match {
 	}
 
 	public String[] getMatchData() {
-		String[] matchData = new String[13];
+		String[] matchData = new String[16];
 		matchData[0] = subscribedHomeTeam.getName();
 		matchData[1] = "" + matchResult.getRedCards(true);
 		matchData[2] = "" + matchResult.getYellowCards(true);
@@ -325,7 +329,21 @@ public class Match {
 		matchData[10] = "" + matchResult.getYellowCards(false);
 		matchData[11] = "" + matchResult.getRedCards(false);
 		matchData[12] = subscribedAwayTeam.getName();
+		matchData[13] = startTime.toString();
+		int hoursElapsed = (int) (((new Date()).getTime() - startTime.getTime())/1000/3600);
+		int minutesElapsed = (int) (((new Date()).getTime() - startTime.getTime())/1000/60);
+		if (complete) {
+			matchData[14] = "DONE";
+		}
+		else {
+			matchData[14] = hoursElapsed + "h " + minutesElapsed + "m";
+		}
 		return matchData;
+	}
+	
+	public String getSummary() {
+		String summary = subscribedHomeTeam.getName() + " vs " + subscribedAwayTeam.getName() + " @ " + startTime.toString();
+		return summary;
 	}
 
 }

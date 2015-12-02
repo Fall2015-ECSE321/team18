@@ -42,16 +42,12 @@ public class Demo2 {
     addTeamPlayers(f,"F");
     
     // Creating dummy Matches
-    Match match1 = new Match(season);
-    Match match2 = new Match(season);
-    Match match3 = new Match(season);
+    Match match1 = new Match(season, a, b);
+    //Match match2 = new Match(season);
+    //Match match3 = new Match(season);
     
     season.addMatch(match1);
 
-    //Set teams participating in match1
-    
-    match1.setSubscribedHomeTeam(a);
-    match1.setSubscribedAwayTeam(b);
     
     // Players participating in match1
     List<Player> teamA;

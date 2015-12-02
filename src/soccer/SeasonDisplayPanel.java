@@ -65,8 +65,7 @@ public class SeasonDisplayPanel extends JPanel {
 		
 		
 
-		table = new SeasonDisplayController().generateSeasonDataTable();
-		table.getColumnModel().getColumn(0).setPreferredWidth(200);
+		table = SeasonDisplayController.generateSeasonDataTable();
 		table.setEnabled(false);
 		table.setShowGrid(false);
 		 DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
@@ -76,7 +75,7 @@ public class SeasonDisplayPanel extends JPanel {
 		 DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
 		 centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
 		 
-		 for (int i = 0; i < 13; i++)
+		 for (int i = 0; i < 15; i++)
 		 {
 			if (i < 6) {
 				table.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
@@ -87,14 +86,19 @@ public class SeasonDisplayPanel extends JPanel {
 			 	table.getColumnModel().getColumn(i).setHeaderRenderer(leftRenderer);
 			}
 		 }
-		 table.getColumnModel().getColumn(0).setPreferredWidth(200);
+		 table.getColumnModel().getColumn(0).setPreferredWidth(100);
 		 table.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
 		 table.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
-		 table.getColumnModel().getColumn(12).setPreferredWidth(200);
+		 table.getColumnModel().getColumn(12).setPreferredWidth(100);
 		 table.getColumnModel().getColumn(12).setCellRenderer(rightRenderer);
 		 table.getColumnModel().getColumn(12).setHeaderRenderer(rightRenderer);
 		 table.getColumnModel().getColumn(6).setCellRenderer(centerRenderer);
 		 table.getColumnModel().getColumn(6).setHeaderRenderer(rightRenderer);
+		 table.getColumnModel().getColumn(13).setPreferredWidth(200);
+		 table.getColumnModel().getColumn(13).setCellRenderer(rightRenderer);
+		 table.getColumnModel().getColumn(13).setHeaderRenderer(rightRenderer);
+		 table.getColumnModel().getColumn(14).setCellRenderer(rightRenderer);
+		 table.getColumnModel().getColumn(14).setHeaderRenderer(rightRenderer);
 
 		
 		

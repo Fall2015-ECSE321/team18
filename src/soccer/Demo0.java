@@ -105,12 +105,13 @@ public class Demo0 {
    	System.out.println(p6.toString());
 
 
-
-   	Match m1 = new Match(s1);
+    System.out.println("test");
+   	Match m1 = new Match(s1, t2, t3);
+    System.out.println("testa0");
    	s1.addMatch(m1);
+    System.out.println("testa");
    	System.out.println(m1.toString());
-   	m1.setSubscribedHomeTeam(t2);
-   	m1.setSubscribedAwayTeam(t3);
+    System.out.println("testb");
    	System.out.println(m1.toString());
 
    	System.out.println("\n" + m1.addMatchEvent(se1));
