@@ -4,6 +4,13 @@ import java.util.UUID;
 import java.util.ArrayList;
 import java.util.List;
 
+/** This class contains information regarding the Team objects. Includes methods
+ * that allow the addition of players, and the application (or unapplication) 
+ * of MatchResults.
+ * 
+ * @author Team 18
+ *
+ */
 public class Team {
 
 	private String uniqueID;
@@ -23,6 +30,10 @@ public class Team {
 	private List<MatchResult> matchResultsApplied;
 	private List<Player> players;
 
+	/** Constructor method. Initializes the fields and assigns a unique ID.
+	 * 
+	 * @param name		The intended Team name.
+	 */
 	public Team(String name) {
 		this.name = name;
 
@@ -31,6 +42,7 @@ public class Team {
 		players = new ArrayList<Player>();
 	}
 
+	// getters
 	public String getUniqueID() {
 		return uniqueID;
 	}
@@ -95,6 +107,11 @@ public class Team {
 		return players;
 	}
 
+	/** This method lists all the Team object's fields and their values.
+	 * 
+	 * @see java.lang.Object#toString()
+	 * @return		Returns a String listing all the Team's fields and their values.
+	 */
 	public String toString() {
 		String returnString = "";
 		returnString += "\nTeam:               \t" + name ;
@@ -136,6 +153,12 @@ public class Team {
 		return teamStats;	
 	}
 
+	/** This method adds a new player to the Team.
+	 * 
+	 * @param newPlayer		Player that will be added to the Team.
+	 * @return				Returns a String that indicates if the Player was added
+	 * 						to the Team or not.
+	 */
 	public String addPlayer(Player newPlayer) {
 		if (players.contains(newPlayer)) {
 			return "ERROR; This player already exists on team.";
@@ -147,6 +170,12 @@ public class Team {
 	}
 
 
+	/** This method changes Team statistics based on input MatchResult.
+	 * 
+	 * @param isHomeTeam		Boolean value. Set true if home team, false if away team.
+	 * @param result			MatchResult object applying the changes to the Team objects.
+	 * @return					Returns a String indicating the update of the Team.
+	 */
 	public String applyMatchResult(boolean isHomeTeam, MatchResult result) {
 		if (matchResultsApplied.contains(result)) {
 			return "Error this match has already been applied to this team";
@@ -178,6 +207,13 @@ public class Team {
 		}
 	}
 
+	/** This method undoes changes on Team statistics caused by applyMatchResult() method.
+	 * 
+	 * @param isHomeTeam		Boolean value. Set true if home team, false if away team.
+	 * @param result			MatchResult object that applied the initial changes to
+	 * 							the Team objects.
+	 * @return					Returns a String indicating the update of the Team.
+	 */
 	public String unapplyMatchResult(boolean isHomeTeam, MatchResult result) {
 		if (matchResultsApplied.contains(result)) {
 			matchResultsApplied.remove(result);

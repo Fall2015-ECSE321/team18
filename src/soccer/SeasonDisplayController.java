@@ -11,8 +11,8 @@ import persistence.PersistenceXStream;
 public class SeasonDisplayController {
 
 
-	public JTable generateSeasonDataTable(Season season) {
-		season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+	public JTable generateSeasonDataTable() {
+		Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
 		String[][] seasonDataRows = season.getSubscribedSeasonDisplay().getSeasonData();
 
 		String seasonDataHeaders[] = { "HomeTeam",

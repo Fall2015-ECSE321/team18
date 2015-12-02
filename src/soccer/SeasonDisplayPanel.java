@@ -50,7 +50,7 @@ public class SeasonDisplayPanel extends JPanel {
 		
 		
 
-		table = new SeasonDisplayController().generateSeasonDataTable(parentFrame.getSeason());
+		table = new SeasonDisplayController().generateSeasonDataTable();
 		table.getColumnModel().getColumn(0).setPreferredWidth(200);
 		table.setEnabled(false);
 		table.setShowGrid(false);

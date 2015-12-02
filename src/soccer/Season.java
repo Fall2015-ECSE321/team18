@@ -4,6 +4,11 @@ import java.util.UUID;
 import java.util.ArrayList;
 import java.util.List;
 
+/** This class contains all information regarding a soccer season.
+ * 
+ * @author Team 18
+ *
+ */
 public class Season {
 
 	private String uniqueID;
@@ -12,6 +17,11 @@ public class Season {
 	private SeasonDisplay subscribedSeasonDisplay;
 	private List<Match> matches;
 
+	/** Constructor method. Initializes fields and assigns a unique ID.
+	 * 
+	 * @param name		The Season's name.
+	 * @param league	The League participating in this season.
+	 */
 	public Season(String name, League league) {
 		this.name = name;
 		this.league = league;
@@ -19,7 +29,8 @@ public class Season {
 		subscribedSeasonDisplay = new SeasonDisplay();
 		uniqueID = UUID.randomUUID().toString();
 	}
-
+	
+	// getters
 	public String getUniqueID() {
 		return uniqueID;
 	}
@@ -40,6 +51,12 @@ public class Season {
 		return matches;
 	}
 	
+	/** This method adds a Match object to the matches list.
+	 * 
+	 * @param match		Match object that is intended to be entered in Season.
+	 * @return			Returns String indicating whether the match was added to 
+	 * 					the season or not.
+	 */
 	public String addMatch(Match match) {
 		if (matches.contains(match)) {
 			return "this match has already been added to the season";
@@ -54,6 +71,11 @@ public class Season {
 		subscribedSeasonDisplay.update(matches);
 	}
 
+	/** This method lists the Season's fields and their values.
+	 * 
+	 * @see java.lang.Object#toString()
+	 * @return		Returns a String listing the Season's fields and their values.
+	 */
 	public String toString() {
 		String returnString = "Season";
 		returnString += "\nuniqueID:\t" + uniqueID;
