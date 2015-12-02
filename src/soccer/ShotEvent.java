@@ -1,14 +1,23 @@
 package soccer;
 
+/** This class extends a MatchEvent and describes a shot event. It has same
+ * fields as a MatchEvent as well as a subscribedGoalie and scored field.
+ * 
+ * @author Team 18
+ *
+ */
 public class ShotEvent extends MatchEvent{
 
 	private Goalie subscribedGoalie;
 	private boolean scored;
 
+	/** Constructor method. Assigns unique ID to ShotEvent. 
+	 * 
+	 */
 	public 	ShotEvent() {
 		super();
 	}
-
+	// getters and setters
 	public Goalie getSubscribedGoalie() {
 		return subscribedGoalie;
 	}
@@ -27,6 +36,12 @@ public class ShotEvent extends MatchEvent{
 		return "Scored boolean succesfully set to " + this.scored + ".";
 	}
 
+	/** This method publishes match event and indicates players to update.
+	 * 
+	 * @see soccer.MatchEvent#publishMatchEvent()
+	 * @return		Returns String indicating whether the ShotEvent was published
+	 * 				or not.
+	 */
 	public String publishMatchEvent() {
 		if (super.getSubscribedPlayer() != null && subscribedGoalie != null) {
 			super.getSubscribedPlayer().applyMatchEvent(this);
@@ -38,6 +53,11 @@ public class ShotEvent extends MatchEvent{
 		}
 	}
 
+	/** This method unpublishes match event and indicates players to update.
+	 * @see soccer.MatchEvent#unpublishMatchEvent()
+	 * 
+	 * @return 		Returns a String indicating whether or not ShotEvent was unpublished.
+	 */
 	public String unpublishMatchEvent() {
 		if (super.getSubscribedPlayer() != null && subscribedGoalie != null) {
 			super.getSubscribedPlayer().unapplyMatchEvent(this);
@@ -49,6 +69,11 @@ public class ShotEvent extends MatchEvent{
 		}
 	}
 
+	/** This method lists all the ShotEvent fields and their values.  
+	 * @see soccer.MatchEvent#toString()
+	 * @return		Returns a String listing the ShotEvent subscribedGoalie
+	 * 				and scored boolean value.
+	 */
 	public String toString() {
 		String returnString = "\nShotEvent:";
 		returnString += super.toString();
