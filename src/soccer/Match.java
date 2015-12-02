@@ -12,12 +12,14 @@ public class Match {
 	private List<MatchEvent> matchEvents;
 	private MatchResult matchResult;
 	private boolean complete;
+	private Season season;
 
-	public 	Match() {
+	public 	Match(Season season) {
 		uniqueID = UUID.randomUUID().toString(); 
 		matchEvents = new ArrayList<MatchEvent>();
 		matchResult = new MatchResult();
 		complete = false;
+		this.season = season;
 	}
 
 	public Team getSubscribedHomeTeam() {
@@ -54,10 +56,12 @@ public class Match {
 			matchEvents.add(event);
 			if (subscribedHomeTeam.getPlayers().contains(event.getSubscribedPlayer()) && subscribedAwayTeam.getPlayers().contains(event.getSubscribedGoalie())) {
 				matchResult.applyEvent(0, event);
+				season.publishSeason();
 				return "added MatchEvent";
 			}
 			else if (subscribedAwayTeam.getPlayers().contains(event.getSubscribedPlayer()) && subscribedHomeTeam.getPlayers().contains(event.getSubscribedGoalie())) {
 				matchResult.applyEvent(1, event);
+				season.publishSeason();
 				return "added MatchEvent";
 			}
 			else {
@@ -72,12 +76,15 @@ public class Match {
 		}
 		else {
 			matchEvents.add(event);
+			
 			if (subscribedHomeTeam.getPlayers().contains(event.getSubscribedPlayer())) {
 				matchResult.applyEvent(0, event);
+				season.publishSeason();
 				return "added InfractionEvent";
 			}
 			else if (subscribedAwayTeam.getPlayers().contains(event.getSubscribedPlayer())) {
 				matchResult.applyEvent(1, event);
+				season.publishSeason();
 				return "added InfractionEvent";
 			}
 			else {
@@ -91,10 +98,12 @@ public class Match {
 			matchEvents.remove(event);
 			if (subscribedHomeTeam.getPlayers().contains(event.getSubscribedPlayer()) && subscribedAwayTeam.getPlayers().contains(event.getSubscribedGoalie())) {
 				matchResult.unapplyEvent(0, event);
+				season.publishSeason();
 				return "removed ShotEvent";
 			}
 			else if (subscribedAwayTeam.getPlayers().contains(event.getSubscribedPlayer()) && subscribedHomeTeam.getPlayers().contains(event.getSubscribedGoalie())) {
 				matchResult.unapplyEvent(1, event);
+				season.publishSeason();
 				return "removed ShotEvent";
 			}
 			else {
@@ -111,10 +120,12 @@ public class Match {
 			matchEvents.remove(event);
 			if (subscribedHomeTeam.getPlayers().contains(event.getSubscribedPlayer())) {
 				matchResult.unapplyEvent(0, event);
+				season.publishSeason();
 				return "removed InfractionEvent";
 			}
 			else if (subscribedAwayTeam.getPlayers().contains(event.getSubscribedPlayer())) {
 				matchResult.unapplyEvent(1, event);
+				season.publishSeason();
 				return "removed InfractionEvent";
 			}
 			else {
@@ -133,6 +144,7 @@ public class Match {
 			publishPlayerStats();
 			//season.publishSeason();
 			//season.getLeague().publishToRankings()
+			season.publishSeason();
 			return "Match was succesfully ended";
 		}
 		else {
@@ -147,6 +159,7 @@ public class Match {
 			unpublishPlayerStats();
 			//season.publishSeason();
 			//season.getLeague().publishToRankings()
+			season.publishSeason();
 			return "Match was succesfully unended";
 		}
 		else {
@@ -211,6 +224,24 @@ public class Match {
 		returnString += "\nmatchEvents:\t" + matchEvents.size();
 		returnString += matchResult.toString();
 		return returnString;
+	}
+
+	public String[] getMatchData() {
+		String[] matchData = new String[13];
+		matchData[0] = subscribedHomeTeam.getName();
+		matchData[1] = "" + matchResult.getRedCards(true);
+		matchData[2] = "" + matchResult.getYellowCards(true);
+		matchData[3] = "" + matchResult.getPenaltyKicks(true);
+		matchData[4] = "" + matchResult.getShots(true);
+		matchData[5] = "" + matchResult.getPoints(true);
+		matchData[6] = "vs";
+		matchData[7] = "" + matchResult.getPoints(false);
+		matchData[8] = "" + matchResult.getShots(false);
+		matchData[9] = "" + matchResult.getPenaltyKicks(false);
+		matchData[10] = "" + matchResult.getYellowCards(false);
+		matchData[11] = "" + matchResult.getRedCards(false);
+		matchData[12] = subscribedAwayTeam.getName();
+		return matchData;
 	}
 
 }

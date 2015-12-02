@@ -106,7 +106,7 @@ public class Demo0 {
 
 
 
-   	Match m1 = new Match();
+   	Match m1 = new Match(s1);
    	s1.addMatch(m1);
    	System.out.println(m1.toString());
    	m1.setSubscribedHomeTeam(t2);

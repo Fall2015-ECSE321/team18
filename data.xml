@@ -1,12 +1,12 @@
 <soccer.Season id="1">
-  <uniqueID>faf8fc35-a209-4793-9c18-3ba420f244b4</uniqueID>
+  <uniqueID>d9169a24-bd94-47a7-83d1-7f0e7925eb63</uniqueID>
   <name>2015</name>
   <league id="2">
-    <uniqueID>afd91934-9d65-410b-a6cf-c09f260e445d</uniqueID>
+    <uniqueID>f177bc25-55e9-4fd0-b93f-bf0aca415908</uniqueID>
     <name>BigLeagues</name>
     <teams id="3">
       <soccer.Team id="4">
-        <uniqueID>1660cb3e-acf4-4bf3-b8ad-a1c35664d03a</uniqueID>
+        <uniqueID>fadb5879-8191-413f-be1c-dbada3078515</uniqueID>
         <name>Habs</name>
         <gamesPlayed>0</gamesPlayed>
         <points>0</points>
@@ -23,7 +23,7 @@
         <matchResultsApplied id="5"/>
         <players id="6">
           <soccer.Player id="7">
-            <uniqueID>a418775a-b461-4c1e-90cd-c36888caf366</uniqueID>
+            <uniqueID>8152b398-8761-4e5f-8233-f824940c3121</uniqueID>
             <firstName>Ricky1</firstName>
             <lastName>Bobby1</lastName>
             <number>1</number>
@@ -36,7 +36,7 @@
             <matchEventsApplied id="8"/>
           </soccer.Player>
           <soccer.Player id="9">
-            <uniqueID>39874204-ea8d-4e35-ba52-696d4f542483</uniqueID>
+            <uniqueID>ae3b98ee-80af-4168-9c55-e92e462fc668</uniqueID>
             <firstName>Ricky2</firstName>
             <lastName>Bobby2</lastName>
             <number>2</number>
@@ -49,7 +49,7 @@
             <matchEventsApplied id="10"/>
           </soccer.Player>
           <soccer.Player id="11">
-            <uniqueID>f7115f30-19e6-4d1d-badb-dff9c0bd57dd</uniqueID>
+            <uniqueID>479ee319-1ed3-4fc6-9373-f71fd4cd2059</uniqueID>
             <firstName>Ricky3</firstName>
             <lastName>Bobby3</lastName>
             <number>3</number>
@@ -62,7 +62,7 @@
             <matchEventsApplied id="12"/>
           </soccer.Player>
           <soccer.Player id="13">
-            <uniqueID>3e01a20a-e730-44fe-af20-658bb9aa3b27</uniqueID>
+            <uniqueID>435ee19a-a151-4872-ba3a-994aabae3c9f</uniqueID>
             <firstName>Ricky4</firstName>
             <lastName>Bobby4</lastName>
             <number>4</number>
@@ -75,7 +75,7 @@
             <matchEventsApplied id="14"/>
           </soccer.Player>
           <soccer.Goalie id="15">
-            <uniqueID>b7107bd9-88b4-4ee5-887c-b84d16088e42</uniqueID>
+            <uniqueID>29a3d737-501f-4664-838e-43cf5f80b63c</uniqueID>
             <firstName>Ricky5</firstName>
             <lastName>Bobby5</lastName>
             <number>5</number>
@@ -87,10 +87,10 @@
             <penaltyKicks>1</penaltyKicks>
             <matchEventsApplied id="16">
               <soccer.ShotEvent id="17">
-                <uniqueID>41de122a-b7e0-4d78-afaf-e241fec66bc7</uniqueID>
+                <uniqueID>b7360de2-9a6b-4ae9-a4fc-59c3b7fcc322</uniqueID>
                 <subscribedPlayer class="soccer.Goalie" reference="15"/>
                 <subscribedGoalie id="18">
-                  <uniqueID>e1f98a27-3958-41d3-a961-422007e9249f</uniqueID>
+                  <uniqueID>15f048b5-1254-44e6-8331-7a6a2b6f0545</uniqueID>
                   <firstName>Ricky6</firstName>
                   <lastName>Bobby6</lastName>
                   <number>6</number>
@@ -109,7 +109,7 @@
                 <scored>true</scored>
               </soccer.ShotEvent>
               <soccer.InfractionEvent id="20">
-                <uniqueID>83e43437-d3dc-4575-ac00-af627ca4c51d</uniqueID>
+                <uniqueID>03aabf31-3e29-4560-9749-ca2dce0ba638</uniqueID>
                 <subscribedPlayer class="soccer.Goalie" reference="15"/>
                 <redCard>true</redCard>
                 <yellowCard>true</yellowCard>
@@ -122,7 +122,7 @@
         </players>
       </soccer.Team>
       <soccer.Team id="21">
-        <uniqueID>23887ea7-87d0-44ba-920e-5eb2f861ff34</uniqueID>
+        <uniqueID>100876c8-a2a4-4254-9da7-d4ee8b96ab51</uniqueID>
         <name>Habs2</name>
         <gamesPlayed>1</gamesPlayed>
         <points>3</points>
@@ -138,7 +138,7 @@
         <penaltyKicks>1</penaltyKicks>
         <matchResultsApplied id="22">
           <soccer.MatchResult id="23">
-            <uniqueID>17b6a548-7de7-4e4a-8e35-f4547a9c0001</uniqueID>
+            <uniqueID>c1b67d9c-e6ea-40f9-badb-37a4e2d49f2f</uniqueID>
             <homePoints>1</homePoints>
             <homeShots>1</homeShots>
             <homeYellowCards>1</homeYellowCards>
@@ -158,7 +158,7 @@
         </players>
       </soccer.Team>
       <soccer.Team id="25">
-        <uniqueID>c715639f-3f07-40ff-ba5a-c5c9de9dec9b</uniqueID>
+        <uniqueID>5b2bc1a6-ca25-4975-a61d-23bd670eb52a</uniqueID>
         <name>Habs3</name>
         <gamesPlayed>1</gamesPlayed>
         <points>0</points>
@@ -184,20 +184,37 @@
     </teams>
   </league>
   <subscribedSeasonDisplay id="28">
-    <uniqueID>61f13100-daf4-429d-a630-3cca97ca215b</uniqueID>
-    <matches id="29"/>
+    <uniqueID>02f244a3-675b-42d0-9e7a-a99893f119cb</uniqueID>
+    <seasonData id="29">
+      <string-array id="30">
+        <string>Habs2</string>
+        <string>1</string>
+        <string>1</string>
+        <string>1</string>
+        <string>1</string>
+        <string>1</string>
+        <string>vs</string>
+        <string>0</string>
+        <string>0</string>
+        <string>0</string>
+        <string>0</string>
+        <string>0</string>
+        <string>Habs3</string>
+      </string-array>
+    </seasonData>
   </subscribedSeasonDisplay>
-  <matches id="30">
-    <soccer.Match id="31">
-      <uniqueID>1a4ce2e9-8006-40c4-9978-6bc3b054566e</uniqueID>
+  <matches id="31">
+    <soccer.Match id="32">
+      <uniqueID>1e9bbcb3-e445-4234-9dad-84e94d47ba55</uniqueID>
       <subscribedHomeTeam reference="21"/>
       <subscribedAwayTeam reference="25"/>
-      <matchEvents id="32">
+      <matchEvents id="33">
         <soccer.ShotEvent reference="17"/>
         <soccer.InfractionEvent reference="20"/>
       </matchEvents>
       <matchResult reference="23"/>
       <complete>true</complete>
+      <season reference="1"/>
     </soccer.Match>
   </matches>
 </soccer.Season>

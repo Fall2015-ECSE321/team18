@@ -72,6 +72,12 @@ public class ApplicationWindow extends JFrame {
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
+	
+	public void changePanel(SeasonDisplayPanel newPanel) {
+	    contentPane.removeAll();
+	    contentPane.add(newPanel);
+	    revalidate();
+	}
 
 
 	public Season getSeason() {

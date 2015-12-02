@@ -34,6 +34,12 @@ public class ViewModeMenuPanel extends JPanel {
 		add(button0, "cell 1 0,grow");
 		
 		JButton button1 = new JButton("Season Display");
+		button1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SeasonDisplayPanel newPanel = new SeasonDisplayPanel(parentFrame);
+				parentFrame.changePanel(newPanel);
+			}
+		});
 		add(button1, "cell 1 2,grow");
 		
 		JButton button2 = new JButton("Team Rankings");
@@ -57,14 +63,7 @@ public class ViewModeMenuPanel extends JPanel {
 	}
 
 	
-//	@Override
-//	 protected void paintComponent(Graphics g) {
-//		ImageIcon bgImage = new ImageIcon(ImagePanel.class.getResource("/soccer/soccer-stadium-11840.jpg"));
-//		Image background = Toolkit.getDefaultToolkit().createImage("/soccer/soccer-stadium-11840.jpg");
-//	    super.paintComponent(g);
-//	        //g.drawImage(bgImage.getImage(), 0, 0, null);
-//	    g.drawImage(background, 0, 0, null);
-//	}
+
 	@Override
 	  protected void paintComponent(Graphics g) {
 

@@ -16,7 +16,7 @@ public class Season {
 		this.name = name;
 		this.league = league;
 		matches = new ArrayList<Match>();
-		subscribedSeasonDisplay = new SeasonDisplay(matches);
+		subscribedSeasonDisplay = new SeasonDisplay();
 		uniqueID = UUID.randomUUID().toString();
 	}
 
@@ -48,6 +48,10 @@ public class Season {
 			matches.add(match);
 			return "this match was succesfully added to the season";
 		}
+	}
+	
+	public void publishSeason() {
+		subscribedSeasonDisplay.update(matches);
 	}
 
 	public String toString() {
