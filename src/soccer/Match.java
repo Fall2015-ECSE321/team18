@@ -185,9 +185,8 @@ public class Match {
 			complete = true;
 			publishTeamStats();
 			publishPlayerStats();
-			//season.publishSeason();
-			//season.getLeague().publishToRankings()
 			season.publishSeason();
+			//season.getLeague().publishToRankings()
 			return "Match was succesfully ended";
 		}
 		else {

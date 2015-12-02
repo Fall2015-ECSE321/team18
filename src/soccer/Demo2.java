@@ -19,12 +19,12 @@ public class Demo2 {
 
     
     // A few dummy Teams
-    Team a = new Team("A");
-    Team b = new Team("B");
-    Team c = new Team("C");
-    Team d = new Team("D");
-    Team e = new Team("E");
-    Team f = new Team("F");
+    Team a = new Team("TeamA");
+    Team b = new Team("TeamB");
+    Team c = new Team("TeamC");
+    Team d = new Team("TeamD");
+    Team e = new Team("TeamE");
+    Team f = new Team("TeamF");
 
     L1.addTeam(a);
     L1.addTeam(b);
@@ -152,15 +152,15 @@ public class Demo2 {
   	// adds 2 goalies and 10 players to specified team
   	private static void addTeamPlayers(Team teamX, String playerChar){
   		
-  		Goalie goalie0 = new Goalie("f"+playerChar+"0","l"+playerChar+"0", 0);
-  		Goalie goalie1 = new Goalie("f"+playerChar+"1","l"+playerChar+"1", 1);
+  		Goalie goalie0 = new Goalie("Ricky"+playerChar+"0","Bobby"+playerChar+"0", 0);
+  		Goalie goalie1 = new Goalie("Ricky"+playerChar+"1","Bobby"+playerChar+"1", 1);
   		
   		teamX.addPlayer(goalie0);
   		teamX.addPlayer(goalie1);
 	  
   		for (Integer i=2; i<12; i++){
-  			String firstName = "f"+ playerChar + i.toString();
-  			String lastName = "l"+ playerChar + i.toString();
+  			String firstName = "Ricky"+ playerChar + i.toString();
+  			String lastName = "Bobby"+ playerChar + i.toString();
   			int playerNum = i;
   			Player playerX = new Player(firstName, lastName, playerNum);
   		

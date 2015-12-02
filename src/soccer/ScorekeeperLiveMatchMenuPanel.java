@@ -76,12 +76,14 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 		btnLiveScorekeeping.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Team homeTeam = (Team)comboBox1.getSelectedItem();
+				homeTeam = LiveInputController.getTeam(homeTeam, parentFrame.getSeason());
 				Team awayTeam = (Team)comboBox2.getSelectedItem();
-				if (homeTeam.getUniqueID() == awayTeam.getUniqueID()) {
+				awayTeam = LiveInputController.getTeam(awayTeam, parentFrame.getSeason());
+				if (homeTeam == awayTeam) {
 					JOptionPane.showMessageDialog(parentFrame, "Error: Home and Away Teams must be different!");
 				}
 				else {
-					Match newMatch = LiveInputController.newMatch(homeTeam, awayTeam);
+					Match newMatch = LiveInputController.newMatch(homeTeam, awayTeam, parentFrame.getSeason());
 					LiveInputPanel newPanel = new LiveInputPanel(parentFrame, newMatch);
 					parentFrame.changePanel(newPanel);
 				}

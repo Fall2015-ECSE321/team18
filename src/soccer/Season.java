@@ -73,7 +73,10 @@ public class Season {
 	}
 	
 	public void publishSeason() {
+		
 		subscribedSeasonDisplay.update(matches);
+		//System.out.println(league.toString());
+		//System.out.println(league.getTeams().toString());
 		PersistenceXStream.saveToXMLwithXStream(this);
 	}
 

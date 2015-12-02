@@ -33,13 +33,14 @@ public class LiveInputController {
 	// }
 
 
-	public static Match newMatch(Team homeTeam, Team awayTeam) {
-		Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+	public static Match newMatch(Team homeTeam, Team awayTeam, Season season) {
+		//Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+		//League league
 		System.out.println(season.getMatches().toString());
 		Match newMatch = new Match(season, homeTeam, awayTeam);
 		season.addMatch(newMatch);
 		System.out.println(season.getMatches().toString());
-		//PersistenceXStream.saveToXMLwithXStream(season);
+		PersistenceXStream.saveToXMLwithXStream(season);
 		return newMatch;
 		
 	}
@@ -75,5 +76,34 @@ public class LiveInputController {
 		liveMatch.endMatch();
 	}
 	
+	public static Player[] getPlayersArray(Team homeTeam) {
+		List<Player> players = homeTeam.getPlayers();
+		return players.toArray(new Player[players.size()]);
+	}
+	
+	public static Team getTeam(Team selectedTeam, Season season) {
+		List<Team> teams = season.getLeague().getTeams();
+		int count = 0;
+		for (Team team : teams) {
+			if (team.getUniqueID() == selectedTeam.getUniqueID()) {
+				return team;
+			}
+			count++;
+		}
+		return selectedTeam;
+	}
+
+	public static Player[] getGoaliesArray(Team homeTeam) {
+		List<Player> players = homeTeam.getPlayers();
+		List<Goalie> goalies = new ArrayList<Goalie>();
+		int count = 0;
+		for (Player player : players) {
+			if (player instanceof Goalie) {
+				goalies.add((Goalie)player);
+			}
+			count++;
+		}
+		return goalies.toArray(new Goalie[goalies.size()]);
+	}
 }
 

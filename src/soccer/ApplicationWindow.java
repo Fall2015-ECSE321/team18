@@ -119,10 +119,10 @@ public class ApplicationWindow extends JFrame {
 		
 		//testing 
 		League l = season.getLeague();
-		System.out.println(season.toString());
-		System.out.println(season.getMatches().toString());
-		System.out.println(l.toString());
-		System.out.println(l.getTeams().toString());
+//		System.out.println(season.toString());
+//		System.out.println(season.getMatches().toString());
+//		System.out.println(l.toString());
+//		System.out.println(l.getTeams().toString());
 		
 		
 		HomeMenuPanel homeMenuPanel = new HomeMenuPanel(this);

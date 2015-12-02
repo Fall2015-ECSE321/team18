@@ -6,10 +6,13 @@ import java.util.List;
 
 import javax.swing.JTable;
 
+import persistence.PersistenceXStream;
+
 public class PlayerRankingsController {
 
 
-	public JTable generateRankingsDataTable(Season season) {
+	public JTable generateRankingsDataTable() {
+		Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
 		List<Team> teams = season.getLeague().getTeams();
 		List<Player> players = new ArrayList<Player>();
 		for (Team team : teams) {

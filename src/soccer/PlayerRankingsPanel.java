@@ -62,7 +62,7 @@ public class PlayerRankingsPanel extends JPanel {
 		
 		
 
-		table = new PlayerRankingsController().generateRankingsDataTable(parentFrame.getSeason());
+		table = new PlayerRankingsController().generateRankingsDataTable();
 		//table.getColumnModel().getColumn(0).setPreferredWidth(200);
 		table.setEnabled(false);
 		table.setShowGrid(false);
