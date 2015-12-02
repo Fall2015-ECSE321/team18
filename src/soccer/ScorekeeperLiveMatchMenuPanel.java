@@ -81,7 +81,9 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 					JOptionPane.showMessageDialog(parentFrame, "Error: Home and Away Teams must be different!");
 				}
 				else {
-					LiveInputController.newMatch(homeTeam, awayTeam);
+					Match newMatch = LiveInputController.newMatch(homeTeam, awayTeam);
+					LiveInputPanel newPanel = new LiveInputPanel(parentFrame, newMatch);
+					parentFrame.changePanel(newPanel);
 				}
 			}
 		});
@@ -93,23 +95,34 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 		JLabel lblSelectMatch = new JLabel("Select Live Match");
 		lblSelectMatch.setForeground(SystemColor.text);
 		add(lblSelectMatch, "flowx,cell 1 6");
+		Match[] liveMatchesArray = LiveInputController.getLiveMatchesArray();
+		System.out.println(liveMatchesArray);
+		JComboBox comboBox3 = new JComboBox(new DefaultComboBoxModel(liveMatchesArray));
+		if (liveMatchesArray.length > 0) {
+			
+			comboBox3.setRenderer(new DefaultListCellRenderer() {
+			    @Override
+			    public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+			        Match match = (Match)value;
+			        value = match.getSummary();
+			        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+			    }
+			});
+			add(comboBox3, "cell 1 6,growx");
+		}
 		
-		JComboBox comboBox3 = new JComboBox(new DefaultComboBoxModel(LiveInputController.getLiveMatchesArray()));
-		comboBox3.setRenderer(new DefaultListCellRenderer() {
-		    @Override
-		    public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-		        Match match = (Match)value;
-		        value = match.getSummary();
-		        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-		    }
-		});
-		add(comboBox3, "cell 1 6,growx");
 		
 		JButton btnLoadLiveMatch = new JButton("Load live match!");
 		btnLoadLiveMatch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Match liveMatch = (Match)comboBox3.getSelectedItem();
-				LiveInputController.endMatch(liveMatch);
+				if (liveMatchesArray.length > 0) {
+					Match liveMatch = (Match)comboBox3.getSelectedItem();
+					LiveInputPanel newPanel = new LiveInputPanel(parentFrame, liveMatch);
+					parentFrame.changePanel(newPanel);
+				}
+				else {
+					JOptionPane.showMessageDialog(parentFrame, "Error: There are no current Live Matches!");
+				}
 			}
 		});
 		add(btnLoadLiveMatch, "cell 1 7,grow");

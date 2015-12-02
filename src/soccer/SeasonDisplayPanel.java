@@ -105,7 +105,7 @@ public class SeasonDisplayPanel extends JPanel {
 		
 
 		JScrollPane scrollPane = new JScrollPane(table,
-		        JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
+		        JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, 
 		        JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 	    add(scrollPane, "cell 0 2 3 1,grow");
 

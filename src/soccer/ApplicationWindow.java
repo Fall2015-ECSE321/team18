@@ -90,6 +90,12 @@ public class ApplicationWindow extends JFrame {
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
+	
+	public void changePanel(LiveInputPanel newPanel) {
+	    contentPane.removeAll();
+	    contentPane.add(newPanel);
+	    revalidate();
+	}
 
 	public Season getSeason() {
 		return season;
@@ -100,7 +106,7 @@ public class ApplicationWindow extends JFrame {
 	 */
 	public ApplicationWindow() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 600, 800);
+		setBounds(100, 100, 660, 800);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

@@ -74,5 +74,6 @@ public class LiveInputController {
 	public static void endMatch(Match liveMatch) {
 		liveMatch.endMatch();
 	}
+	
 }
 
