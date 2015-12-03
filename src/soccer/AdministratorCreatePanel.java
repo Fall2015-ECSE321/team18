@@ -28,6 +28,8 @@ import javax.swing.ComboBoxModel;
 import java.awt.Color;
 
 import javax.swing.JTextField;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
 
 public class AdministratorCreatePanel extends JPanel {
 
@@ -36,16 +38,15 @@ public class AdministratorCreatePanel extends JPanel {
 	private JTextField textFieldP1;
 	private JTextField textField_2;
 	private JTextField textFieldT2;
-	private JTextField comboBoxT1;
 	private JTextField textFieldT3;
-	private JTextField textFieldT4;
+	private JTextField textFieldT1;
 	/**
 	 * Create the panel.
 	 */
 	public AdministratorCreatePanel(ApplicationWindow parentFrame) {
 		this.parentFrame = parentFrame;
 		setOpaque(false);
-		setLayout(new MigLayout("", "[100.00px,grow,left][][278.00,grow,center][100.00,grow,right]", "[35.00][82.00px,grow][][][][][][60][60][][][][][65.00][60][60][60][97.00,grow]"));
+		setLayout(new MigLayout("", "[100.00px,grow,left][][278.00,grow,center][100.00,grow,right]", "[35.00][82.00px,grow][][][][][60][60][60][][][][][65.00][60][60][60][97.00,grow]"));
 		
 		JButton button0 = new JButton("Return to Home Screen");
 		button0.addActionListener(new ActionListener() {
@@ -76,25 +77,46 @@ public class AdministratorCreatePanel extends JPanel {
 		JLabel labelP3 = new JLabel("Number");
 		labelP3.setForeground(Color.WHITE);
 		add(labelP3, "flowx,cell 2 4");
-		JComboBox comboBoxP3 = new JComboBox();
-		add(comboBoxP3, "cell 2 4,growx");
-		
-		
-		JLabel labelP4 = new JLabel("Type");
-		labelP4.setForeground(Color.WHITE);
-		add(labelP4, "flowx,cell 2 5,alignx right,aligny bottom");
-		JComboBox comboBoxP4 = new JComboBox();
-		add(comboBoxP4, "cell 2 5,growx");
+		JSpinner spinnerP3 = new JSpinner();
+		add(spinnerP3, "cell 2 4,growx");
 		
 		
 		JLabel labelP5 = new JLabel("Team");
 		labelP5.setForeground(SystemColor.text);
-		add(labelP5, "flowx,cell 2 6");
+		add(labelP5, "flowx,cell 2 5");
 		JComboBox comboBoxP5 = new JComboBox();
-		add(comboBoxP5, "cell 2 6,growx");
+		add(comboBoxP5, "cell 2 5,growx");
 		
 		
-		JButton buttonP = new JButton("Add new Player/Goalie to Team");
+		JButton buttonB = new JButton("Add new Player to Team");
+		buttonB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String playerFirstName = textFieldP1.getText();
+				String playerLastName = textFieldP2.getText();
+				int playerNumber = (Integer) spinnerP3.getValue();
+				Goalie newPlayer = new Goalie(playerFirstName, playerLastName, playerNumber);
+				
+				AdministratorCreateController.createPlayer(parentFrame.getSeason(), newPlayer, Team);
+				AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
+				parentFrame.changePanel(newPanel);
+			}
+		});
+		add(buttonB, "cell 2 6,grow");
+
+		
+		JButton buttonP = new JButton("Add new Goalie to Team");
+		buttonP.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String goalieFirstName = textFieldP1.getText();
+				String goalieLastName = textFieldP2.getText();
+				int goalieNumber = (Integer) spinnerP3.getValue();
+				Goalie newGoalie = new Goalie(goalieFirstName, goalieLastName, goalieNumber);
+				
+				AdministratorCreateController.createGoalie(parentFrame.getSeason(), newGoalie, Team);
+				AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
+				parentFrame.changePanel(newPanel);
+			}
+		});
 		add(buttonP, "cell 2 7,grow");
 		
 		
@@ -103,9 +125,9 @@ public class AdministratorCreatePanel extends JPanel {
 		JLabel labelT1 = new JLabel("Team Name");
 		labelT1.setForeground(Color.WHITE);
 		add(labelT1, "flowx,cell 2 9");
-		comboBoxT1 = new JTextField();
-		comboBoxT1.setColumns(10);
-		add(comboBoxT1, "cell 2 9,growx");
+		textFieldT1 = new JTextField();
+		textFieldT1.setColumns(10);
+		add(textFieldT1, "cell 2 9,growx");
 
 		
 		JLabel labelT2 = new JLabel("Goalie First Name");
@@ -127,19 +149,32 @@ public class AdministratorCreatePanel extends JPanel {
 		JLabel labelT4 = new JLabel("Goalie Number");
 		labelT4.setForeground(Color.WHITE);
 		add(labelT4, "flowx,cell 2 12");
-
-		textFieldT4 = new JTextField();
-		textFieldT4.setColumns(10);
-		add(textFieldT4, "cell 2 12,growx");
+		JSpinner spinnerT4 = new JSpinner();
+		spinnerT4.setModel(new SpinnerNumberModel(0, 0, 99, 1));
+		add(spinnerT4, "cell 2 12,growx");
 		
 		
 		JButton buttonT = new JButton("Create Team with new Goalie");
 		buttonT.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//Goalie newGoalie = new Goalie()
+				String teamName = textFieldT1.getText();
+				String goalieFirstName = textFieldT2.getText();
+				String goalieLastName = textFieldT3.getText();
+				int goalieNumber = (Integer) spinnerT4.getValue();
+				Goalie newGoalie = new Goalie(goalieFirstName, goalieLastName, goalieNumber);
+				Team newTeam = new Team(teamName);
+				AdministratorCreateController.createTeam(parentFrame.getSeason(), newGoalie, newTeam);
+				AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
+				parentFrame.changePanel(newPanel);
 			}
 		});
 		add(buttonT, "cell 2 13,grow");
+		
+		
+		
+		
+		
+		
 		
 		
 

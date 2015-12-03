@@ -13,9 +13,6 @@ import javax.swing.table.DefaultTableCellRenderer;
 import persistence.PersistenceXStream;
 
 public class SeasonDisplayController {
-//	Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
-//	season.publishSeason();
-//	PersistenceXStream.saveToXMLwithXStream(season);
 
 	public static String[][] getSeasonDataRows(Season season) {
 		String[][] seasonDataRows = season.getSubscribedSeasonDisplay().getSeasonData();
