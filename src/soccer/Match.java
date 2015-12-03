@@ -330,7 +330,7 @@ public class Match {
 		matchData[12] = subscribedAwayTeam.getName();
 		matchData[13] = startTime.toString();
 		int hoursElapsed = (int) (((new Date()).getTime() - startTime.getTime())/1000/3600);
-		int minutesElapsed = (int) (((new Date()).getTime() - startTime.getTime())/1000/60);
+		int minutesElapsed = (int) (((new Date()).getTime() - startTime.getTime())/1000%60);
 		if (complete) {
 			matchData[14] = "DONE";
 		}

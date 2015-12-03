@@ -8,235 +8,251 @@
       <soccer.Team id="4">
         <uniqueID>b04ddb39-a97a-4d26-b692-5dd2780d3626</uniqueID>
         <name>TeamA</name>
-        <gamesPlayed>0</gamesPlayed>
-        <points>0</points>
+        <gamesPlayed>2</gamesPlayed>
+        <points>2</points>
         <wins>0</wins>
         <losses>0</losses>
-        <draws>0</draws>
-        <shotsFor>0</shotsFor>
-        <shotsAgainst>0</shotsAgainst>
-        <goalsFor>0</goalsFor>
-        <goalsAgainst>0</goalsAgainst>
+        <draws>2</draws>
+        <shotsFor>2</shotsFor>
+        <shotsAgainst>2</shotsAgainst>
+        <goalsFor>2</goalsFor>
+        <goalsAgainst>2</goalsAgainst>
         <yellowCards>0</yellowCards>
-        <redCards>0</redCards>
+        <redCards>1</redCards>
         <penaltyKicks>0</penaltyKicks>
-        <matchResultsApplied id="5"/>
-        <players id="6">
-          <soccer.Goalie id="7">
+        <matchResultsApplied id="5">
+          <soccer.MatchResult id="6">
+            <uniqueID>ff52c449-3f3e-41da-94ed-738c6210a6c6</uniqueID>
+            <homePoints>2</homePoints>
+            <homeShots>2</homeShots>
+            <homeYellowCards>0</homeYellowCards>
+            <homeRedCards>1</homeRedCards>
+            <homePenaltyKicks>0</homePenaltyKicks>
+            <awayPoints>2</awayPoints>
+            <awayShots>2</awayShots>
+            <awayYellowCards>0</awayYellowCards>
+            <awayRedCards>0</awayRedCards>
+            <awayPenaltyKicks>0</awayPenaltyKicks>
+          </soccer.MatchResult>
+          <soccer.MatchResult id="7">
+            <uniqueID>ef589eb6-9ae1-45a3-b43e-1b9dc770e2ec</uniqueID>
+            <homePoints>0</homePoints>
+            <homeShots>0</homeShots>
+            <homeYellowCards>0</homeYellowCards>
+            <homeRedCards>0</homeRedCards>
+            <homePenaltyKicks>0</homePenaltyKicks>
+            <awayPoints>0</awayPoints>
+            <awayShots>0</awayShots>
+            <awayYellowCards>0</awayYellowCards>
+            <awayRedCards>0</awayRedCards>
+            <awayPenaltyKicks>0</awayPenaltyKicks>
+          </soccer.MatchResult>
+        </matchResultsApplied>
+        <players id="8">
+          <soccer.Goalie id="9">
             <uniqueID>bba7a132-0bd9-47c5-9a51-63331528332d</uniqueID>
             <firstName>RickyA0</firstName>
             <lastName>BobbyA0</lastName>
             <number>0</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
+            <gamesPlayed>2</gamesPlayed>
+            <shots>2</shots>
+            <goals>2</goals>
+            <redCards>1</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="8"/>
+            <matchEventsApplied id="10">
+              <soccer.ShotEvent id="11">
+                <uniqueID>026a2b2e-9d80-4eeb-aeb0-9e9482087541</uniqueID>
+                <subscribedPlayer class="soccer.Goalie" id="12">
+                  <uniqueID>54840973-2db3-4e3b-96c5-eab19117789e</uniqueID>
+                  <firstName>RickyC0</firstName>
+                  <lastName>BobbyC0</lastName>
+                  <number>0</number>
+                  <gamesPlayed>1</gamesPlayed>
+                  <shots>2</shots>
+                  <goals>2</goals>
+                  <redCards>0</redCards>
+                  <yellowCards>0</yellowCards>
+                  <penaltyKicks>0</penaltyKicks>
+                  <matchEventsApplied id="13">
+                    <soccer.ShotEvent reference="11"/>
+                    <soccer.ShotEvent id="14">
+                      <uniqueID>04c1e439-e295-4833-9036-21cc3b408a03</uniqueID>
+                      <subscribedPlayer class="soccer.Goalie" reference="12"/>
+                      <subscribedGoalie reference="9"/>
+                      <scored>true</scored>
+                    </soccer.ShotEvent>
+                    <soccer.ShotEvent id="15">
+                      <uniqueID>75647f70-0eb3-40bd-8928-b4698f7e2ae6</uniqueID>
+                      <subscribedPlayer class="soccer.Goalie" reference="9"/>
+                      <subscribedGoalie reference="12"/>
+                      <scored>true</scored>
+                    </soccer.ShotEvent>
+                    <soccer.ShotEvent id="16">
+                      <uniqueID>e61d0030-4eb7-4b86-ac84-d34d0981d350</uniqueID>
+                      <subscribedPlayer class="soccer.Goalie" reference="9"/>
+                      <subscribedGoalie reference="12"/>
+                      <scored>true</scored>
+                    </soccer.ShotEvent>
+                  </matchEventsApplied>
+                  <saves>0</saves>
+                  <goalsAllowed>2</goalsAllowed>
+                </subscribedPlayer>
+                <subscribedGoalie reference="9"/>
+                <scored>true</scored>
+              </soccer.ShotEvent>
+              <soccer.ShotEvent reference="14"/>
+              <soccer.ShotEvent reference="15"/>
+              <soccer.ShotEvent reference="16"/>
+              <soccer.InfractionEvent id="17">
+                <uniqueID>87dac63e-9fb0-4fa2-91fc-2e4a184909e6</uniqueID>
+                <subscribedPlayer class="soccer.Goalie" reference="9"/>
+                <redCard>true</redCard>
+                <yellowCard>false</yellowCard>
+                <penaltyKick>false</penaltyKick>
+              </soccer.InfractionEvent>
+            </matchEventsApplied>
             <saves>0</saves>
-            <goalsAllowed>0</goalsAllowed>
+            <goalsAllowed>2</goalsAllowed>
           </soccer.Goalie>
-          <soccer.Goalie id="9">
+          <soccer.Goalie id="18">
             <uniqueID>4266abdd-ff17-4f1d-89d7-b6bb6923b851</uniqueID>
             <firstName>RickyA1</firstName>
             <lastName>BobbyA1</lastName>
             <number>1</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="10"/>
+            <matchEventsApplied id="19"/>
             <saves>0</saves>
             <goalsAllowed>0</goalsAllowed>
           </soccer.Goalie>
-          <soccer.Player id="11">
+          <soccer.Player id="20">
             <uniqueID>d8ff7502-2a10-4562-ba9b-3a36281c10b8</uniqueID>
             <firstName>RickyA2</firstName>
             <lastName>BobbyA2</lastName>
             <number>2</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="12"/>
+            <matchEventsApplied id="21"/>
           </soccer.Player>
-          <soccer.Player id="13">
+          <soccer.Player id="22">
             <uniqueID>8183edca-4565-4a00-8754-340b8634bd4e</uniqueID>
             <firstName>RickyA3</firstName>
             <lastName>BobbyA3</lastName>
             <number>3</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="14"/>
+            <matchEventsApplied id="23"/>
           </soccer.Player>
-          <soccer.Player id="15">
+          <soccer.Player id="24">
             <uniqueID>568e7be9-1817-469d-9be4-43a0519853f8</uniqueID>
             <firstName>RickyA4</firstName>
             <lastName>BobbyA4</lastName>
             <number>4</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="16"/>
+            <matchEventsApplied id="25"/>
           </soccer.Player>
-          <soccer.Player id="17">
+          <soccer.Player id="26">
             <uniqueID>3e2d1c16-2458-4abf-bb81-a11e4c06d875</uniqueID>
             <firstName>RickyA5</firstName>
             <lastName>BobbyA5</lastName>
             <number>5</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="18"/>
+            <matchEventsApplied id="27"/>
           </soccer.Player>
-          <soccer.Player id="19">
+          <soccer.Player id="28">
             <uniqueID>fc942c5c-0100-4f24-93bd-96370d9b5fbb</uniqueID>
             <firstName>RickyA6</firstName>
             <lastName>BobbyA6</lastName>
             <number>6</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="20"/>
+            <matchEventsApplied id="29"/>
           </soccer.Player>
-          <soccer.Player id="21">
+          <soccer.Player id="30">
             <uniqueID>8984a91a-a7fa-44d9-bf29-9337175a6b07</uniqueID>
             <firstName>RickyA7</firstName>
             <lastName>BobbyA7</lastName>
             <number>7</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="22"/>
+            <matchEventsApplied id="31"/>
           </soccer.Player>
-          <soccer.Player id="23">
+          <soccer.Player id="32">
             <uniqueID>332ce9d5-0e45-44bc-ac55-b9a536d8a25c</uniqueID>
             <firstName>RickyA8</firstName>
             <lastName>BobbyA8</lastName>
             <number>8</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="24"/>
+            <matchEventsApplied id="33"/>
           </soccer.Player>
-          <soccer.Player id="25">
+          <soccer.Player id="34">
             <uniqueID>cff2600a-2556-47b6-a151-3b633adae073</uniqueID>
             <firstName>RickyA9</firstName>
             <lastName>BobbyA9</lastName>
             <number>9</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="26"/>
-          </soccer.Player>
-          <soccer.Player id="27">
-            <uniqueID>866f069b-987d-4f11-b1a2-79580a975415</uniqueID>
-            <firstName>RickyA10</firstName>
-            <lastName>BobbyA10</lastName>
-            <number>10</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="28"/>
-          </soccer.Player>
-          <soccer.Player id="29">
-            <uniqueID>9e01ade6-955e-490f-8263-75ee851f7f65</uniqueID>
-            <firstName>RickyA11</firstName>
-            <lastName>BobbyA11</lastName>
-            <number>11</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="30"/>
-          </soccer.Player>
-        </players>
-      </soccer.Team>
-      <soccer.Team id="31">
-        <uniqueID>037498c4-41b6-4299-b34b-17838ef696a3</uniqueID>
-        <name>TeamB</name>
-        <gamesPlayed>0</gamesPlayed>
-        <points>0</points>
-        <wins>0</wins>
-        <losses>0</losses>
-        <draws>0</draws>
-        <shotsFor>0</shotsFor>
-        <shotsAgainst>0</shotsAgainst>
-        <goalsFor>0</goalsFor>
-        <goalsAgainst>0</goalsAgainst>
-        <yellowCards>0</yellowCards>
-        <redCards>0</redCards>
-        <penaltyKicks>0</penaltyKicks>
-        <matchResultsApplied id="32"/>
-        <players id="33">
-          <soccer.Goalie id="34">
-            <uniqueID>6a29707a-47e4-4b6f-9f77-89aa8b0bb957</uniqueID>
-            <firstName>RickyB0</firstName>
-            <lastName>BobbyB0</lastName>
-            <number>0</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
             <matchEventsApplied id="35"/>
-            <saves>0</saves>
-            <goalsAllowed>0</goalsAllowed>
-          </soccer.Goalie>
-          <soccer.Goalie id="36">
-            <uniqueID>d25d4369-4237-4b77-986d-2fa3c5bd667f</uniqueID>
-            <firstName>RickyB1</firstName>
-            <lastName>BobbyB1</lastName>
-            <number>1</number>
-            <gamesPlayed>0</gamesPlayed>
+          </soccer.Player>
+          <soccer.Player id="36">
+            <uniqueID>866f069b-987d-4f11-b1a2-79580a975415</uniqueID>
+            <firstName>RickyA10</firstName>
+            <lastName>BobbyA10</lastName>
+            <number>10</number>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
             <matchEventsApplied id="37"/>
-            <saves>0</saves>
-            <goalsAllowed>0</goalsAllowed>
-          </soccer.Goalie>
+          </soccer.Player>
           <soccer.Player id="38">
-            <uniqueID>62e1932e-81a0-4ee3-876d-704236c62707</uniqueID>
-            <firstName>RickyB2</firstName>
-            <lastName>BobbyB2</lastName>
-            <number>2</number>
-            <gamesPlayed>0</gamesPlayed>
+            <uniqueID>9e01ade6-955e-490f-8263-75ee851f7f65</uniqueID>
+            <firstName>RickyA11</firstName>
+            <lastName>BobbyA11</lastName>
+            <number>11</number>
+            <gamesPlayed>2</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
@@ -244,133 +260,16 @@
             <penaltyKicks>0</penaltyKicks>
             <matchEventsApplied id="39"/>
           </soccer.Player>
-          <soccer.Player id="40">
-            <uniqueID>76345b6d-7853-4d0e-bcfd-2bbaa4062ff5</uniqueID>
-            <firstName>RickyB3</firstName>
-            <lastName>BobbyB3</lastName>
-            <number>3</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="41"/>
-          </soccer.Player>
-          <soccer.Player id="42">
-            <uniqueID>f6314ddd-ab99-4823-86d2-31d3fa71ca3b</uniqueID>
-            <firstName>RickyB4</firstName>
-            <lastName>BobbyB4</lastName>
-            <number>4</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="43"/>
-          </soccer.Player>
-          <soccer.Player id="44">
-            <uniqueID>88803bba-f7ff-48c3-a26b-19791be06334</uniqueID>
-            <firstName>RickyB5</firstName>
-            <lastName>BobbyB5</lastName>
-            <number>5</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="45"/>
-          </soccer.Player>
-          <soccer.Player id="46">
-            <uniqueID>34c39070-9675-483b-9429-03a924b07a4b</uniqueID>
-            <firstName>RickyB6</firstName>
-            <lastName>BobbyB6</lastName>
-            <number>6</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="47"/>
-          </soccer.Player>
-          <soccer.Player id="48">
-            <uniqueID>25a0abc7-27d0-4b2f-90f2-02500737acca</uniqueID>
-            <firstName>RickyB7</firstName>
-            <lastName>BobbyB7</lastName>
-            <number>7</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="49"/>
-          </soccer.Player>
-          <soccer.Player id="50">
-            <uniqueID>287fcf52-2561-49d1-9709-cee32997f759</uniqueID>
-            <firstName>RickyB8</firstName>
-            <lastName>BobbyB8</lastName>
-            <number>8</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="51"/>
-          </soccer.Player>
-          <soccer.Player id="52">
-            <uniqueID>9461164d-c1a4-447b-9129-0de9ac33184d</uniqueID>
-            <firstName>RickyB9</firstName>
-            <lastName>BobbyB9</lastName>
-            <number>9</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="53"/>
-          </soccer.Player>
-          <soccer.Player id="54">
-            <uniqueID>f565c766-9d58-43e1-bbc2-5ad7f8ece12f</uniqueID>
-            <firstName>RickyB10</firstName>
-            <lastName>BobbyB10</lastName>
-            <number>10</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="55"/>
-          </soccer.Player>
-          <soccer.Player id="56">
-            <uniqueID>7e7cc67f-2cd7-47a8-b68a-17911c271c7e</uniqueID>
-            <firstName>RickyB11</firstName>
-            <lastName>BobbyB11</lastName>
-            <number>11</number>
-            <gamesPlayed>0</gamesPlayed>
-            <shots>0</shots>
-            <goals>0</goals>
-            <redCards>0</redCards>
-            <yellowCards>0</yellowCards>
-            <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="57"/>
-          </soccer.Player>
         </players>
       </soccer.Team>
-      <soccer.Team id="58">
-        <uniqueID>e978d085-5c07-4d93-8838-a100bbb029a9</uniqueID>
-        <name>TeamC</name>
-        <gamesPlayed>0</gamesPlayed>
-        <points>0</points>
+      <soccer.Team id="40">
+        <uniqueID>037498c4-41b6-4299-b34b-17838ef696a3</uniqueID>
+        <name>TeamB</name>
+        <gamesPlayed>1</gamesPlayed>
+        <points>1</points>
         <wins>0</wins>
         <losses>0</losses>
-        <draws>0</draws>
+        <draws>1</draws>
         <shotsFor>0</shotsFor>
         <shotsAgainst>0</shotsAgainst>
         <goalsFor>0</goalsFor>
@@ -378,44 +277,163 @@
         <yellowCards>0</yellowCards>
         <redCards>0</redCards>
         <penaltyKicks>0</penaltyKicks>
-        <matchResultsApplied id="59"/>
-        <players id="60">
-          <soccer.Goalie id="61">
-            <uniqueID>54840973-2db3-4e3b-96c5-eab19117789e</uniqueID>
-            <firstName>RickyC0</firstName>
-            <lastName>BobbyC0</lastName>
+        <matchResultsApplied id="41">
+          <soccer.MatchResult reference="7"/>
+        </matchResultsApplied>
+        <players id="42">
+          <soccer.Goalie id="43">
+            <uniqueID>6a29707a-47e4-4b6f-9f77-89aa8b0bb957</uniqueID>
+            <firstName>RickyB0</firstName>
+            <lastName>BobbyB0</lastName>
             <number>0</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="44"/>
+            <saves>0</saves>
+            <goalsAllowed>0</goalsAllowed>
+          </soccer.Goalie>
+          <soccer.Goalie id="45">
+            <uniqueID>d25d4369-4237-4b77-986d-2fa3c5bd667f</uniqueID>
+            <firstName>RickyB1</firstName>
+            <lastName>BobbyB1</lastName>
+            <number>1</number>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="46"/>
+            <saves>0</saves>
+            <goalsAllowed>0</goalsAllowed>
+          </soccer.Goalie>
+          <soccer.Player id="47">
+            <uniqueID>62e1932e-81a0-4ee3-876d-704236c62707</uniqueID>
+            <firstName>RickyB2</firstName>
+            <lastName>BobbyB2</lastName>
+            <number>2</number>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="48"/>
+          </soccer.Player>
+          <soccer.Player id="49">
+            <uniqueID>76345b6d-7853-4d0e-bcfd-2bbaa4062ff5</uniqueID>
+            <firstName>RickyB3</firstName>
+            <lastName>BobbyB3</lastName>
+            <number>3</number>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="50"/>
+          </soccer.Player>
+          <soccer.Player id="51">
+            <uniqueID>f6314ddd-ab99-4823-86d2-31d3fa71ca3b</uniqueID>
+            <firstName>RickyB4</firstName>
+            <lastName>BobbyB4</lastName>
+            <number>4</number>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="52"/>
+          </soccer.Player>
+          <soccer.Player id="53">
+            <uniqueID>88803bba-f7ff-48c3-a26b-19791be06334</uniqueID>
+            <firstName>RickyB5</firstName>
+            <lastName>BobbyB5</lastName>
+            <number>5</number>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="54"/>
+          </soccer.Player>
+          <soccer.Player id="55">
+            <uniqueID>34c39070-9675-483b-9429-03a924b07a4b</uniqueID>
+            <firstName>RickyB6</firstName>
+            <lastName>BobbyB6</lastName>
+            <number>6</number>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="56"/>
+          </soccer.Player>
+          <soccer.Player id="57">
+            <uniqueID>25a0abc7-27d0-4b2f-90f2-02500737acca</uniqueID>
+            <firstName>RickyB7</firstName>
+            <lastName>BobbyB7</lastName>
+            <number>7</number>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="58"/>
+          </soccer.Player>
+          <soccer.Player id="59">
+            <uniqueID>287fcf52-2561-49d1-9709-cee32997f759</uniqueID>
+            <firstName>RickyB8</firstName>
+            <lastName>BobbyB8</lastName>
+            <number>8</number>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="60"/>
+          </soccer.Player>
+          <soccer.Player id="61">
+            <uniqueID>9461164d-c1a4-447b-9129-0de9ac33184d</uniqueID>
+            <firstName>RickyB9</firstName>
+            <lastName>BobbyB9</lastName>
+            <number>9</number>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
             <matchEventsApplied id="62"/>
-            <saves>0</saves>
-            <goalsAllowed>0</goalsAllowed>
-          </soccer.Goalie>
-          <soccer.Goalie id="63">
-            <uniqueID>7e588d05-bc93-4986-912a-3788efb69da6</uniqueID>
-            <firstName>RickyC1</firstName>
-            <lastName>BobbyC1</lastName>
-            <number>1</number>
-            <gamesPlayed>0</gamesPlayed>
+          </soccer.Player>
+          <soccer.Player id="63">
+            <uniqueID>f565c766-9d58-43e1-bbc2-5ad7f8ece12f</uniqueID>
+            <firstName>RickyB10</firstName>
+            <lastName>BobbyB10</lastName>
+            <number>10</number>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
             <matchEventsApplied id="64"/>
-            <saves>0</saves>
-            <goalsAllowed>0</goalsAllowed>
-          </soccer.Goalie>
+          </soccer.Player>
           <soccer.Player id="65">
-            <uniqueID>39637936-56ce-48bf-98e8-9b05c48e1ddf</uniqueID>
-            <firstName>RickyC2</firstName>
-            <lastName>BobbyC2</lastName>
-            <number>2</number>
-            <gamesPlayed>0</gamesPlayed>
+            <uniqueID>7e7cc67f-2cd7-47a8-b68a-17911c271c7e</uniqueID>
+            <firstName>RickyB11</firstName>
+            <lastName>BobbyB11</lastName>
+            <number>11</number>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
@@ -423,126 +441,176 @@
             <penaltyKicks>0</penaltyKicks>
             <matchEventsApplied id="66"/>
           </soccer.Player>
-          <soccer.Player id="67">
+        </players>
+      </soccer.Team>
+      <soccer.Team id="67">
+        <uniqueID>e978d085-5c07-4d93-8838-a100bbb029a9</uniqueID>
+        <name>TeamC</name>
+        <gamesPlayed>1</gamesPlayed>
+        <points>1</points>
+        <wins>0</wins>
+        <losses>0</losses>
+        <draws>1</draws>
+        <shotsFor>2</shotsFor>
+        <shotsAgainst>2</shotsAgainst>
+        <goalsFor>2</goalsFor>
+        <goalsAgainst>2</goalsAgainst>
+        <yellowCards>0</yellowCards>
+        <redCards>0</redCards>
+        <penaltyKicks>0</penaltyKicks>
+        <matchResultsApplied id="68">
+          <soccer.MatchResult reference="6"/>
+        </matchResultsApplied>
+        <players id="69">
+          <soccer.Goalie reference="12"/>
+          <soccer.Goalie id="70">
+            <uniqueID>7e588d05-bc93-4986-912a-3788efb69da6</uniqueID>
+            <firstName>RickyC1</firstName>
+            <lastName>BobbyC1</lastName>
+            <number>1</number>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="71"/>
+            <saves>0</saves>
+            <goalsAllowed>0</goalsAllowed>
+          </soccer.Goalie>
+          <soccer.Player id="72">
+            <uniqueID>39637936-56ce-48bf-98e8-9b05c48e1ddf</uniqueID>
+            <firstName>RickyC2</firstName>
+            <lastName>BobbyC2</lastName>
+            <number>2</number>
+            <gamesPlayed>1</gamesPlayed>
+            <shots>0</shots>
+            <goals>0</goals>
+            <redCards>0</redCards>
+            <yellowCards>0</yellowCards>
+            <penaltyKicks>0</penaltyKicks>
+            <matchEventsApplied id="73"/>
+          </soccer.Player>
+          <soccer.Player id="74">
             <uniqueID>0b195efa-0e8f-4d65-bfd9-b242ab72c345</uniqueID>
             <firstName>RickyC3</firstName>
             <lastName>BobbyC3</lastName>
             <number>3</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="68"/>
+            <matchEventsApplied id="75"/>
           </soccer.Player>
-          <soccer.Player id="69">
+          <soccer.Player id="76">
             <uniqueID>06072ee8-ba03-4ce8-bde1-55a14dfbeadd</uniqueID>
             <firstName>RickyC4</firstName>
             <lastName>BobbyC4</lastName>
             <number>4</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="70"/>
+            <matchEventsApplied id="77"/>
           </soccer.Player>
-          <soccer.Player id="71">
+          <soccer.Player id="78">
             <uniqueID>d28759b7-4aa1-458f-a23c-288dca1e6d84</uniqueID>
             <firstName>RickyC5</firstName>
             <lastName>BobbyC5</lastName>
             <number>5</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="72"/>
+            <matchEventsApplied id="79"/>
           </soccer.Player>
-          <soccer.Player id="73">
+          <soccer.Player id="80">
             <uniqueID>bf9793d9-af07-4eac-b96d-43b5dd89bebf</uniqueID>
             <firstName>RickyC6</firstName>
             <lastName>BobbyC6</lastName>
             <number>6</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="74"/>
+            <matchEventsApplied id="81"/>
           </soccer.Player>
-          <soccer.Player id="75">
+          <soccer.Player id="82">
             <uniqueID>638ea7ce-d6eb-4d25-a7bb-0e4d8015ab45</uniqueID>
             <firstName>RickyC7</firstName>
             <lastName>BobbyC7</lastName>
             <number>7</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="76"/>
+            <matchEventsApplied id="83"/>
           </soccer.Player>
-          <soccer.Player id="77">
+          <soccer.Player id="84">
             <uniqueID>360004a8-ef61-495f-b7f0-21f4f7abda45</uniqueID>
             <firstName>RickyC8</firstName>
             <lastName>BobbyC8</lastName>
             <number>8</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="78"/>
+            <matchEventsApplied id="85"/>
           </soccer.Player>
-          <soccer.Player id="79">
+          <soccer.Player id="86">
             <uniqueID>b3d5aeca-b4bf-4893-bd9c-8b69f5566f2b</uniqueID>
             <firstName>RickyC9</firstName>
             <lastName>BobbyC9</lastName>
             <number>9</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="80"/>
+            <matchEventsApplied id="87"/>
           </soccer.Player>
-          <soccer.Player id="81">
+          <soccer.Player id="88">
             <uniqueID>02bf1f70-8d37-4415-ae99-8562fbeff9ef</uniqueID>
             <firstName>RickyC10</firstName>
             <lastName>BobbyC10</lastName>
             <number>10</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="82"/>
+            <matchEventsApplied id="89"/>
           </soccer.Player>
-          <soccer.Player id="83">
+          <soccer.Player id="90">
             <uniqueID>e61661d4-12c0-4134-9403-19d8392f1800</uniqueID>
             <firstName>RickyC11</firstName>
             <lastName>BobbyC11</lastName>
             <number>11</number>
-            <gamesPlayed>0</gamesPlayed>
+            <gamesPlayed>1</gamesPlayed>
             <shots>0</shots>
             <goals>0</goals>
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="84"/>
+            <matchEventsApplied id="91"/>
           </soccer.Player>
         </players>
       </soccer.Team>
-      <soccer.Team id="85">
+      <soccer.Team id="92">
         <uniqueID>918f37b3-4d6f-42ad-bb52-3fc249c3203b</uniqueID>
         <name>TeamD</name>
         <gamesPlayed>0</gamesPlayed>
@@ -557,9 +625,9 @@
         <yellowCards>0</yellowCards>
         <redCards>0</redCards>
         <penaltyKicks>0</penaltyKicks>
-        <matchResultsApplied id="86"/>
-        <players id="87">
-          <soccer.Goalie id="88">
+        <matchResultsApplied id="93"/>
+        <players id="94">
+          <soccer.Goalie id="95">
             <uniqueID>f7275268-dceb-42a1-8cb4-5038992b99de</uniqueID>
             <firstName>RickyD0</firstName>
             <lastName>BobbyD0</lastName>
@@ -570,11 +638,11 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="89"/>
+            <matchEventsApplied id="96"/>
             <saves>0</saves>
             <goalsAllowed>0</goalsAllowed>
           </soccer.Goalie>
-          <soccer.Goalie id="90">
+          <soccer.Goalie id="97">
             <uniqueID>d3f340a7-852a-4751-addc-1c17de6536b5</uniqueID>
             <firstName>RickyD1</firstName>
             <lastName>BobbyD1</lastName>
@@ -585,11 +653,11 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="91"/>
+            <matchEventsApplied id="98"/>
             <saves>0</saves>
             <goalsAllowed>0</goalsAllowed>
           </soccer.Goalie>
-          <soccer.Player id="92">
+          <soccer.Player id="99">
             <uniqueID>29b74d8b-b78b-4dc8-8ad6-a7dea5c6473e</uniqueID>
             <firstName>RickyD2</firstName>
             <lastName>BobbyD2</lastName>
@@ -600,9 +668,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="93"/>
+            <matchEventsApplied id="100"/>
           </soccer.Player>
-          <soccer.Player id="94">
+          <soccer.Player id="101">
             <uniqueID>77c97042-3fa1-4b69-94c0-7624feb549b4</uniqueID>
             <firstName>RickyD3</firstName>
             <lastName>BobbyD3</lastName>
@@ -613,9 +681,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="95"/>
+            <matchEventsApplied id="102"/>
           </soccer.Player>
-          <soccer.Player id="96">
+          <soccer.Player id="103">
             <uniqueID>2f82cc39-e58e-42e7-885c-67e937d44e58</uniqueID>
             <firstName>RickyD4</firstName>
             <lastName>BobbyD4</lastName>
@@ -626,9 +694,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="97"/>
+            <matchEventsApplied id="104"/>
           </soccer.Player>
-          <soccer.Player id="98">
+          <soccer.Player id="105">
             <uniqueID>9f9906df-3cc7-40c5-9152-3375a1adc617</uniqueID>
             <firstName>RickyD5</firstName>
             <lastName>BobbyD5</lastName>
@@ -639,9 +707,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="99"/>
+            <matchEventsApplied id="106"/>
           </soccer.Player>
-          <soccer.Player id="100">
+          <soccer.Player id="107">
             <uniqueID>a3004e41-25d4-4557-9ac4-bf1e09386636</uniqueID>
             <firstName>RickyD6</firstName>
             <lastName>BobbyD6</lastName>
@@ -652,9 +720,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="101"/>
+            <matchEventsApplied id="108"/>
           </soccer.Player>
-          <soccer.Player id="102">
+          <soccer.Player id="109">
             <uniqueID>ba55c63b-d09d-4488-b9e1-5adb2da5d695</uniqueID>
             <firstName>RickyD7</firstName>
             <lastName>BobbyD7</lastName>
@@ -665,9 +733,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="103"/>
+            <matchEventsApplied id="110"/>
           </soccer.Player>
-          <soccer.Player id="104">
+          <soccer.Player id="111">
             <uniqueID>263db63f-006b-442b-ae87-9d71b1320fa8</uniqueID>
             <firstName>RickyD8</firstName>
             <lastName>BobbyD8</lastName>
@@ -678,9 +746,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="105"/>
+            <matchEventsApplied id="112"/>
           </soccer.Player>
-          <soccer.Player id="106">
+          <soccer.Player id="113">
             <uniqueID>5b7e82a4-31e1-4c10-876f-b5d0b6938230</uniqueID>
             <firstName>RickyD9</firstName>
             <lastName>BobbyD9</lastName>
@@ -691,9 +759,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="107"/>
+            <matchEventsApplied id="114"/>
           </soccer.Player>
-          <soccer.Player id="108">
+          <soccer.Player id="115">
             <uniqueID>58bfbe53-3d66-4845-9f5b-0b5dadef5a20</uniqueID>
             <firstName>RickyD10</firstName>
             <lastName>BobbyD10</lastName>
@@ -704,9 +772,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="109"/>
+            <matchEventsApplied id="116"/>
           </soccer.Player>
-          <soccer.Player id="110">
+          <soccer.Player id="117">
             <uniqueID>db422fc8-59a7-449b-ba5c-45e62e59da17</uniqueID>
             <firstName>RickyD11</firstName>
             <lastName>BobbyD11</lastName>
@@ -717,11 +785,11 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="111"/>
+            <matchEventsApplied id="118"/>
           </soccer.Player>
         </players>
       </soccer.Team>
-      <soccer.Team id="112">
+      <soccer.Team id="119">
         <uniqueID>7879d22d-f266-4a6c-8a6d-7c84dc43ba49</uniqueID>
         <name>TeamE</name>
         <gamesPlayed>0</gamesPlayed>
@@ -736,9 +804,9 @@
         <yellowCards>0</yellowCards>
         <redCards>0</redCards>
         <penaltyKicks>0</penaltyKicks>
-        <matchResultsApplied id="113"/>
-        <players id="114">
-          <soccer.Goalie id="115">
+        <matchResultsApplied id="120"/>
+        <players id="121">
+          <soccer.Goalie id="122">
             <uniqueID>4a21530b-3c65-4266-888f-7c048260d79a</uniqueID>
             <firstName>RickyE0</firstName>
             <lastName>BobbyE0</lastName>
@@ -749,11 +817,11 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="116"/>
+            <matchEventsApplied id="123"/>
             <saves>0</saves>
             <goalsAllowed>0</goalsAllowed>
           </soccer.Goalie>
-          <soccer.Goalie id="117">
+          <soccer.Goalie id="124">
             <uniqueID>e02362a7-d3a0-4f1c-a700-b525195ec687</uniqueID>
             <firstName>RickyE1</firstName>
             <lastName>BobbyE1</lastName>
@@ -764,11 +832,11 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="118"/>
+            <matchEventsApplied id="125"/>
             <saves>0</saves>
             <goalsAllowed>0</goalsAllowed>
           </soccer.Goalie>
-          <soccer.Player id="119">
+          <soccer.Player id="126">
             <uniqueID>e7180632-59a6-43cc-bfb2-f03dfe3ad271</uniqueID>
             <firstName>RickyE2</firstName>
             <lastName>BobbyE2</lastName>
@@ -779,9 +847,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="120"/>
+            <matchEventsApplied id="127"/>
           </soccer.Player>
-          <soccer.Player id="121">
+          <soccer.Player id="128">
             <uniqueID>e71023a1-4661-4481-89ec-d789383edea9</uniqueID>
             <firstName>RickyE3</firstName>
             <lastName>BobbyE3</lastName>
@@ -792,9 +860,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="122"/>
+            <matchEventsApplied id="129"/>
           </soccer.Player>
-          <soccer.Player id="123">
+          <soccer.Player id="130">
             <uniqueID>ba7d5cfc-3392-4168-87b1-c3a340fe3193</uniqueID>
             <firstName>RickyE4</firstName>
             <lastName>BobbyE4</lastName>
@@ -805,9 +873,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="124"/>
+            <matchEventsApplied id="131"/>
           </soccer.Player>
-          <soccer.Player id="125">
+          <soccer.Player id="132">
             <uniqueID>f5d1f141-060a-4d6e-bfa0-002ed9fef45d</uniqueID>
             <firstName>RickyE5</firstName>
             <lastName>BobbyE5</lastName>
@@ -818,9 +886,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="126"/>
+            <matchEventsApplied id="133"/>
           </soccer.Player>
-          <soccer.Player id="127">
+          <soccer.Player id="134">
             <uniqueID>b3b92f5c-56b2-4a6c-9f4c-d814eea7e20c</uniqueID>
             <firstName>RickyE6</firstName>
             <lastName>BobbyE6</lastName>
@@ -831,9 +899,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="128"/>
+            <matchEventsApplied id="135"/>
           </soccer.Player>
-          <soccer.Player id="129">
+          <soccer.Player id="136">
             <uniqueID>dd8cc8aa-8e13-452b-ab72-de0a1aa2a7ae</uniqueID>
             <firstName>RickyE7</firstName>
             <lastName>BobbyE7</lastName>
@@ -844,9 +912,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="130"/>
+            <matchEventsApplied id="137"/>
           </soccer.Player>
-          <soccer.Player id="131">
+          <soccer.Player id="138">
             <uniqueID>fa8731ce-30c4-4dce-9a94-06b2c30ad858</uniqueID>
             <firstName>RickyE8</firstName>
             <lastName>BobbyE8</lastName>
@@ -857,9 +925,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="132"/>
+            <matchEventsApplied id="139"/>
           </soccer.Player>
-          <soccer.Player id="133">
+          <soccer.Player id="140">
             <uniqueID>329da3db-fb93-4b36-ac23-ac306e946625</uniqueID>
             <firstName>RickyE9</firstName>
             <lastName>BobbyE9</lastName>
@@ -870,9 +938,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="134"/>
+            <matchEventsApplied id="141"/>
           </soccer.Player>
-          <soccer.Player id="135">
+          <soccer.Player id="142">
             <uniqueID>f638ab1e-8472-4ca8-ab57-f455187e68ba</uniqueID>
             <firstName>RickyE10</firstName>
             <lastName>BobbyE10</lastName>
@@ -883,9 +951,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="136"/>
+            <matchEventsApplied id="143"/>
           </soccer.Player>
-          <soccer.Player id="137">
+          <soccer.Player id="144">
             <uniqueID>380ca9e0-43bb-4cc7-9aa0-f09f43a937ef</uniqueID>
             <firstName>RickyE11</firstName>
             <lastName>BobbyE11</lastName>
@@ -896,11 +964,11 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="138"/>
+            <matchEventsApplied id="145"/>
           </soccer.Player>
         </players>
       </soccer.Team>
-      <soccer.Team id="139">
+      <soccer.Team id="146">
         <uniqueID>40ac0d20-f73f-4f4e-96da-a862f49431a8</uniqueID>
         <name>TeamF</name>
         <gamesPlayed>0</gamesPlayed>
@@ -915,9 +983,9 @@
         <yellowCards>0</yellowCards>
         <redCards>0</redCards>
         <penaltyKicks>0</penaltyKicks>
-        <matchResultsApplied id="140"/>
-        <players id="141">
-          <soccer.Goalie id="142">
+        <matchResultsApplied id="147"/>
+        <players id="148">
+          <soccer.Goalie id="149">
             <uniqueID>b6f12d0a-a37e-4985-a451-bc9b7673586d</uniqueID>
             <firstName>RickyF0</firstName>
             <lastName>BobbyF0</lastName>
@@ -928,11 +996,11 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="143"/>
+            <matchEventsApplied id="150"/>
             <saves>0</saves>
             <goalsAllowed>0</goalsAllowed>
           </soccer.Goalie>
-          <soccer.Goalie id="144">
+          <soccer.Goalie id="151">
             <uniqueID>4ab24b2e-7e81-4aed-811f-a74bb632e6c3</uniqueID>
             <firstName>RickyF1</firstName>
             <lastName>BobbyF1</lastName>
@@ -943,11 +1011,11 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="145"/>
+            <matchEventsApplied id="152"/>
             <saves>0</saves>
             <goalsAllowed>0</goalsAllowed>
           </soccer.Goalie>
-          <soccer.Player id="146">
+          <soccer.Player id="153">
             <uniqueID>6cc65ed0-436a-4b32-8916-c65facce54d6</uniqueID>
             <firstName>RickyF2</firstName>
             <lastName>BobbyF2</lastName>
@@ -958,9 +1026,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="147"/>
+            <matchEventsApplied id="154"/>
           </soccer.Player>
-          <soccer.Player id="148">
+          <soccer.Player id="155">
             <uniqueID>f0b9fd58-9893-4973-851d-e44f2a549fea</uniqueID>
             <firstName>RickyF3</firstName>
             <lastName>BobbyF3</lastName>
@@ -971,9 +1039,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="149"/>
+            <matchEventsApplied id="156"/>
           </soccer.Player>
-          <soccer.Player id="150">
+          <soccer.Player id="157">
             <uniqueID>d5f69366-0ad7-42cd-8187-965fc625bef0</uniqueID>
             <firstName>RickyF4</firstName>
             <lastName>BobbyF4</lastName>
@@ -984,9 +1052,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="151"/>
+            <matchEventsApplied id="158"/>
           </soccer.Player>
-          <soccer.Player id="152">
+          <soccer.Player id="159">
             <uniqueID>1a42aa5f-38fd-4634-8e0d-ab1c8974cb42</uniqueID>
             <firstName>RickyF5</firstName>
             <lastName>BobbyF5</lastName>
@@ -997,9 +1065,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="153"/>
+            <matchEventsApplied id="160"/>
           </soccer.Player>
-          <soccer.Player id="154">
+          <soccer.Player id="161">
             <uniqueID>60db1f6d-b4cf-452b-a5a8-17e45c93fd7d</uniqueID>
             <firstName>RickyF6</firstName>
             <lastName>BobbyF6</lastName>
@@ -1010,9 +1078,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="155"/>
+            <matchEventsApplied id="162"/>
           </soccer.Player>
-          <soccer.Player id="156">
+          <soccer.Player id="163">
             <uniqueID>01de973a-afe5-4ace-81fc-f51f85dae201</uniqueID>
             <firstName>RickyF7</firstName>
             <lastName>BobbyF7</lastName>
@@ -1023,9 +1091,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="157"/>
+            <matchEventsApplied id="164"/>
           </soccer.Player>
-          <soccer.Player id="158">
+          <soccer.Player id="165">
             <uniqueID>7ba4cc13-b8e8-45f3-bac0-f87b007151e9</uniqueID>
             <firstName>RickyF8</firstName>
             <lastName>BobbyF8</lastName>
@@ -1036,9 +1104,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="159"/>
+            <matchEventsApplied id="166"/>
           </soccer.Player>
-          <soccer.Player id="160">
+          <soccer.Player id="167">
             <uniqueID>084aa16c-86b6-45ac-93eb-93a8c09a77a5</uniqueID>
             <firstName>RickyF9</firstName>
             <lastName>BobbyF9</lastName>
@@ -1049,9 +1117,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="161"/>
+            <matchEventsApplied id="168"/>
           </soccer.Player>
-          <soccer.Player id="162">
+          <soccer.Player id="169">
             <uniqueID>4e75c9fc-2c30-4051-96af-91a20583f98b</uniqueID>
             <firstName>RickyF10</firstName>
             <lastName>BobbyF10</lastName>
@@ -1062,9 +1130,9 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="163"/>
+            <matchEventsApplied id="170"/>
           </soccer.Player>
-          <soccer.Player id="164">
+          <soccer.Player id="171">
             <uniqueID>bb02a187-0fb8-4ff9-a541-10cdf0ef4dc4</uniqueID>
             <firstName>RickyF11</firstName>
             <lastName>BobbyF11</lastName>
@@ -1075,16 +1143,16 @@
             <redCards>0</redCards>
             <yellowCards>0</yellowCards>
             <penaltyKicks>0</penaltyKicks>
-            <matchEventsApplied id="165"/>
+            <matchEventsApplied id="172"/>
           </soccer.Player>
         </players>
       </soccer.Team>
     </teams>
   </league>
-  <subscribedSeasonDisplay id="166">
+  <subscribedSeasonDisplay id="173">
     <uniqueID>f8d7d31d-ae4e-4b8a-9795-bfe338c38e55</uniqueID>
-    <seasonData id="167">
-      <string-array id="168">
+    <seasonData id="174">
+      <string-array id="175">
         <string>TeamA</string>
         <string>1</string>
         <string>1</string>
@@ -1099,10 +1167,10 @@
         <string>1</string>
         <string>TeamB</string>
         <string>Wed Dec 02 14:37:02 EST 2015</string>
-        <string>0h 12m</string>
+        <string>16h 978m</string>
         <null/>
       </string-array>
-      <string-array id="169">
+      <string-array id="176">
         <string>TeamA</string>
         <string>0</string>
         <string>0</string>
@@ -1117,10 +1185,10 @@
         <string>0</string>
         <string>TeamC</string>
         <string>Wed Dec 02 14:40:10 EST 2015</string>
-        <string>0h 8m</string>
+        <string>16h 975m</string>
         <null/>
       </string-array>
-      <string-array id="170">
+      <string-array id="177">
         <string>TeamA</string>
         <string>0</string>
         <string>0</string>
@@ -1135,103 +1203,139 @@
         <string>0</string>
         <string>TeamE</string>
         <string>Wed Dec 02 14:44:14 EST 2015</string>
-        <string>0h 4m</string>
+        <string>16h 971m</string>
+        <null/>
+      </string-array>
+      <string-array id="178">
+        <string>TeamA</string>
+        <string>1</string>
+        <string>0</string>
+        <string>0</string>
+        <string>2</string>
+        <string>2</string>
+        <string>vs</string>
+        <string>2</string>
+        <string>2</string>
+        <string>0</string>
+        <string>0</string>
+        <string>0</string>
+        <string>TeamC</string>
+        <string>Wed Dec 02 14:55:16 EST 2015</string>
+        <string>DONE</string>
+        <null/>
+      </string-array>
+      <string-array id="179">
+        <string>TeamA</string>
+        <string>0</string>
+        <string>0</string>
+        <string>0</string>
+        <string>0</string>
+        <string>0</string>
+        <string>vs</string>
+        <string>0</string>
+        <string>0</string>
+        <string>0</string>
+        <string>0</string>
+        <string>0</string>
+        <string>TeamB</string>
+        <string>Thu Dec 03 06:55:16 EST 2015</string>
+        <string>DONE</string>
         <null/>
       </string-array>
     </seasonData>
   </subscribedSeasonDisplay>
-  <matches id="171">
-    <soccer.Match id="172">
+  <matches id="180">
+    <soccer.Match id="181">
       <uniqueID>ec83da6e-8b17-449f-971e-9000b1a72032</uniqueID>
       <subscribedHomeTeam reference="4"/>
-      <subscribedAwayTeam reference="31"/>
-      <matchEvents id="173">
-        <soccer.ShotEvent id="174">
+      <subscribedAwayTeam reference="40"/>
+      <matchEvents id="182">
+        <soccer.ShotEvent id="183">
           <uniqueID>e4c7140c-f148-4d47-9486-8bdc99d3f184</uniqueID>
-          <subscribedPlayer reference="40"/>
-          <subscribedGoalie reference="7"/>
+          <subscribedPlayer reference="49"/>
+          <subscribedGoalie reference="9"/>
           <scored>false</scored>
         </soccer.ShotEvent>
-        <soccer.ShotEvent id="175">
-          <uniqueID>097265a6-db96-427b-89e5-a191185924f4</uniqueID>
-          <subscribedPlayer reference="44"/>
-          <subscribedGoalie reference="7"/>
-          <scored>true</scored>
-        </soccer.ShotEvent>
-        <soccer.ShotEvent id="176">
-          <uniqueID>89735b27-ba76-4e52-b5cd-24919494c312</uniqueID>
-          <subscribedPlayer reference="13"/>
-          <subscribedGoalie reference="34"/>
-          <scored>true</scored>
-        </soccer.ShotEvent>
-        <soccer.ShotEvent id="177">
-          <uniqueID>ed9978ff-bc18-4d1f-96fa-59b1bd401877</uniqueID>
-          <subscribedPlayer reference="17"/>
-          <subscribedGoalie reference="34"/>
-          <scored>false</scored>
-        </soccer.ShotEvent>
-        <soccer.InfractionEvent id="178">
-          <uniqueID>062e65a8-c623-4af7-bb4b-0f2319dacc2e</uniqueID>
-          <subscribedPlayer reference="48"/>
-          <redCard>false</redCard>
-          <yellowCard>false</yellowCard>
-          <penaltyKick>true</penaltyKick>
-        </soccer.InfractionEvent>
-        <soccer.InfractionEvent id="179">
-          <uniqueID>981cf8f1-791c-4a61-9179-023f1f70f9b2</uniqueID>
-          <subscribedPlayer reference="52"/>
-          <redCard>false</redCard>
-          <yellowCard>true</yellowCard>
-          <penaltyKick>false</penaltyKick>
-        </soccer.InfractionEvent>
-        <soccer.InfractionEvent id="180">
-          <uniqueID>98e64506-dcbd-48b2-98f6-adc3c3e10651</uniqueID>
-          <subscribedPlayer reference="56"/>
-          <redCard>true</redCard>
-          <yellowCard>false</yellowCard>
-          <penaltyKick>false</penaltyKick>
-        </soccer.InfractionEvent>
-        <soccer.InfractionEvent id="181">
-          <uniqueID>7151fba6-0629-458e-8830-728da6901421</uniqueID>
-          <subscribedPlayer reference="21"/>
-          <redCard>false</redCard>
-          <yellowCard>false</yellowCard>
-          <penaltyKick>true</penaltyKick>
-        </soccer.InfractionEvent>
-        <soccer.InfractionEvent id="182">
-          <uniqueID>09156907-6245-493e-b38f-9f1e13c8e6aa</uniqueID>
-          <subscribedPlayer reference="25"/>
-          <redCard>false</redCard>
-          <yellowCard>true</yellowCard>
-          <penaltyKick>false</penaltyKick>
-        </soccer.InfractionEvent>
-        <soccer.InfractionEvent id="183">
-          <uniqueID>90827947-3232-4727-a181-3fccd1931b1c</uniqueID>
-          <subscribedPlayer reference="29"/>
-          <redCard>true</redCard>
-          <yellowCard>false</yellowCard>
-          <penaltyKick>false</penaltyKick>
-        </soccer.InfractionEvent>
         <soccer.ShotEvent id="184">
-          <uniqueID>d9d51100-195c-4492-87da-26f0199373a0</uniqueID>
-          <subscribedPlayer class="soccer.Goalie" reference="7"/>
-          <subscribedGoalie reference="34"/>
+          <uniqueID>097265a6-db96-427b-89e5-a191185924f4</uniqueID>
+          <subscribedPlayer reference="53"/>
+          <subscribedGoalie reference="9"/>
           <scored>true</scored>
         </soccer.ShotEvent>
         <soccer.ShotEvent id="185">
-          <uniqueID>0f2b393e-908b-462a-9ad8-8a8ef8640e69</uniqueID>
-          <subscribedPlayer class="soccer.Goalie" reference="7"/>
-          <subscribedGoalie reference="34"/>
+          <uniqueID>89735b27-ba76-4e52-b5cd-24919494c312</uniqueID>
+          <subscribedPlayer reference="22"/>
+          <subscribedGoalie reference="43"/>
           <scored>true</scored>
         </soccer.ShotEvent>
         <soccer.ShotEvent id="186">
+          <uniqueID>ed9978ff-bc18-4d1f-96fa-59b1bd401877</uniqueID>
+          <subscribedPlayer reference="26"/>
+          <subscribedGoalie reference="43"/>
+          <scored>false</scored>
+        </soccer.ShotEvent>
+        <soccer.InfractionEvent id="187">
+          <uniqueID>062e65a8-c623-4af7-bb4b-0f2319dacc2e</uniqueID>
+          <subscribedPlayer reference="57"/>
+          <redCard>false</redCard>
+          <yellowCard>false</yellowCard>
+          <penaltyKick>true</penaltyKick>
+        </soccer.InfractionEvent>
+        <soccer.InfractionEvent id="188">
+          <uniqueID>981cf8f1-791c-4a61-9179-023f1f70f9b2</uniqueID>
+          <subscribedPlayer reference="61"/>
+          <redCard>false</redCard>
+          <yellowCard>true</yellowCard>
+          <penaltyKick>false</penaltyKick>
+        </soccer.InfractionEvent>
+        <soccer.InfractionEvent id="189">
+          <uniqueID>98e64506-dcbd-48b2-98f6-adc3c3e10651</uniqueID>
+          <subscribedPlayer reference="65"/>
+          <redCard>true</redCard>
+          <yellowCard>false</yellowCard>
+          <penaltyKick>false</penaltyKick>
+        </soccer.InfractionEvent>
+        <soccer.InfractionEvent id="190">
+          <uniqueID>7151fba6-0629-458e-8830-728da6901421</uniqueID>
+          <subscribedPlayer reference="30"/>
+          <redCard>false</redCard>
+          <yellowCard>false</yellowCard>
+          <penaltyKick>true</penaltyKick>
+        </soccer.InfractionEvent>
+        <soccer.InfractionEvent id="191">
+          <uniqueID>09156907-6245-493e-b38f-9f1e13c8e6aa</uniqueID>
+          <subscribedPlayer reference="34"/>
+          <redCard>false</redCard>
+          <yellowCard>true</yellowCard>
+          <penaltyKick>false</penaltyKick>
+        </soccer.InfractionEvent>
+        <soccer.InfractionEvent id="192">
+          <uniqueID>90827947-3232-4727-a181-3fccd1931b1c</uniqueID>
+          <subscribedPlayer reference="38"/>
+          <redCard>true</redCard>
+          <yellowCard>false</yellowCard>
+          <penaltyKick>false</penaltyKick>
+        </soccer.InfractionEvent>
+        <soccer.ShotEvent id="193">
+          <uniqueID>d9d51100-195c-4492-87da-26f0199373a0</uniqueID>
+          <subscribedPlayer class="soccer.Goalie" reference="9"/>
+          <subscribedGoalie reference="43"/>
+          <scored>true</scored>
+        </soccer.ShotEvent>
+        <soccer.ShotEvent id="194">
+          <uniqueID>0f2b393e-908b-462a-9ad8-8a8ef8640e69</uniqueID>
+          <subscribedPlayer class="soccer.Goalie" reference="9"/>
+          <subscribedGoalie reference="43"/>
+          <scored>true</scored>
+        </soccer.ShotEvent>
+        <soccer.ShotEvent id="195">
           <uniqueID>9d16351f-acde-4c1a-99d0-bdf1a3cc88d6</uniqueID>
-          <subscribedPlayer class="soccer.Goalie" reference="7"/>
-          <subscribedGoalie reference="34"/>
+          <subscribedPlayer class="soccer.Goalie" reference="9"/>
+          <subscribedGoalie reference="43"/>
           <scored>true</scored>
         </soccer.ShotEvent>
       </matchEvents>
-      <matchResult id="187">
+      <matchResult id="196">
         <uniqueID>06eba0fa-0c01-4453-8905-a32c824d7cea</uniqueID>
         <homePoints>4</homePoints>
         <homeShots>5</homeShots>
@@ -1246,51 +1350,51 @@
       </matchResult>
       <complete>false</complete>
       <season reference="1"/>
-      <startTime id="188">2015-12-02 19:37:02.802 UTC</startTime>
+      <startTime id="197">2015-12-02 19:37:02.802 UTC</startTime>
     </soccer.Match>
-    <soccer.Match id="189">
+    <soccer.Match id="198">
       <uniqueID>f5699b52-9339-4177-8e63-5bda2b341fce</uniqueID>
       <subscribedHomeTeam reference="4"/>
-      <subscribedAwayTeam reference="58"/>
-      <matchEvents id="190">
-        <soccer.ShotEvent id="191">
+      <subscribedAwayTeam reference="67"/>
+      <matchEvents id="199">
+        <soccer.ShotEvent id="200">
           <uniqueID>dd920561-e6ee-4fa4-b603-c89fab7585a3</uniqueID>
-          <subscribedPlayer class="soccer.Goalie" reference="61"/>
+          <subscribedPlayer class="soccer.Goalie" reference="12"/>
+          <subscribedGoalie reference="18"/>
+          <scored>true</scored>
+        </soccer.ShotEvent>
+        <soccer.ShotEvent id="201">
+          <uniqueID>4ecb388e-b5ea-477c-89f6-c7cb9ce8df8a</uniqueID>
+          <subscribedPlayer class="soccer.Goalie" reference="12"/>
           <subscribedGoalie reference="9"/>
           <scored>true</scored>
         </soccer.ShotEvent>
-        <soccer.ShotEvent id="192">
-          <uniqueID>4ecb388e-b5ea-477c-89f6-c7cb9ce8df8a</uniqueID>
-          <subscribedPlayer class="soccer.Goalie" reference="61"/>
-          <subscribedGoalie reference="7"/>
-          <scored>true</scored>
-        </soccer.ShotEvent>
-        <soccer.ShotEvent id="193">
+        <soccer.ShotEvent id="202">
           <uniqueID>4c91f192-e7a5-42ba-a683-cec164b86ff9</uniqueID>
-          <subscribedPlayer class="soccer.Goalie" reference="61"/>
-          <subscribedGoalie reference="7"/>
+          <subscribedPlayer class="soccer.Goalie" reference="12"/>
+          <subscribedGoalie reference="9"/>
           <scored>true</scored>
         </soccer.ShotEvent>
-        <soccer.ShotEvent id="194">
+        <soccer.ShotEvent id="203">
           <uniqueID>fbc266b4-825c-4a94-90c8-04fc4fa24eaf</uniqueID>
-          <subscribedPlayer class="soccer.Goalie" reference="61"/>
-          <subscribedGoalie reference="7"/>
+          <subscribedPlayer class="soccer.Goalie" reference="12"/>
+          <subscribedGoalie reference="9"/>
           <scored>true</scored>
         </soccer.ShotEvent>
-        <soccer.ShotEvent id="195">
+        <soccer.ShotEvent id="204">
           <uniqueID>c36ddd9c-ffbc-45cc-8f59-03748a527af8</uniqueID>
-          <subscribedPlayer class="soccer.Goalie" reference="61"/>
-          <subscribedGoalie reference="7"/>
+          <subscribedPlayer class="soccer.Goalie" reference="12"/>
+          <subscribedGoalie reference="9"/>
           <scored>true</scored>
         </soccer.ShotEvent>
-        <soccer.ShotEvent id="196">
+        <soccer.ShotEvent id="205">
           <uniqueID>784552a0-7991-4c98-a3f1-c2488f321ca7</uniqueID>
-          <subscribedPlayer class="soccer.Goalie" reference="61"/>
-          <subscribedGoalie reference="7"/>
+          <subscribedPlayer class="soccer.Goalie" reference="12"/>
+          <subscribedGoalie reference="9"/>
           <scored>true</scored>
         </soccer.ShotEvent>
       </matchEvents>
-      <matchResult id="197">
+      <matchResult id="206">
         <uniqueID>9a059c03-30d7-40d8-8954-a9020f850ae9</uniqueID>
         <homePoints>0</homePoints>
         <homeShots>0</homeShots>
@@ -1305,14 +1409,14 @@
       </matchResult>
       <complete>false</complete>
       <season reference="1"/>
-      <startTime id="198">2015-12-02 19:40:10.270 UTC</startTime>
+      <startTime id="207">2015-12-02 19:40:10.270 UTC</startTime>
     </soccer.Match>
-    <soccer.Match id="199">
+    <soccer.Match id="208">
       <uniqueID>3161a55d-6d10-462a-8fbc-0e6cdd3da443</uniqueID>
       <subscribedHomeTeam reference="4"/>
-      <subscribedAwayTeam reference="112"/>
-      <matchEvents id="200"/>
-      <matchResult id="201">
+      <subscribedAwayTeam reference="119"/>
+      <matchEvents id="209"/>
+      <matchResult id="210">
         <uniqueID>45f32ad0-968a-4c65-9896-33efeea92187</uniqueID>
         <homePoints>0</homePoints>
         <homeShots>0</homeShots>
@@ -1327,7 +1431,33 @@
       </matchResult>
       <complete>false</complete>
       <season reference="1"/>
-      <startTime id="202">2015-12-02 19:44:14.578 UTC</startTime>
+      <startTime id="211">2015-12-02 19:44:14.578 UTC</startTime>
+    </soccer.Match>
+    <soccer.Match id="212">
+      <uniqueID>2dd93469-8f33-4bc7-af32-b3e00cf66a7b</uniqueID>
+      <subscribedHomeTeam reference="4"/>
+      <subscribedAwayTeam reference="67"/>
+      <matchEvents id="213">
+        <soccer.ShotEvent reference="11"/>
+        <soccer.ShotEvent reference="14"/>
+        <soccer.ShotEvent reference="15"/>
+        <soccer.ShotEvent reference="16"/>
+        <soccer.InfractionEvent reference="17"/>
+      </matchEvents>
+      <matchResult reference="6"/>
+      <complete>true</complete>
+      <season reference="1"/>
+      <startTime id="214">2015-12-02 19:55:16.530 UTC</startTime>
+    </soccer.Match>
+    <soccer.Match id="215">
+      <uniqueID>318aebad-57d6-4a3d-bb9a-fa8edcd43214</uniqueID>
+      <subscribedHomeTeam reference="4"/>
+      <subscribedAwayTeam reference="40"/>
+      <matchEvents id="216"/>
+      <matchResult reference="7"/>
+      <complete>true</complete>
+      <season reference="1"/>
+      <startTime id="217">2015-12-03 11:55:16.913 UTC</startTime>
     </soccer.Match>
   </matches>
 </soccer.Season>
