@@ -1,6 +1,7 @@
 package soccer;
 
 import java.util.UUID;
+import java.util.Date;
 
 /** Abstract class representing a MatchEvent. Each MatchEvent is assigned a uniqueID
  * and a player involved in the event.
@@ -11,12 +12,14 @@ abstract public class MatchEvent {
 
 	private String uniqueID;
 	private Player subscribedPlayer;
+	private Date timeStamp;
 
 	/** Constructor method. Sets a unique ID to MatchEvent.
 	 * 
 	 */
 	public 	MatchEvent() {
 		uniqueID = UUID.randomUUID().toString(); 
+		timeStamp = new Date();
 	}
 
 	// Getters and setters
@@ -27,6 +30,10 @@ abstract public class MatchEvent {
 	public String setSubscribedPlayer(Player newPlayer) {
 		subscribedPlayer = newPlayer;
 		return "Player " + subscribedPlayer.getFullName() + " succesfully subscribed to MatchEvent.";
+	}
+	
+	public Date getTimeStamp() {
+		return timeStamp;
 	}
 	
 	/** Abstract method to be implemented in subclasses. It is intended to publish
@@ -59,5 +66,7 @@ abstract public class MatchEvent {
 		}
 		return returnString;
 	}
+
+	abstract public String getSummary();
 
 }

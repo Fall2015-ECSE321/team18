@@ -1,5 +1,6 @@
 package soccer;
 
+import java.util.Arrays;
 import java.util.UUID;
 import java.util.ArrayList;
 import java.util.Date;
@@ -343,6 +344,18 @@ public class Match {
 	public String getSummary() {
 		String summary = subscribedHomeTeam.getName() + " vs " + subscribedAwayTeam.getName() + " @ " + startTime.toString();
 		return summary;
+	}
+	
+	public String[][] getMatchEventsSummary() {
+		String[][] matchEventsSummary = new String[matchEvents.size()][];
+		int count = 0;
+		for (MatchEvent matchEvent : matchEvents) {
+			String[] row = {matchEvent.getTimeStamp().toString() , matchEvent.getSummary()};
+			matchEventsSummary[count] = row;
+			count++;
+		}	
+		System.out.println(Arrays.deepToString(matchEventsSummary));
+		return matchEventsSummary;
 	}
 
 }

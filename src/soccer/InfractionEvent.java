@@ -102,5 +102,15 @@ public class InfractionEvent extends MatchEvent{
 		returnString += "\nPenaltyKick:\t" + penaltyKick;
 		return returnString;
 	}
+	
+	public String getSummary() {
+		String summaryString = "";
+		summaryString += super.getSubscribedPlayer().getTeamName() + " player " + super.getSubscribedPlayer().getFullName();
+		summaryString += " received the following infractions: ";
+		if (redCard) {summaryString += " red card ";}
+		if (yellowCard) {summaryString += " yellow card ";}
+		if (penaltyKick) {summaryString += " penalty kick ";}
+		return summaryString;
+	}
 
 }

@@ -68,7 +68,7 @@ public class LiveInputPanel extends JPanel {
 	    Player[] awayGoaliesArray = LiveInputController.getGoaliesArray(awayTeam);
 		
 		parentFrame.setTitle(match.getSummary());
-		setLayout(new MigLayout("", "[100.00px,grow][100.00px,grow][150,grow][][150,grow,center][100.00,grow][100.00,grow]", "[35px:n][59.00][][][59.00][72.00][-46.00][::150,fill][50px:n][][][][][50px:n][][][][][][60px:50][73.00][56.00]"));
+		setLayout(new MigLayout("", "[100.00px][100.00px,grow][150,grow][][150,grow,center][100.00,grow][100.00]", "[35px:n][59.00][][][59.00][72.00][-46.00][grow,fill][50px:n][][][][][50px:n][][][][][][60px:50][73.00][56.00]"));
 		
 		JButton ReturnButton = new JButton("Return to Scorekeeper Menu");
 		ReturnButton.addActionListener(new ActionListener() {
@@ -80,24 +80,11 @@ public class LiveInputPanel extends JPanel {
 		add(ReturnButton, "cell 2 0 3 1,grow");
 		
 		
-		
-//		String[] t= {" ", " "};
-//		String[] c= {" ", " "};
-//		table = new JTable(t,c);//{"", ""},{"", ""}); //new TeamRankingsController().generateRankingsDataTable();
-//		//table.getColumnModel().getColumn(0).setPreferredWidth(200);
-//		table.setEnabled(false);
-//		table.setShowGrid(false);
-//		DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-//		rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-//		DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
-//		leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
-//		for (int i = 1; i < 14; i++)
-//		{
-//			table.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-//			table.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
-//		}
-//		table.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
-//		table.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
+		table = LiveInputController.generateMatchEventsTable(match);
+		table.getColumnModel().getColumn(1).setPreferredWidth(500);
+		table.setEnabled(false);
+		table.setShowGrid(false);
+
 		
 		JLabel lblHomeTeam = new JLabel("HOME TEAM");
 		lblHomeTeam.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -129,12 +116,12 @@ public class LiveInputPanel extends JPanel {
 		JLabel label_3 = new JLabel("" + match.getMatchResult().getShots(false));
 		label_3.setForeground(Color.WHITE);
 		label_3.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		add(label_3, "cell 5 4 2 1,alignx left");
+		add(label_3, "cell 5 4,alignx center");
 		
 		JLabel label_2 = new JLabel("" + match.getMatchResult().getShots(true));
 		label_2.setForeground(Color.WHITE);
 		label_2.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		add(label_2, "cell 0 4 2 1,alignx right");
+		add(label_2, "cell 1 4,alignx center");
 		
 		
 		JLabel label_1 = new JLabel("" + match.getMatchResult().getPoints(true));
@@ -152,7 +139,7 @@ public class LiveInputPanel extends JPanel {
 		JLabel lblShots = new JLabel("SHOTS");
 		lblShots.setForeground(Color.WHITE);
 		lblShots.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		add(lblShots, "cell 0 5 2 1,alignx right,aligny top");
+		add(lblShots, "cell 1 5,alignx center,aligny top");
 		
 		JLabel lblGoals = new JLabel("GOALS");
 		lblGoals.setForeground(Color.WHITE);
@@ -167,7 +154,7 @@ public class LiveInputPanel extends JPanel {
 		JLabel lblShots_1 = new JLabel("SHOTS");
 		lblShots_1.setForeground(Color.WHITE);
 		lblShots_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		add(lblShots_1, "cell 5 5 2 1,alignx left,aligny top");
+		add(lblShots_1, "cell 5 5,alignx center,aligny top");
 		
 		
 		
@@ -175,7 +162,7 @@ public class LiveInputPanel extends JPanel {
 		JScrollPane scrollPane = new JScrollPane(table, 
 				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
 		        JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-	    add(scrollPane, "cell 1 7 5 1,growx,aligny bottom");
+	    add(scrollPane, "cell 0 7 7 1,growx,aligny bottom");
 	    
 	    
 	    
@@ -189,10 +176,10 @@ public class LiveInputPanel extends JPanel {
 		        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
 		    }
 		});
-	    add(comboBox_SE_HOME_1, "cell 2 9,growx");
+	    add(comboBox_SE_HOME_1, "cell 1 9 2 1,growx");
 	    
 	    JComboBox comboBox_SE_HOME_2 = new JComboBox(shotValue);
-	    add(comboBox_SE_HOME_2, "cell 2 10,growx");
+	    add(comboBox_SE_HOME_2, "cell 1 10 2 1,growx");
 	    
 	    JComboBox comboBox_SE_HOME_3 = new JComboBox(new DefaultComboBoxModel(awayGoaliesArray));
 	    comboBox_SE_HOME_3.setRenderer(new DefaultListCellRenderer() {
@@ -203,7 +190,7 @@ public class LiveInputPanel extends JPanel {
 		        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
 		    }
 		});
-	    add(comboBox_SE_HOME_3, "cell 2 11,growx");
+	    add(comboBox_SE_HOME_3, "cell 1 11 2 1,growx");
 	    
 	    JButton btnHomeTeamShot = new JButton("ADD HOME TEAM SHOT");
 	    btnHomeTeamShot.addActionListener(new ActionListener() {
@@ -229,7 +216,7 @@ public class LiveInputPanel extends JPanel {
 	    		
 	    	}
 	    });
-	    add(btnHomeTeamShot, "cell 2 12,grow");
+	    add(btnHomeTeamShot, "cell 1 12 2 1,grow");
 	    
 	    
 
@@ -242,10 +229,10 @@ public class LiveInputPanel extends JPanel {
 		        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
 		    }
 		});
-	    add(comboBox_SE_AWAY_1, "cell 4 9,growx");
+	    add(comboBox_SE_AWAY_1, "cell 4 9 2 1,growx");
 	    
 	    JComboBox comboBox_SE_AWAY_2 = new JComboBox(shotValue);
-	    add(comboBox_SE_AWAY_2, "cell 4 10,growx");
+	    add(comboBox_SE_AWAY_2, "cell 4 10 2 1,growx");
 	    
 	    JComboBox comboBox_SE_AWAY_3 = new JComboBox(new DefaultComboBoxModel(homeGoaliesArray));
 	    comboBox_SE_AWAY_3.setRenderer(new DefaultListCellRenderer() {
@@ -256,7 +243,7 @@ public class LiveInputPanel extends JPanel {
 		        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
 		    }
 		});
-	    add(comboBox_SE_AWAY_3, "cell 4 11,growx");
+	    add(comboBox_SE_AWAY_3, "cell 4 11 2 1,growx");
 	    
 	    JButton btnAwayTeamShot = new JButton("ADD AWAY TEAM SHOT");
 	    btnAwayTeamShot.addActionListener(new ActionListener() {
@@ -282,7 +269,7 @@ public class LiveInputPanel extends JPanel {
 	    		
 	    	}
 	    });
-	    add(btnAwayTeamShot, "cell 4 12,grow");
+	    add(btnAwayTeamShot, "cell 4 12 2 1,grow");
 	    
 	    
 	    
@@ -295,16 +282,16 @@ public class LiveInputPanel extends JPanel {
 		        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
 		    }
 		});
-	    add(comboBox_IF_HOME_1, "cell 2 14,growx");
+	    add(comboBox_IF_HOME_1, "cell 1 14 2 1,growx");
 	    
 	    JComboBox comboBox_IF_HOME_2 = new JComboBox(redCardValue);
-	    add(comboBox_IF_HOME_2, "cell 2 15,growx");
+	    add(comboBox_IF_HOME_2, "cell 1 15 2 1,growx");
 	    
 	    JComboBox comboBox_IF_HOME_3 = new JComboBox(yellowCardValue);
-	    add(comboBox_IF_HOME_3, "cell 2 16,growx");
+	    add(comboBox_IF_HOME_3, "cell 1 16 2 1,growx");
 	    
 	    JComboBox comboBox_IF_HOME_4 = new JComboBox(penaltyKickValue);
-	    add(comboBox_IF_HOME_4, "cell 2 17,growx");
+	    add(comboBox_IF_HOME_4, "cell 1 17 2 1,growx");
 	    
 	    JButton btnHomeTeamInfraction = new JButton("ADD HOME TEAM INFRACTION");
 	    btnHomeTeamInfraction.addActionListener(new ActionListener() {
@@ -348,7 +335,7 @@ public class LiveInputPanel extends JPanel {
 	    		}
 	    	}
 	    });
-	    add(btnHomeTeamInfraction, "cell 2 18,grow");
+	    add(btnHomeTeamInfraction, "cell 1 18 2 1,grow");
 	    
 	    
 	    
@@ -361,16 +348,16 @@ public class LiveInputPanel extends JPanel {
 		        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
 		    }
 		});
-	    add(comboBox_IF_AWAY_1, "cell 4 14,growx");
+	    add(comboBox_IF_AWAY_1, "cell 4 14 2 1,growx");
 	    
 	    JComboBox comboBox_IF_AWAY_2 = new JComboBox(redCardValue);
-	    add(comboBox_IF_AWAY_2, "cell 4 15,growx");
+	    add(comboBox_IF_AWAY_2, "cell 4 15 2 1,growx");
 	    
 	    JComboBox comboBox_IF_AWAY_3 = new JComboBox(yellowCardValue);
-	    add(comboBox_IF_AWAY_3, "cell 4 16,growx");
+	    add(comboBox_IF_AWAY_3, "cell 4 16 2 1,growx");
 	    
 	    JComboBox comboBox_IF_AWAY_4 = new JComboBox(penaltyKickValue);
-	    add(comboBox_IF_AWAY_4, "cell 4 17,growx");
+	    add(comboBox_IF_AWAY_4, "cell 4 17 2 1,growx");
 	    
 	    JButton btnAwayTeamInfraction = new JButton("ADD AWAY TEAM INFRACTION");
 	    btnAwayTeamInfraction.addActionListener(new ActionListener() {
@@ -415,7 +402,7 @@ public class LiveInputPanel extends JPanel {
 	    		}
 	    	}
 	    });
-	    add(btnAwayTeamInfraction, "cell 4 18,grow");
+	    add(btnAwayTeamInfraction, "cell 4 18 2 1,grow");
 	    
 	    
 	    

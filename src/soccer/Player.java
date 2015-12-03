@@ -24,6 +24,7 @@ public class Player {
 	private int yellowCards;
 	private int penaltyKicks;
 	private List<MatchEvent> matchEventsApplied;
+	private String teamName;
 
 	/** Constructor method. Initialized the fields and sets a unique ID.
 	 * 
@@ -35,7 +36,6 @@ public class Player {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.number = number;
-
 		uniqueID = UUID.randomUUID().toString();
 		matchEventsApplied = new ArrayList<MatchEvent>();
 	}
@@ -83,6 +83,14 @@ public class Player {
 
 	public int getPenaltyKicks() {
 		return penaltyKicks;
+	}
+	
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
+	}
+	
+	public String getTeamName() {
+		return teamName;
 	}
 
 	public List<MatchEvent> getMatchEventsApplied() {

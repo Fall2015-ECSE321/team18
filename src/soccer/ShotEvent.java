@@ -86,5 +86,20 @@ public class ShotEvent extends MatchEvent{
 		returnString += "\nScored:     \t" + scored ;
 		return returnString;
 	}
+	
+	public String getSummary() {
+		String summaryString = "";
+		summaryString += super.getSubscribedPlayer().getTeamName() + " player " + super.getSubscribedPlayer().getFullName();
+		if (scored) {
+			summaryString += " took shot and scored on ";
+		}
+		else {
+			summaryString += " took shot which was saved by ";
+		}
+		summaryString += subscribedGoalie.getTeamName() + " goalie " + subscribedGoalie.getFullName();
+		
+		
+		return summaryString;
+	}
 
 }

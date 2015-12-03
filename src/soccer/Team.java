@@ -165,6 +165,7 @@ public class Team {
 		}
 		else {
 			players.add(newPlayer);
+			newPlayer.setTeamName(name);
 			return "Player succesfully added to team.";
 		}
 	}

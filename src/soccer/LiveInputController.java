@@ -11,26 +11,11 @@ import persistence.PersistenceXStream;
 public class LiveInputController {
 
 
-	// public JTable generateSeasonDataTable() {
-	// 	Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
-	// 	String[][] seasonDataRows = season.getSubscribedSeasonDisplay().getSeasonData();
-
-	// 	String seasonDataHeaders[] = { "HomeTeam",
-	// 								   "RCrd",
-	// 								   "YCrd",
-	// 								   "PK",
-	// 								   "Sh",
-	// 								   "Pts",
-	// 								   "",
-	// 								   "Pts",
-	// 								   "Sh",
-	// 								   "PK",
-	// 								   "YCrd",
-	// 								   "RCrd",
-	// 								   "AwayTeam"};
-	// 	JTable seasonDataTable = new JTable(seasonDataRows, seasonDataHeaders);
-	// 	return seasonDataTable;
-	// }
+	public static JTable generateMatchEventsTable(Match liveMatch) {
+		String[] matchEventsHeader = {"timestamp", "Match Events Feed"};
+		JTable matchEventsTable = new JTable(liveMatch.getMatchEventsSummary(), matchEventsHeader);
+		return matchEventsTable;
+	}
 
 
 	public static Match newMatch(Team homeTeam, Team awayTeam, Season season) {
