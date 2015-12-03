@@ -45,8 +45,8 @@ public class LiveInputController {
 		
 	}
 
-	public static Team[] getTeamsArray() {
-		Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+	public static Team[] getTeamsArray(Season season) {
+		//Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
 		List<Team> teamsList = season.getLeague().getTeams();
 		return teamsList.toArray(new Team[teamsList.size()]);
 //		Team[] teamsArray = new Team[teamsList.size()];
@@ -58,16 +58,16 @@ public class LiveInputController {
 //		return teamsArray;
 	}
 
-	public static Match[] getLiveMatchesArray() {
-		Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+	public static Match[] getLiveMatchesArray(Season season) {
+		//Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
 		List<Match> matches = season.getMatches();
 		List<Match> liveMatches = new ArrayList<Match>();
-		int count = 0;
+		//int count = 0;
 		for (Match match : matches) {
 			if (!match.getComplete()) {
 				liveMatches.add(match);
 			}
-			count++;
+			//count++;
 		}
 		return liveMatches.toArray(new Match[liveMatches.size()]);
 	}
@@ -81,27 +81,27 @@ public class LiveInputController {
 		return players.toArray(new Player[players.size()]);
 	}
 	
-	public static Team getTeam(Team selectedTeam, Season season) {
-		List<Team> teams = season.getLeague().getTeams();
-		int count = 0;
-		for (Team team : teams) {
-			if (team.getUniqueID() == selectedTeam.getUniqueID()) {
-				return team;
-			}
-			count++;
-		}
-		return selectedTeam;
-	}
+//	public static Team getTeam(Team selectedTeam, Season season) {
+//		List<Team> teams = season.getLeague().getTeams();
+//		//int count = 0;
+//		for (Team team : teams) {
+//			if (team.getUniqueID() == selectedTeam.getUniqueID()) {
+//				return team;
+//			}
+//			//count++;
+//		}
+//		return selectedTeam;
+//	}
 
 	public static Player[] getGoaliesArray(Team homeTeam) {
 		List<Player> players = homeTeam.getPlayers();
 		List<Goalie> goalies = new ArrayList<Goalie>();
-		int count = 0;
+		//int count = 0;
 		for (Player player : players) {
 			if (player instanceof Goalie) {
 				goalies.add((Goalie)player);
 			}
-			count++;
+			//count++;
 		}
 		return goalies.toArray(new Goalie[goalies.size()]);
 	}
