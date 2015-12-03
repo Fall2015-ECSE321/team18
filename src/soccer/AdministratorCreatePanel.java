@@ -84,7 +84,15 @@ public class AdministratorCreatePanel extends JPanel {
 		JLabel labelP5 = new JLabel("Team");
 		labelP5.setForeground(SystemColor.text);
 		add(labelP5, "flowx,cell 2 5");
-		JComboBox comboBoxP5 = new JComboBox();
+		JComboBox comboBoxP5 = new JComboBox(new DefaultComboBoxModel(AdministratorCreateController.getTeamsArray(parentFrame.getSeason())));
+		comboBoxP5.setRenderer(new DefaultListCellRenderer() {
+		    @Override
+		    public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+		        Team team = (Team)value;
+		        value = team.getName();
+		        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+		    }
+		});
 		add(comboBoxP5, "cell 2 5,growx");
 		
 		
@@ -94,9 +102,8 @@ public class AdministratorCreatePanel extends JPanel {
 				String playerFirstName = textFieldP1.getText();
 				String playerLastName = textFieldP2.getText();
 				int playerNumber = (Integer) spinnerP3.getValue();
-				Goalie newPlayer = new Goalie(playerFirstName, playerLastName, playerNumber);
-				
-				AdministratorCreateController.createPlayer(parentFrame.getSeason(), newPlayer, Team);
+				Team team = (Team)comboBoxP5.getSelectedItem();
+				AdministratorCreateController.createPlayer(parentFrame.getSeason(), playerFirstName, playerLastName, playerNumber, team);
 				AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
 				parentFrame.changePanel(newPanel);
 			}
@@ -110,9 +117,8 @@ public class AdministratorCreatePanel extends JPanel {
 				String goalieFirstName = textFieldP1.getText();
 				String goalieLastName = textFieldP2.getText();
 				int goalieNumber = (Integer) spinnerP3.getValue();
-				Goalie newGoalie = new Goalie(goalieFirstName, goalieLastName, goalieNumber);
-				
-				AdministratorCreateController.createGoalie(parentFrame.getSeason(), newGoalie, Team);
+				Team team = (Team)comboBoxP5.getSelectedItem();
+				AdministratorCreateController.createGoalie(parentFrame.getSeason(), goalieFirstName, goalieLastName, goalieNumber, team);
 				AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
 				parentFrame.changePanel(newPanel);
 			}

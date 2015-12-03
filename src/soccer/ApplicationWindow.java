@@ -33,72 +33,84 @@ public class ApplicationWindow extends JFrame {
 	}
 	
 	public void changePanel() {
+		//updateSeason();
 	    contentPane.removeAll();
 	    //update(getGraphics());
 	    revalidate();
 	}
 	
 	public void changePanel(ViewModeMenuPanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
 	
 	public void changePanel(HomeMenuPanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
 	
 	public void changePanel(AdministratorLoginPanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
 	
 	public void changePanel(ScorekeeperLoginPanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
 	
 	public void changePanel(TeamRankingsPanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
 	
 	public void changePanel(PlayerRankingsPanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
 	
 	public void changePanel(SeasonDisplayPanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
 	
 	public void changePanel(ScorekeeperModeMenuPanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
 	
 	public void changePanel(ScorekeeperLiveMatchMenuPanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
 	
 	public void changePanel(LiveInputPanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
 	
 	public void changePanel(AdministratorCreatePanel newPanel) {
+		//updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();
@@ -139,6 +151,18 @@ public class ApplicationWindow extends JFrame {
 		
 		HomeMenuPanel homeMenuPanel = new HomeMenuPanel(this);
 		changePanel(homeMenuPanel);
+	}
+	
+	public void updateSeason() {
+		try {
+			season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+		}
+		catch (com.thoughtworks.xstream.io.StreamException e) {
+			System.out.println("test");
+			League league = new League("league");
+		    season = new Season("W_2015-2016", league);
+		    PersistenceXStream.saveToXMLwithXStream(season);  
+		}
 	}
 
 }

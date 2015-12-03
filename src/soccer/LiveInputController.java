@@ -21,10 +21,10 @@ public class LiveInputController {
 	public static Match newMatch(Team homeTeam, Team awayTeam, Season season) {
 		//Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
 		//League league
-		System.out.println(season.getMatches().toString());
+		//System.out.println(season.getMatches().toString());
 		Match newMatch = new Match(season, homeTeam, awayTeam);
 		season.addMatch(newMatch);
-		System.out.println(season.getMatches().toString());
+		//System.out.println(season.getMatches().toString());
 		PersistenceXStream.saveToXMLwithXStream(season);
 		return newMatch;
 		
