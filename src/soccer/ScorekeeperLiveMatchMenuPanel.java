@@ -46,7 +46,7 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 		lblNewLabel.setForeground(SystemColor.text);
 		add(lblNewLabel, "flowx,cell 1 2");
 		
-		JComboBox comboBox1 = new JComboBox(new DefaultComboBoxModel(LiveInputController.getTeamsArray()));
+		JComboBox comboBox1 = new JComboBox(new DefaultComboBoxModel(LiveInputController.getTeamsArray(parentFrame.getSeason())));
 		comboBox1.setRenderer(new DefaultListCellRenderer() {
 		    @Override
 		    public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
@@ -61,7 +61,7 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 		lblNewLabel_1.setForeground(SystemColor.text);
 		add(lblNewLabel_1, "flowx,cell 1 3");
 		
-		JComboBox comboBox2 = new JComboBox(new DefaultComboBoxModel(LiveInputController.getTeamsArray()));
+		JComboBox comboBox2 = new JComboBox(new DefaultComboBoxModel(LiveInputController.getTeamsArray(parentFrame.getSeason())));
 		comboBox2.setRenderer(new DefaultListCellRenderer() {
 		    @Override
 		    public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
@@ -76,9 +76,9 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 		btnLiveScorekeeping.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Team homeTeam = (Team)comboBox1.getSelectedItem();
-				homeTeam = LiveInputController.getTeam(homeTeam, parentFrame.getSeason());
+				//homeTeam = LiveInputController.getTeam(homeTeam, parentFrame.getSeason());
 				Team awayTeam = (Team)comboBox2.getSelectedItem();
-				awayTeam = LiveInputController.getTeam(awayTeam, parentFrame.getSeason());
+				//awayTeam = LiveInputController.getTeam(awayTeam, parentFrame.getSeason());
 				if (homeTeam == awayTeam) {
 					JOptionPane.showMessageDialog(parentFrame, "Error: Home and Away Teams must be different!");
 				}
@@ -97,7 +97,7 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 		JLabel lblSelectMatch = new JLabel("Select Live Match");
 		lblSelectMatch.setForeground(SystemColor.text);
 		add(lblSelectMatch, "flowx,cell 1 6");
-		Match[] liveMatchesArray = LiveInputController.getLiveMatchesArray();
+		Match[] liveMatchesArray = LiveInputController.getLiveMatchesArray(parentFrame.getSeason());
 		System.out.println(liveMatchesArray);
 		JComboBox comboBox3 = new JComboBox(new DefaultComboBoxModel(liveMatchesArray));
 		if (liveMatchesArray.length > 0) {
