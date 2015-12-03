@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 import persistence.PersistenceXStream;
 
 import java.awt.GridLayout;
+import java.io.IOException;
 
 public class ApplicationWindow extends JFrame {
 
@@ -119,16 +120,21 @@ public class ApplicationWindow extends JFrame {
 		contentPane.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		
+		try {
+			season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+		}
+		catch (com.thoughtworks.xstream.io.StreamException e) {
+			System.out.println("test");
+			League league = new League("league");
+		    season = new Season("W_2015-2016", league);
+		    PersistenceXStream.saveToXMLwithXStream(season);  
+		}
 		
-		
-		season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
-		
-		//testing 
-		League l = season.getLeague();
+		//debugging purpose
 //		System.out.println(season.toString());
 //		System.out.println(season.getMatches().toString());
-//		System.out.println(l.toString());
-//		System.out.println(l.getTeams().toString());
+//		System.out.println(league.toString());
+//		System.out.println(league.getTeams().toString());
 		
 		
 		HomeMenuPanel homeMenuPanel = new HomeMenuPanel(this);

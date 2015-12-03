@@ -8,6 +8,7 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 
@@ -24,21 +25,23 @@ import javax.swing.table.TableColumn;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Arrays;
 import java.util.List;
 import java.awt.Color;
+import java.awt.SystemColor;
+import java.awt.Font;
 
 public class SeasonDisplayPanel extends JPanel {
 
 	ApplicationWindow parentFrame;
 	private Season season;
 	private JTable table;
-	private int returnLocation;
 	/**
 	 * Create the panel.
 	 */
 	public SeasonDisplayPanel(ApplicationWindow parentFrame, int returnLocation) {
 		this.parentFrame = parentFrame;
-		setLayout(new MigLayout("", "[100.00px,grow][278.00,grow,center][100.00,grow]", "[35px:n][220.00][335.00px:n][-268.00,grow][420.00]"));
+		setLayout(new MigLayout("", "[100.00px,grow][278.00,grow,center][100.00,grow]", "[35px:n][68.00][335.00px:n][39.00][63.00]"));
 		
 		if (returnLocation == 0) {
 			JButton ReturnButton = new JButton("Return to Menu");
@@ -63,51 +66,65 @@ public class SeasonDisplayPanel extends JPanel {
 		
 		
 		
+		JLabel TitleLabel = new JLabel("Season Display");
+		TitleLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		TitleLabel.setForeground(SystemColor.text);
+		add(TitleLabel, "cell 1 1,alignx center");
 		
+		
+		
+		String[][] seasonDataRows = SeasonDisplayController.getSeasonDataRows(parentFrame.getSeason());
+		String[] seasonDataHeaders = SeasonDisplayController.getSeasonDataHeaders();
+		
+		JTable seasonDataTable;
+		if (seasonDataRows.length == 15) {
+			seasonDataTable = new JTable(seasonDataRows, seasonDataHeaders);
+			seasonDataTable.setEnabled(false);
+			seasonDataTable.setShowGrid(false);
+			
+			DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+			 rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+			 DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
+			 leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
+			 DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+			 centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
+			 
+			 for (int i = 0; i < 15; i++)
+			 {
+				if (i < 6) {
+					seasonDataTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+				 	seasonDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
+				}
+				if (i > 6) {
+				 	seasonDataTable.getColumnModel().getColumn(i).setCellRenderer(leftRenderer);
+				 	seasonDataTable.getColumnModel().getColumn(i).setHeaderRenderer(leftRenderer);
+				}
+			 }
+			 seasonDataTable.getColumnModel().getColumn(0).setPreferredWidth(100);
+			 seasonDataTable.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
+			 seasonDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
+			 seasonDataTable.getColumnModel().getColumn(12).setPreferredWidth(100);
+			 seasonDataTable.getColumnModel().getColumn(12).setCellRenderer(rightRenderer);
+			 seasonDataTable.getColumnModel().getColumn(12).setHeaderRenderer(rightRenderer);
+			 seasonDataTable.getColumnModel().getColumn(6).setCellRenderer(centerRenderer);
+			 seasonDataTable.getColumnModel().getColumn(6).setHeaderRenderer(rightRenderer);
+			 seasonDataTable.getColumnModel().getColumn(13).setPreferredWidth(200);
+			 seasonDataTable.getColumnModel().getColumn(13).setCellRenderer(rightRenderer);
+			 seasonDataTable.getColumnModel().getColumn(13).setHeaderRenderer(rightRenderer);
+			 seasonDataTable.getColumnModel().getColumn(14).setCellRenderer(rightRenderer);
+			 seasonDataTable.getColumnModel().getColumn(14).setHeaderRenderer(rightRenderer);
+			
+		}
+		else {
+			TitleLabel.setText("No season matches to view");
+			seasonDataTable = new JTable();
+			seasonDataTable.add(new JLabel("No season matches to view"));
 
-		table = SeasonDisplayController.generateSeasonDataTable();
-		table.setEnabled(false);
-		table.setShowGrid(false);
-		 DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-		 rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-		 DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
-		 leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
-		 DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-		 centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
-		 
-		 for (int i = 0; i < 15; i++)
-		 {
-			if (i < 6) {
-				table.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-			 	table.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
-			}
-			if (i > 6) {
-			 	table.getColumnModel().getColumn(i).setCellRenderer(leftRenderer);
-			 	table.getColumnModel().getColumn(i).setHeaderRenderer(leftRenderer);
-			}
-		 }
-		 table.getColumnModel().getColumn(0).setPreferredWidth(100);
-		 table.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
-		 table.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
-		 table.getColumnModel().getColumn(12).setPreferredWidth(100);
-		 table.getColumnModel().getColumn(12).setCellRenderer(rightRenderer);
-		 table.getColumnModel().getColumn(12).setHeaderRenderer(rightRenderer);
-		 table.getColumnModel().getColumn(6).setCellRenderer(centerRenderer);
-		 table.getColumnModel().getColumn(6).setHeaderRenderer(rightRenderer);
-		 table.getColumnModel().getColumn(13).setPreferredWidth(200);
-		 table.getColumnModel().getColumn(13).setCellRenderer(rightRenderer);
-		 table.getColumnModel().getColumn(13).setHeaderRenderer(rightRenderer);
-		 table.getColumnModel().getColumn(14).setCellRenderer(rightRenderer);
-		 table.getColumnModel().getColumn(14).setHeaderRenderer(rightRenderer);
-
+		}
 		
+		JScrollPane scrollPane = new JScrollPane(table, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		add(scrollPane, "cell 0 2 3 1,grow");
 		
-		
-
-		JScrollPane scrollPane = new JScrollPane(table,
-		        JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, 
-		        JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-	    add(scrollPane, "cell 0 2 3 1,grow");
 
 
 	}

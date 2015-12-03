@@ -8,6 +8,7 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 
@@ -24,8 +25,11 @@ import javax.swing.table.TableColumn;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Arrays;
 import java.util.List;
 import java.awt.Color;
+import java.awt.SystemColor;
+import java.awt.Font;
 
 public class TeamRankingsPanel extends JPanel {
 
@@ -37,7 +41,7 @@ public class TeamRankingsPanel extends JPanel {
 	 */
 	public TeamRankingsPanel(ApplicationWindow parentFrame, int returnLocation) {
 		this.parentFrame = parentFrame;
-		setLayout(new MigLayout("", "[100.00px,grow][278.00,grow,center][100.00,grow]", "[35px:n][562.00][204.00px:n][46.00,grow][791.00]"));
+		setLayout(new MigLayout("", "[100.00px,grow][278.00,grow,center][100.00,grow]", "[35px:n][68.00][335.00px:n][39.00][63.00]"));
 		
 		if (returnLocation == 0) {
 			JButton ReturnButton = new JButton("Return to Menu");
@@ -61,30 +65,46 @@ public class TeamRankingsPanel extends JPanel {
 		}
 		
 		
-
-		table = new TeamRankingsController().generateRankingsDataTable();
-		//table.getColumnModel().getColumn(0).setPreferredWidth(200);
-		table.setEnabled(false);
-		table.setShowGrid(false);
-		DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-		rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-		DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
-		leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
-		for (int i = 1; i < 14; i++)
-		{
-			table.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-			table.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
+		
+		JLabel TitleLabel = new JLabel("Team Rankings");
+		TitleLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		TitleLabel.setForeground(SystemColor.text);
+		add(TitleLabel, "cell 1 1,alignx center");
+		
+		
+		
+		String[][] teamDataRows = TeamRankingsController.generateTeamDataRows(parentFrame.getSeason());
+		String[] teamDataHeaders = TeamRankingsController.getTeamDataHeaders();
+		
+		JTable teamDataTable;
+		if (teamDataRows.length > 0) {
+			teamDataTable = new JTable(teamDataRows, teamDataHeaders);
+			teamDataTable.setEnabled(false);
+			teamDataTable.setShowGrid(false);
+			
+			DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+			rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+			DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
+			leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
+			for (int i = 1; i < 14; i++)
+			{
+				teamDataTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+				teamDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
+			}
+			teamDataTable.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
+			teamDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
+			
 		}
-		table.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
-		table.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
-		
-		
-		
+		else {
+			TitleLabel.setText("No team rankings available");
+			teamDataTable = new JTable();
+			teamDataTable.add(new JLabel("No team rankings available"));
 
-		JScrollPane scrollPane = new JScrollPane(table, 
-				JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, 
-		        JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-	    add(scrollPane, "cell 0 2 3 1,growx,aligny bottom");
+		}
+		
+		JScrollPane scrollPane = new JScrollPane(table, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		add(scrollPane, "cell 0 2 3 1,grow");
+		
 
 
 	}

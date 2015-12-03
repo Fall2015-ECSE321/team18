@@ -1,5 +1,6 @@
 package persistence;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -43,5 +44,15 @@ public class PersistenceXStream {
 	
 	public static void setFilename(String fn){
 		filename = fn;
+	}
+	
+	public static void createNewFile(String fn){
+		filename = fn;
+		File f = new File(filename);
+		try{
+			f.createNewFile();
+		} catch(IOException e){
+			e.printStackTrace();
+		}
 	}
 }

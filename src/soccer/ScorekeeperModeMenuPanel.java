@@ -7,6 +7,7 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 import net.miginfocom.swing.MigLayout;
 
@@ -44,8 +45,14 @@ public class ScorekeeperModeMenuPanel extends JPanel {
 		JButton btnLiveScorekeeping = new JButton("Live Scorekeeping");
 		btnLiveScorekeeping.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ScorekeeperLiveMatchMenuPanel newPanel = new ScorekeeperLiveMatchMenuPanel(parentFrame);
-				parentFrame.changePanel(newPanel);
+				if (parentFrame.getSeason().getLeague().getTeams().size() >= 2) {
+					ScorekeeperLiveMatchMenuPanel newPanel = new ScorekeeperLiveMatchMenuPanel(parentFrame);
+					parentFrame.changePanel(newPanel);
+				}
+				else {
+					JOptionPane.showMessageDialog(parentFrame, "Error: There must be at least two teams in the league!");
+				}
+				
 			}
 		});
 		add(btnLiveScorekeeping, "cell 1 2,grow");

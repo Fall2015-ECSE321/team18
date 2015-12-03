@@ -11,10 +11,10 @@ public class SeasonDisplay {
 
 	public SeasonDisplay() {
 		uniqueID = UUID.randomUUID().toString();
+		seasonData = new String[0][0];
 	}
 	
 	public void update(List<Match> matches) {
-		//System.out.println("test444");
 		seasonData = new String[matches.size()][];
 		int count = 0;
 		for (Match match : matches) {

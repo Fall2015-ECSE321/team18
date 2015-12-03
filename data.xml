@@ -1,0 +1,14 @@
+<soccer.Season id="1">
+  <uniqueID>97ba9b50-9001-4365-903c-781cfb472ab5</uniqueID>
+  <name>W_2015-2016</name>
+  <league id="2">
+    <uniqueID>03277ee2-b538-464e-bbb0-a7d9380fdcc9</uniqueID>
+    <name>league</name>
+    <teams id="3"/>
+  </league>
+  <subscribedSeasonDisplay id="4">
+    <uniqueID>8aadec74-dc87-4c70-b785-fe43087a7aa2</uniqueID>
+    <seasonData id="5"/>
+  </subscribedSeasonDisplay>
+  <matches id="6"/>
+</soccer.Season>

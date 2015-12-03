@@ -2,17 +2,20 @@ package soccer;
 
 import java.util.UUID;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
 
 import persistence.PersistenceXStream;
 
 public class PlayerRankingsController {
 
 
-	public JTable generateRankingsDataTable() {
-		Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+	public static String[][] generatePlayerDataRows(Season season) {
 		List<Team> teams = season.getLeague().getTeams();
 		List<Player> players = new ArrayList<Player>();
 		for (Team team : teams) {
@@ -27,19 +30,22 @@ public class PlayerRankingsController {
 			playerDataRows[count] = player.getPlayerStats();
 			count++;
 		}
-
+		System.out.println(Arrays.deepToString(playerDataRows));
+		return playerDataRows;
+	}
+			
+	
+	public static String[] getPlayerDataHeaders() {
 		String playerDataHeaders[] = { "FirstName",
-									 "LastName",
-									 "Number",
-									 "GP",
-									 "Sh",
-									 "G",
-									 "RCrd",
-									 "YCrd",
-									 "PK"};
-		JTable playerDataTable = new JTable(playerDataRows, playerDataHeaders);
-		return playerDataTable;
+									   "LastName",
+									   "Number",
+									   "GP",
+									   "Sh",
+									   "G",
+									   "RCrd",
+									   "YCrd",
+									   "PK"};
+		return playerDataHeaders;
 	}
 }
-
-
+			

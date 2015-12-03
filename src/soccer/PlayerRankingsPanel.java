@@ -8,6 +8,7 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 
@@ -24,8 +25,11 @@ import javax.swing.table.TableColumn;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Arrays;
 import java.util.List;
 import java.awt.Color;
+import java.awt.SystemColor;
+import java.awt.Font;
 
 public class PlayerRankingsPanel extends JPanel {
 
@@ -37,7 +41,7 @@ public class PlayerRankingsPanel extends JPanel {
 	 */
 	public PlayerRankingsPanel(ApplicationWindow parentFrame, int returnLocation) {
 		this.parentFrame = parentFrame;
-		setLayout(new MigLayout("", "[100.00px,grow][278.00,grow,center][100.00,grow]", "[35px:n][220.00][335.00px:n][-268.00,grow][420.00]"));
+		setLayout(new MigLayout("", "[100.00px,grow][278.00,grow,center][100.00,grow]", "[35px:n][68.00][335.00px:n][39.00][63.00]"));
 		
 		if (returnLocation == 0) {
 			JButton ReturnButton = new JButton("Return to Menu");
@@ -61,30 +65,46 @@ public class PlayerRankingsPanel extends JPanel {
 		}
 		
 		
+		
+		JLabel TitleLabel = new JLabel("Player Rankings");
+		TitleLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		TitleLabel.setForeground(SystemColor.text);
+		add(TitleLabel, "cell 1 1,alignx center");
+		
+		
+		
+		String[][] playerDataRows = PlayerRankingsController.generatePlayerDataRows(parentFrame.getSeason());
+		String[] playerDataHeaders = PlayerRankingsController.getPlayerDataHeaders();
+		
+		JTable playerDataTable;
+		if (playerDataRows.length > 0) {
+			playerDataTable = new JTable(playerDataRows, playerDataHeaders);
+			table.setEnabled(false);
+			table.setShowGrid(false);
+			
+			DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+			rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+			DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
+			leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
+			for (int i = 2; i < 9; i++)
+			{
+				playerDataTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+				playerDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
+			}
+			playerDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
+			playerDataTable.getColumnModel().getColumn(1).setHeaderRenderer(leftRenderer);
+			
+		}
+		else {
+			TitleLabel.setText("No player rankings available");
+			playerDataTable = new JTable();
+			playerDataTable.add(new JLabel("No player rankings available"));
 
-		table = new PlayerRankingsController().generateRankingsDataTable();
-		//table.getColumnModel().getColumn(0).setPreferredWidth(200);
-		table.setEnabled(false);
-		table.setShowGrid(false);
-		 DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-		 rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-		 DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
-		 leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
-		 for (int i = 2; i < 9; i++)
-		 {
-		 	table.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-		 	table.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
-		 }
-		 table.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
-		 table.getColumnModel().getColumn(1).setHeaderRenderer(leftRenderer);
+		}
 		
+		JScrollPane scrollPane = new JScrollPane(table, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		add(scrollPane, "cell 0 2 3 1,grow");
 		
-		
-
-		JScrollPane scrollPane = new JScrollPane(table,
-		        JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, 
-		        JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-	    add(scrollPane, "cell 0 2 3 1,grow");
 
 
 	}

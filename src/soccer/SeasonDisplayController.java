@@ -2,21 +2,29 @@ package soccer;
 
 import java.util.UUID;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
 
 import persistence.PersistenceXStream;
 
 public class SeasonDisplayController {
+//	Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+//	season.publishSeason();
+//	PersistenceXStream.saveToXMLwithXStream(season);
 
-
-	public static JTable generateSeasonDataTable() {
-		Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
-		season.publishSeason();
-		PersistenceXStream.saveToXMLwithXStream(season);
+	public static String[][] getSeasonDataRows(Season season) {
 		String[][] seasonDataRows = season.getSubscribedSeasonDisplay().getSeasonData();
-
+		System.out.println(Arrays.deepToString(seasonDataRows));
+		return seasonDataRows;
+	}
+			
+	
+	public static String[] getSeasonDataHeaders() {
 		String seasonDataHeaders[] = { "HomeTeam",
 									   "RCrd",
 									   "YCrd",
@@ -32,9 +40,6 @@ public class SeasonDisplayController {
 									   "AwayTeam",
 									   "Date",
 									   "Time"};
-		JTable seasonDataTable = new JTable(seasonDataRows, seasonDataHeaders);
-		return seasonDataTable;
+		return seasonDataHeaders;
 	}
 }
-
-
