@@ -76,33 +76,28 @@ public class TeamRankingsPanel extends JPanel {
 		String[][] teamDataRows = TeamRankingsController.generateTeamDataRows(parentFrame.getSeason());
 		String[] teamDataHeaders = TeamRankingsController.getTeamDataHeaders();
 		
-		JTable teamDataTable;
-		if (teamDataRows.length > 0) {
-			teamDataTable = new JTable(teamDataRows, teamDataHeaders);
-			teamDataTable.setEnabled(false);
-			teamDataTable.setShowGrid(false);
-			
-			DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-			rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-			DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
-			leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
-			for (int i = 1; i < 14; i++)
-			{
-				teamDataTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-				teamDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
-			}
-			teamDataTable.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
-			teamDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
-			
+		JTable teamDataTable = new JTable(teamDataRows, teamDataHeaders);
+		teamDataTable.setEnabled(false);
+		teamDataTable.setShowGrid(false);
+		
+		DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+		rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+		DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
+		leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
+		for (int i = 1; i < 14; i++)
+		{
+			teamDataTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+			teamDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
 		}
-		else {
-			TitleLabel.setText("No team rankings available");
-			teamDataTable = new JTable();
-			teamDataTable.add(new JLabel("No team rankings available"));
-
+		teamDataTable.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
+		teamDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
+		
+		
+		if (teamDataRows.length == 0) {
+			TitleLabel.setText("No teams in the league");
 		}
 		
-		JScrollPane scrollPane = new JScrollPane(table, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		JScrollPane scrollPane = new JScrollPane(teamDataTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		add(scrollPane, "cell 0 2 3 1,grow");
 		
 

@@ -14,8 +14,8 @@ public class League {
 
 	private String uniqueID;
 	private String name;
-	//private teamRanking teamRankingSubscriber;
-	//private playerRanking playerRankingSubscriber;
+	private TeamRankings subscribedTeamRankings;
+	private PlayerRankings subscribedPlayerRankings;
 	private List<Team> teams;
 
 	/** Constructor method; sets League name and gives it a unique ID.
@@ -27,6 +27,9 @@ public class League {
 
 		uniqueID = UUID.randomUUID().toString();
 		teams = new ArrayList<Team>();
+		subscribedTeamRankings = new TeamRankings();
+		subscribedPlayerRankings = new PlayerRankings();
+		publishRankings();
 	}
 
 	// getters
@@ -75,8 +78,17 @@ public class League {
 	/**	Not yet implemented
 	 * @return
 	 */
-	public String publishToRankings() {
-		return "";
+	public void publishRankings() {
+		subscribedTeamRankings.update(teams);
+		subscribedPlayerRankings.update(teams);
+	}
+
+	public TeamRankings getSubscribedTeamRankings() {
+		return subscribedTeamRankings;
+	}
+	
+	public PlayerRankings getSubscribedPlayerRankings() {
+		return subscribedPlayerRankings;
 	}
 
 

@@ -186,6 +186,7 @@ public class Match {
 			complete = true;
 			publishTeamStats();
 			publishPlayerStats();
+			season.getLeague().publishRankings();
 			season.publishSeason();
 			//season.getLeague().publishToRankings()
 			return "Match was succesfully ended";
@@ -315,7 +316,7 @@ public class Match {
 	}
 
 	public String[] getMatchData() {
-		String[] matchData = new String[16];
+		String[] matchData = new String[15];
 		matchData[0] = subscribedHomeTeam.getName();
 		matchData[1] = "" + matchResult.getRedCards(true);
 		matchData[2] = "" + matchResult.getYellowCards(true);

@@ -60,6 +60,13 @@ public class ScorekeeperModeMenuPanel extends JPanel {
 		JButton btnBatchInputMode = new JButton("Batch Scorekeeping");
 		btnBatchInputMode.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if (parentFrame.getSeason().getLeague().getTeams().size() >= 2) {
+					ScorekeeperLiveMatchMenuPanel newPanel = new ScorekeeperLiveMatchMenuPanel(parentFrame);
+					parentFrame.changePanel(newPanel);
+				}
+				else {
+					JOptionPane.showMessageDialog(parentFrame, "Error: There must be at least two teams in the league!");
+				}
 			}
 		});
 		add(btnBatchInputMode, "cell 1 3,grow");

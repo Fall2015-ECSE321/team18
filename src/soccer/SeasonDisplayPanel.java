@@ -76,53 +76,48 @@ public class SeasonDisplayPanel extends JPanel {
 		String[][] seasonDataRows = SeasonDisplayController.getSeasonDataRows(parentFrame.getSeason());
 		String[] seasonDataHeaders = SeasonDisplayController.getSeasonDataHeaders();
 		
-		JTable seasonDataTable;
-		if (seasonDataRows.length == 15) {
-			seasonDataTable = new JTable(seasonDataRows, seasonDataHeaders);
-			seasonDataTable.setEnabled(false);
-			seasonDataTable.setShowGrid(false);
+		JTable seasonDataTable = new JTable(seasonDataRows, seasonDataHeaders);
+		seasonDataTable.setEnabled(false);
+		seasonDataTable.setShowGrid(false);
+		
+		DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+		 rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+		 DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
+		 leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
+		 DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+		 centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
+		 
+		 for (int i = 0; i < 15; i++)
+		 {
+			if (i < 6) {
+				seasonDataTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+			 	seasonDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
+			}
+			if (i > 6) {
+			 	seasonDataTable.getColumnModel().getColumn(i).setCellRenderer(leftRenderer);
+			 	seasonDataTable.getColumnModel().getColumn(i).setHeaderRenderer(leftRenderer);
+			}
+		 }
+		 seasonDataTable.getColumnModel().getColumn(0).setPreferredWidth(100);
+		 seasonDataTable.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
+		 seasonDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
+		 seasonDataTable.getColumnModel().getColumn(12).setPreferredWidth(100);
+		 seasonDataTable.getColumnModel().getColumn(12).setCellRenderer(rightRenderer);
+		 seasonDataTable.getColumnModel().getColumn(12).setHeaderRenderer(rightRenderer);
+		 seasonDataTable.getColumnModel().getColumn(6).setCellRenderer(centerRenderer);
+		 seasonDataTable.getColumnModel().getColumn(6).setHeaderRenderer(rightRenderer);
+		 seasonDataTable.getColumnModel().getColumn(13).setPreferredWidth(200);
+		 seasonDataTable.getColumnModel().getColumn(13).setCellRenderer(rightRenderer);
+		 seasonDataTable.getColumnModel().getColumn(13).setHeaderRenderer(rightRenderer);
+		 seasonDataTable.getColumnModel().getColumn(14).setCellRenderer(rightRenderer);
+		 seasonDataTable.getColumnModel().getColumn(14).setHeaderRenderer(rightRenderer);
 			
-			DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-			 rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-			 DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
-			 leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
-			 DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-			 centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
-			 
-			 for (int i = 0; i < 15; i++)
-			 {
-				if (i < 6) {
-					seasonDataTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-				 	seasonDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
-				}
-				if (i > 6) {
-				 	seasonDataTable.getColumnModel().getColumn(i).setCellRenderer(leftRenderer);
-				 	seasonDataTable.getColumnModel().getColumn(i).setHeaderRenderer(leftRenderer);
-				}
-			 }
-			 seasonDataTable.getColumnModel().getColumn(0).setPreferredWidth(100);
-			 seasonDataTable.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
-			 seasonDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
-			 seasonDataTable.getColumnModel().getColumn(12).setPreferredWidth(100);
-			 seasonDataTable.getColumnModel().getColumn(12).setCellRenderer(rightRenderer);
-			 seasonDataTable.getColumnModel().getColumn(12).setHeaderRenderer(rightRenderer);
-			 seasonDataTable.getColumnModel().getColumn(6).setCellRenderer(centerRenderer);
-			 seasonDataTable.getColumnModel().getColumn(6).setHeaderRenderer(rightRenderer);
-			 seasonDataTable.getColumnModel().getColumn(13).setPreferredWidth(200);
-			 seasonDataTable.getColumnModel().getColumn(13).setCellRenderer(rightRenderer);
-			 seasonDataTable.getColumnModel().getColumn(13).setHeaderRenderer(rightRenderer);
-			 seasonDataTable.getColumnModel().getColumn(14).setCellRenderer(rightRenderer);
-			 seasonDataTable.getColumnModel().getColumn(14).setHeaderRenderer(rightRenderer);
-			
-		}
-		else {
+		
+		if (seasonDataRows.length == 0) {
 			TitleLabel.setText("No season matches to view");
-			seasonDataTable = new JTable();
-			seasonDataTable.add(new JLabel("No season matches to view"));
-
 		}
 		
-		JScrollPane scrollPane = new JScrollPane(table, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		JScrollPane scrollPane = new JScrollPane(seasonDataTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		add(scrollPane, "cell 0 2 3 1,grow");
 		
 

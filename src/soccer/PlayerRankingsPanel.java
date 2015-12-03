@@ -76,33 +76,28 @@ public class PlayerRankingsPanel extends JPanel {
 		String[][] playerDataRows = PlayerRankingsController.generatePlayerDataRows(parentFrame.getSeason());
 		String[] playerDataHeaders = PlayerRankingsController.getPlayerDataHeaders();
 		
-		JTable playerDataTable;
-		if (playerDataRows.length > 0) {
-			playerDataTable = new JTable(playerDataRows, playerDataHeaders);
-			table.setEnabled(false);
-			table.setShowGrid(false);
-			
-			DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
-			rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
-			DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
-			leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
-			for (int i = 2; i < 9; i++)
-			{
-				playerDataTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-				playerDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
-			}
-			playerDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
-			playerDataTable.getColumnModel().getColumn(1).setHeaderRenderer(leftRenderer);
-			
+		JTable playerDataTable = new JTable(playerDataRows, playerDataHeaders);
+		playerDataTable.setEnabled(false);
+		playerDataTable.setShowGrid(false);
+		
+		DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
+		rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
+		DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
+		leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
+		for (int i = 2; i < 9; i++)
+		{
+			playerDataTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
+			playerDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
 		}
-		else {
-			TitleLabel.setText("No player rankings available");
-			playerDataTable = new JTable();
-			playerDataTable.add(new JLabel("No player rankings available"));
-
+		playerDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
+		playerDataTable.getColumnModel().getColumn(1).setHeaderRenderer(leftRenderer);
+			
+		
+		if (playerDataRows.length == 0) {
+			TitleLabel.setText("No player in the league");
 		}
 		
-		JScrollPane scrollPane = new JScrollPane(table, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		JScrollPane scrollPane = new JScrollPane(playerDataTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		add(scrollPane, "cell 0 2 3 1,grow");
 		
 

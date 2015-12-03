@@ -16,13 +16,15 @@ public class TeamRankingsController {
 
 
 	public static String[][] generateTeamDataRows(Season season) {
-		List<Team> teams = season.getLeague().getTeams();
-		String[][] teamDataRows = new String[teams.size()][14];
-		int count = 0;
-		for (Team team : teams) {
-			teamDataRows[count] = team.getTeamStats();
-			count++;
-		}
+//		List<Team> teams = season.getLeague().getTeams();
+//		String[][] teamDataRows = new String[teams.size()][14];
+//		int count = 0;
+//		for (Team team : teams) {
+//			teamDataRows[count] = team.getTeamStats();
+//			count++;
+//		}
+		season.getLeague().publishRankings();
+		String[][] teamDataRows = season.getLeague().getSubscribedTeamRankings().getTeamData();
 		System.out.println(Arrays.deepToString(teamDataRows));
 		return teamDataRows;
 	}

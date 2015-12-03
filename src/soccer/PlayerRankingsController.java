@@ -16,20 +16,22 @@ public class PlayerRankingsController {
 
 
 	public static String[][] generatePlayerDataRows(Season season) {
-		List<Team> teams = season.getLeague().getTeams();
-		List<Player> players = new ArrayList<Player>();
-		for (Team team : teams) {
-			List<Player> teamPlayers = team.getPlayers();
-			for (Player player : teamPlayers) {
-				players.add(player);
-			}
-		}
-		String[][] playerDataRows = new String[players.size()][8];
-		int count = 0;
-		for (Player player : players) {
-			playerDataRows[count] = player.getPlayerStats();
-			count++;
-		}
+//		List<Team> teams = season.getLeague().getTeams();
+//		List<Player> players = new ArrayList<Player>();
+//		for (Team team : teams) {
+//			List<Player> teamPlayers = team.getPlayers();
+//			for (Player player : teamPlayers) {
+//				players.add(player);
+//			}
+//		}
+//		String[][] playerDataRows = new String[players.size()][8];
+//		int count = 0;
+//		for (Player player : players) {
+//			playerDataRows[count] = player.getPlayerStats();
+//			count++;
+//		}
+		season.getLeague().publishRankings();
+		String[][] playerDataRows = season.getLeague().getSubscribedPlayerRankings().getPlayerData();
 		System.out.println(Arrays.deepToString(playerDataRows));
 		return playerDataRows;
 	}
