@@ -82,7 +82,7 @@ public class ApplicationWindow extends JFrame {
 	}
 	
 	public void changePanel(SeasonDisplayPanel newPanel) {
-		//updateSeason();
+		updateSeason();
 	    contentPane.removeAll();
 	    contentPane.add(newPanel);
 	    revalidate();

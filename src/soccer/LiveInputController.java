@@ -25,7 +25,7 @@ public class LiveInputController {
 		Match newMatch = new Match(season, homeTeam, awayTeam);
 		season.addMatch(newMatch);
 		//System.out.println(season.getMatches().toString());
-		PersistenceXStream.saveToXMLwithXStream(season);
+		//season.publishSeason();
 		return newMatch;
 		
 	}

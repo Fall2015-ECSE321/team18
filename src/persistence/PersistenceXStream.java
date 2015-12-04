@@ -22,6 +22,7 @@ public class PersistenceXStream {
 			writer.close();
 			return true;
 		} catch(IOException e){
+			createNewFile(filename);
 			e.printStackTrace();
 			return false;
 		}
@@ -48,7 +49,7 @@ public class PersistenceXStream {
 	
 	public static void createNewFile(String fn){
 		filename = fn;
-		File f = new File(filename);
+		File f = new File(fn);
 		try{
 			f.createNewFile();
 		} catch(IOException e){

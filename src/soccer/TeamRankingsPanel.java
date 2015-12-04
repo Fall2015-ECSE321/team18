@@ -41,6 +41,7 @@ public class TeamRankingsPanel extends JPanel {
 	 */
 	public TeamRankingsPanel(ApplicationWindow parentFrame, int returnLocation) {
 		this.parentFrame = parentFrame;
+		parentFrame.updateSeason();
 		setLayout(new MigLayout("", "[100.00px,grow][278.00,grow,center][100.00,grow]", "[35px:n][68.00][335.00px:n][39.00][63.00]"));
 		
 		if (returnLocation == 0) {
