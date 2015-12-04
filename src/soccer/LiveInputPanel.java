@@ -84,6 +84,7 @@ public class LiveInputPanel extends JPanel {
 		table.getColumnModel().getColumn(1).setPreferredWidth(500);
 		table.setEnabled(false);
 		table.setShowGrid(false);
+		table.setAutoCreateRowSorter(true);
 
 		
 		JLabel lblHomeTeam = new JLabel("HOME TEAM");

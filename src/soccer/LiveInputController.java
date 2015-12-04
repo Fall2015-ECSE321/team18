@@ -14,6 +14,7 @@ public class LiveInputController {
 	public static JTable generateMatchEventsTable(Match liveMatch) {
 		String[] matchEventsHeader = {"timestamp", "Match Events Feed"};
 		JTable matchEventsTable = new JTable(liveMatch.getMatchEventsSummary(), matchEventsHeader);
+		
 		return matchEventsTable;
 	}
 

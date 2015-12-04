@@ -20,12 +20,15 @@ import java.awt.event.MouseEvent;
 import javax.swing.JTable;
 import javax.swing.JProgressBar;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
+import javax.swing.table.TableRowSorter;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.awt.Color;
 import java.awt.SystemColor;
@@ -42,7 +45,7 @@ public class TeamRankingsPanel extends JPanel {
 	public TeamRankingsPanel(ApplicationWindow parentFrame, int returnLocation) {
 		this.parentFrame = parentFrame;
 		parentFrame.updateSeason();
-		setLayout(new MigLayout("", "[100.00px,grow][278.00,grow,center][100.00,grow]", "[35px:n][68.00][335.00px:n][39.00][63.00]"));
+		setLayout(new MigLayout("", "[100.00px,grow][278.00,grow,center][100.00,grow]", "[35px:n][68.00,grow][500.00px:n][39.00][63.00]"));
 		
 		if (returnLocation == 0) {
 			JButton ReturnButton = new JButton("Return to Menu");
@@ -68,7 +71,7 @@ public class TeamRankingsPanel extends JPanel {
 		
 		
 		JLabel TitleLabel = new JLabel("Team Rankings");
-		TitleLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		TitleLabel.setFont(new Font("Tahoma", Font.PLAIN, 34));
 		TitleLabel.setForeground(SystemColor.text);
 		add(TitleLabel, "cell 1 1,alignx center");
 		
@@ -80,18 +83,29 @@ public class TeamRankingsPanel extends JPanel {
 		JTable teamDataTable = new JTable(teamDataRows, teamDataHeaders);
 		teamDataTable.setEnabled(false);
 		teamDataTable.setShowGrid(false);
+		teamDataTable.setAutoCreateRowSorter(true);
+		TableRowSorter<DefaultTableModel> rowSorter = (TableRowSorter<DefaultTableModel>)teamDataTable.getRowSorter();
+		Comparator<String> intComparator = new Comparator<String>() {
+	        @Override
+	        public int compare(String o1, String o2)
+	        {
+	            return Integer.parseInt(o1) - Integer.parseInt(o2);
+	        }
+		};
 		
 		DefaultTableCellRenderer rightRenderer = new DefaultTableCellRenderer();
 		rightRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
 		DefaultTableCellRenderer leftRenderer = new DefaultTableCellRenderer();
 		leftRenderer.setHorizontalAlignment(SwingConstants.LEFT);
+		teamDataTable.getColumnModel().getColumn(0).setPreferredWidth(200);
 		for (int i = 1; i < 14; i++)
 		{
+			rowSorter.setComparator(i, intComparator);
 			teamDataTable.getColumnModel().getColumn(i).setCellRenderer(rightRenderer);
-			teamDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
+			//teamDataTable.getColumnModel().getColumn(i).setHeaderRenderer(rightRenderer);
 		}
 		teamDataTable.getColumnModel().getColumn(0).setCellRenderer(leftRenderer);
-		teamDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
+		//teamDataTable.getColumnModel().getColumn(0).setHeaderRenderer(leftRenderer);
 		
 		
 		if (teamDataRows.length == 0) {
@@ -100,6 +114,11 @@ public class TeamRankingsPanel extends JPanel {
 		
 		JScrollPane scrollPane = new JScrollPane(teamDataTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		add(scrollPane, "cell 0 2 3 1,grow");
+		
+		JLabel lblClickOnTable = new JLabel("Click on table headers to sort columns!");
+		lblClickOnTable.setForeground(Color.WHITE);
+		lblClickOnTable.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		add(lblClickOnTable, "cell 1 3");
 		
 
 
