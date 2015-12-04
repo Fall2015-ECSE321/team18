@@ -2,6 +2,7 @@ package soccer;
 
 import java.util.List;
 
+
 public class AdministratorCreateController {
 
 		public static void createTeam(Season season, Goalie newGoalie, Team newTeam) {

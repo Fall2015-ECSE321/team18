@@ -104,10 +104,21 @@ public class AdministratorCreatePanel extends JPanel {
 					String playerLastName = textFieldP2.getText();
 					int playerNumber = (Integer) spinnerP3.getValue();
 					Team team = (Team)comboBoxP5.getSelectedItem();
-					AdministratorCreateController.createPlayer(parentFrame.getSeason(), playerFirstName, playerLastName, playerNumber, team);
-					JOptionPane.showMessageDialog(parentFrame, "Success: Player " + playerFirstName + " " + playerFirstName + " created and added to team " + team.getName() + "!");
-					AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
-					parentFrame.changePanel(newPanel);
+					if (!playerFirstName.matches("[A-Za-z]+")) {
+						JOptionPane.showMessageDialog(parentFrame, "Error: Player First Name must contain only letters without spaces or special characters!");
+					}
+					else if (!playerLastName.matches("[A-Za-z]+")) {
+						JOptionPane.showMessageDialog(parentFrame, "Error: Player Last Name must contain only letters without spaces or special characters!");
+					}
+					else if (playerNumber<0 || playerNumber>99) {
+						JOptionPane.showMessageDialog(parentFrame, "Error: Player Number must be between 0 and 99!");
+					}
+					else {
+						AdministratorCreateController.createPlayer(parentFrame.getSeason(), playerFirstName, playerLastName, playerNumber, team);
+						JOptionPane.showMessageDialog(parentFrame, "Success: Player " + playerFirstName + " " + playerFirstName + " created and added to team " + team.getName() + "!");
+						AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
+						parentFrame.changePanel(newPanel);
+					}
 				}
 			});
 			add(buttonB, "cell 2 6,grow");
@@ -120,10 +131,21 @@ public class AdministratorCreatePanel extends JPanel {
 					String goalieLastName = textFieldP2.getText();
 					int goalieNumber = (Integer) spinnerP3.getValue();
 					Team team = (Team)comboBoxP5.getSelectedItem();
-					AdministratorCreateController.createGoalie(parentFrame.getSeason(), goalieFirstName, goalieLastName, goalieNumber, team);
-					JOptionPane.showMessageDialog(parentFrame, "Success:  Goalie " + goalieFirstName + " " + goalieLastName + " created and added to team " + team.getName() + "!");
-					AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
-					parentFrame.changePanel(newPanel);
+					if (!goalieFirstName.matches("[A-Za-z]+")) {
+						JOptionPane.showMessageDialog(parentFrame, "Error: Goalie First Name must contain only letters without spaces or special characters!");
+					}
+					else if (!goalieLastName.matches("[A-Za-z]+")) {
+						JOptionPane.showMessageDialog(parentFrame, "Error: Goalie Last Name must contain only letters without spaces or special characters!");
+					}
+					else if (goalieNumber<0 || goalieNumber>99) {
+						JOptionPane.showMessageDialog(parentFrame, "Error: Goalie Number must be between 0 and 99!");
+					}
+					else {
+						AdministratorCreateController.createGoalie(parentFrame.getSeason(), goalieFirstName, goalieLastName, goalieNumber, team);
+						JOptionPane.showMessageDialog(parentFrame, "Success:  Goalie " + goalieFirstName + " " + goalieLastName + " created and added to team " + team.getName() + "!");
+						AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
+						parentFrame.changePanel(newPanel);
+					}
 				}
 			});
 			add(buttonP, "cell 2 7,grow");
@@ -170,13 +192,27 @@ public class AdministratorCreatePanel extends JPanel {
 				String goalieFirstName = textFieldT2.getText();
 				String goalieLastName = textFieldT3.getText();
 				int goalieNumber = (Integer) spinnerT4.getValue();
-				Goalie newGoalie = new Goalie(goalieFirstName, goalieLastName, goalieNumber);
-				Team newTeam = new Team(teamName);
-				AdministratorCreateController.createTeam(parentFrame.getSeason(), newGoalie, newTeam);
-				JOptionPane.showMessageDialog(parentFrame, "Success:  Goalie " + goalieFirstName + " " + goalieLastName + " created and added to newly created team " + newTeam.getName() + "!");
-
-				AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
-				parentFrame.changePanel(newPanel);
+				if (!teamName.matches("[A-Za-z]+( )?([A-Za-z]+)?")) {
+					JOptionPane.showMessageDialog(parentFrame, "Error: Team Name must be a maximum of two words containing only letters without special characters!");
+				}
+				else if (!goalieFirstName.matches("[A-Za-z]+")) {
+					JOptionPane.showMessageDialog(parentFrame, "Error: Goalie First Name must contain only letters without spaces or special characters!");
+				}
+				else if (!goalieLastName.matches("[A-Za-z]+")) {
+					JOptionPane.showMessageDialog(parentFrame, "Error: Goalie Last Name must contain only letters without spaces or special characters!");
+				}
+				else if (goalieNumber<0 || goalieNumber>99) {
+					JOptionPane.showMessageDialog(parentFrame, "Error: Goalie Number must be between 0 and 99!");
+				}
+				else {
+					Goalie newGoalie = new Goalie(goalieFirstName, goalieLastName, goalieNumber);
+					Team newTeam = new Team(teamName);
+					AdministratorCreateController.createTeam(parentFrame.getSeason(), newGoalie, newTeam);
+					JOptionPane.showMessageDialog(parentFrame, "Success:  Goalie " + goalieFirstName + " " + goalieLastName + " created and added to newly created team " + newTeam.getName() + "!");
+	
+					AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
+					parentFrame.changePanel(newPanel);
+				}
 			}
 		});
 		add(buttonT, "cell 2 13,grow");

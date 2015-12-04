@@ -38,12 +38,12 @@ public class HomeMenuPanel extends JPanel {
 		
 		JLabel lblNewLabel = new JLabel("SOCCER");
 		lblNewLabel.setForeground(SystemColor.text);
-		lblNewLabel.setFont(new Font("Bell MT", Font.BOLD, 83));
+		lblNewLabel.setFont(new Font("Bell MT", Font.BOLD, 98));
 		add(lblNewLabel, "cell 1 1,aligny bottom");
 		
 		JLabel lblScorekeeper = new JLabel("SCOREKEEPER");
 		lblScorekeeper.setForeground(SystemColor.text);
-		lblScorekeeper.setFont(new Font("Bell MT", Font.BOLD, 58));
+		lblScorekeeper.setFont(new Font("Bell MT", Font.BOLD, 53));
 		add(lblScorekeeper, "cell 1 2,aligny top");
 		add(button1, "cell 1 4,grow");
 		
