@@ -64,7 +64,7 @@ public class AdministratorLoginPanel extends JPanel {
 					parentFrame.changePanel(newPanel);
 				}
 				else {
-					JOptionPane.showMessageDialog(parentFrame, "Error: Username or Passoword are incorrect!");
+					JOptionPane.showMessageDialog(parentFrame, "Username or Passoword are incorrect!", "ERROR!", JOptionPane.ERROR_MESSAGE);
 				}
 				
 			}

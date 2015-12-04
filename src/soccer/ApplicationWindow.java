@@ -114,6 +114,20 @@ public class ApplicationWindow extends JFrame {
 	    contentPane.add(newPanel);
 	    revalidate();
 	}
+	
+	public void changePanel(ScorekeeperBatchMatchMenuPanel newPanel) {
+		//updateSeason();
+	    contentPane.removeAll();
+	    contentPane.add(newPanel);
+	    revalidate();
+	}
+	
+	public void changePanel(BatchInputPanel newPanel) {
+		//updateSeason();
+	    contentPane.removeAll();
+	    contentPane.add(newPanel);
+	    revalidate();
+	}
 
 	public Season getSeason() {
 		return season;
@@ -160,5 +174,7 @@ public class ApplicationWindow extends JFrame {
 		    
 		
 	}
+
+	
 
 }

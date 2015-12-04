@@ -7,7 +7,7 @@ import javax.swing.JTable;
 
 import persistence.PersistenceXStream;
 
-public class LiveInputController {
+public class InputModesController {
 
 
 	public static JTable generateMatchEventsTable(Match liveMatch) {
@@ -16,9 +16,16 @@ public class LiveInputController {
 		
 		return matchEventsTable;
 	}
+	
+	public static JTable generateBatchMatchEventsTable(Match batchMatch) {
+		String[] matchEventsHeader = {"timestamp", "Match Event Batch"};
+		JTable matchEventsTable = new JTable(batchMatch.getMatchEventsSummary(), matchEventsHeader);
+		
+		return matchEventsTable;
+	}
 
 
-	public static Match newMatch(Team homeTeam, Team awayTeam, Season season) {
+	public static Match newLiveMatch(Team homeTeam, Team awayTeam, Season season) {
 		//Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
 		//League league
 		//System.out.println(season.getMatches().toString());
@@ -28,6 +35,29 @@ public class LiveInputController {
 		//season.publishSeason();
 		return newMatch;
 		
+	}
+	
+	public static Match newBatchMatch(Team homeTeam, Team awayTeam) {
+		//Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+		//League league
+		//System.out.println(season.getMatches().toString());
+		Match newMatch = new Match(homeTeam, awayTeam);
+		//season.addMatch(newMatch);
+		//System.out.println(season.getMatches().toString());
+		//season.publishSeason();
+		return newMatch;
+		
+	}
+	
+	public static void submitBatchMatch(Season season, Match batchMatch) {
+		//Season season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+		//League league
+		//System.out.println(season.getMatches().toString());
+		//Match newMatch = new Match(homeTeam, awayTeam);
+		batchMatch.batchMatchSubmit(season);
+		season.addMatch(batchMatch);
+		//System.out.println(season.getMatches().toString());
+		//season.publishSeason();
 	}
 
 	public static Team[] getTeamsArray(Season season) {

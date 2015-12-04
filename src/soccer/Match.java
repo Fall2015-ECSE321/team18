@@ -23,6 +23,7 @@ public class Match {
 	private boolean complete;
 	private Season season;
 	private Date startTime;
+	private boolean isBatchMatch;
 
 
 	/** Constructor method. Sets unique ID, and initializes fields.
@@ -37,8 +38,20 @@ public class Match {
 		this.season = season;
 		subscribedHomeTeam = homeTeam;
 		subscribedAwayTeam = awayTeam;
+		isBatchMatch = false;
 	}
 
+
+	public Match(Team homeTeam, Team awayTeam) {
+		uniqueID = UUID.randomUUID().toString(); 
+		startTime = new Date();
+		matchEvents = new ArrayList<MatchEvent>();
+		matchResult = new MatchResult();
+		complete = false;
+		subscribedHomeTeam = homeTeam;
+		subscribedAwayTeam = awayTeam;
+		isBatchMatch = true;
+	}
 	// Getters and setters
 	
 	public Team getSubscribedHomeTeam() {
@@ -79,12 +92,12 @@ public class Match {
 			matchEvents.add(event);
 			if (subscribedHomeTeam.getPlayers().contains(event.getSubscribedPlayer()) && subscribedAwayTeam.getPlayers().contains(event.getSubscribedGoalie())) {
 				matchResult.applyEvent(0, event);
-				season.publishSeason();
+				publishSeason();
 				return "added MatchEvent";
 			}
 			else if (subscribedAwayTeam.getPlayers().contains(event.getSubscribedPlayer()) && subscribedHomeTeam.getPlayers().contains(event.getSubscribedGoalie())) {
 				matchResult.applyEvent(1, event);
-				season.publishSeason();
+				publishSeason();
 				return "added MatchEvent";
 			}
 			else {
@@ -108,12 +121,12 @@ public class Match {
 			
 			if (subscribedHomeTeam.getPlayers().contains(event.getSubscribedPlayer())) {
 				matchResult.applyEvent(0, event);
-				season.publishSeason();
+				publishSeason();
 				return "added InfractionEvent";
 			}
 			else if (subscribedAwayTeam.getPlayers().contains(event.getSubscribedPlayer())) {
 				matchResult.applyEvent(1, event);
-				season.publishSeason();
+				publishSeason();
 				return "added InfractionEvent";
 			}
 			else {
@@ -132,12 +145,12 @@ public class Match {
 			matchEvents.remove(event);
 			if (subscribedHomeTeam.getPlayers().contains(event.getSubscribedPlayer()) && subscribedAwayTeam.getPlayers().contains(event.getSubscribedGoalie())) {
 				matchResult.unapplyEvent(0, event);
-				season.publishSeason();
+				publishSeason();
 				return "removed ShotEvent";
 			}
 			else if (subscribedAwayTeam.getPlayers().contains(event.getSubscribedPlayer()) && subscribedHomeTeam.getPlayers().contains(event.getSubscribedGoalie())) {
 				matchResult.unapplyEvent(1, event);
-				season.publishSeason();
+				publishSeason();
 				return "removed ShotEvent";
 			}
 			else {
@@ -159,12 +172,12 @@ public class Match {
 			matchEvents.remove(event);
 			if (subscribedHomeTeam.getPlayers().contains(event.getSubscribedPlayer())) {
 				matchResult.unapplyEvent(0, event);
-				season.publishSeason();
+				publishSeason();
 				return "removed InfractionEvent";
 			}
 			else if (subscribedAwayTeam.getPlayers().contains(event.getSubscribedPlayer())) {
 				matchResult.unapplyEvent(1, event);
-				season.publishSeason();
+				publishSeason();
 				return "removed InfractionEvent";
 			}
 			else {
@@ -358,5 +371,18 @@ public class Match {
 		//System.out.println(Arrays.deepToString(matchEventsSummary));
 		return matchEventsSummary;
 	}
+	
+	public void publishSeason() {
+		if (!isBatchMatch) {
+			season.publishSeason();
+		}
+	}
+
+
+	public void batchMatchSubmit(Season season) {
+		isBatchMatch = false;
+		this.season = season;
+	}
+
 
 }

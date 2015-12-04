@@ -50,7 +50,7 @@ public class ScorekeeperModeMenuPanel extends JPanel {
 					parentFrame.changePanel(newPanel);
 				}
 				else {
-					JOptionPane.showMessageDialog(parentFrame, "Error: There must be at least two teams in the league!");
+					JOptionPane.showMessageDialog(parentFrame, "There must be at least two teams in the league!", "ERROR!", JOptionPane.ERROR_MESSAGE);
 				}
 				
 			}
@@ -61,11 +61,11 @@ public class ScorekeeperModeMenuPanel extends JPanel {
 		btnBatchInputMode.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (parentFrame.getSeason().getLeague().getTeams().size() >= 2) {
-					ScorekeeperLiveMatchMenuPanel newPanel = new ScorekeeperLiveMatchMenuPanel(parentFrame);
+					ScorekeeperBatchMatchMenuPanel newPanel = new ScorekeeperBatchMatchMenuPanel(parentFrame);
 					parentFrame.changePanel(newPanel);
 				}
 				else {
-					JOptionPane.showMessageDialog(parentFrame, "Error: There must be at least two teams in the league!");
+					JOptionPane.showMessageDialog(parentFrame, "There must be at least two teams in the league!", "ERROR!", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});

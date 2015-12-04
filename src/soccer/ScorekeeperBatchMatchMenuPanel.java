@@ -22,16 +22,18 @@ import javax.swing.JOptionPane;
 
 import java.awt.SystemColor;
 
-public class ScorekeeperLiveMatchMenuPanel extends JPanel {
+public class ScorekeeperBatchMatchMenuPanel extends JPanel {
 
 	ApplicationWindow parentFrame;
 	/**
 	 * Create the panel.
 	 */
-	public ScorekeeperLiveMatchMenuPanel(ApplicationWindow parentFrame) {
+	public ScorekeeperBatchMatchMenuPanel(ApplicationWindow parentFrame) {
 		this.parentFrame = parentFrame;
 		setOpaque(false);
-		setLayout(new MigLayout("", "[100.00px,grow,left][278.00,grow,center][100.00,grow,right]", "[35.00][82.00px,grow][][][60][60][][65.00][60][60][60][97.00,grow]"));
+		setLayout(new MigLayout("", "[100.00px,grow,left][278.00,grow,center][100.00,grow,right]", "[35.00][82.00px,grow][][][60][23.00][65.00][60][60][60][97.00,grow]"));
+		
+		
 		
 		JButton button0 = new JButton("Return to Scorekeeper Menu");
 		button0.addActionListener(new ActionListener() {
@@ -72,7 +74,7 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 		});
 		add(comboBox2, "cell 1 3,growx");
 		
-		JButton btnLiveScorekeeping = new JButton("Create new match!");
+		JButton btnLiveScorekeeping = new JButton("Create new Batch Match!");
 		btnLiveScorekeeping.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Team homeTeam = (Team)comboBox1.getSelectedItem();
@@ -83,8 +85,8 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 					JOptionPane.showMessageDialog(parentFrame, "Home and Away Teams must be different!", "ERROR!", JOptionPane.ERROR_MESSAGE);
 				}
 				else {
-					Match newMatch = InputModesController.newLiveMatch(homeTeam, awayTeam, parentFrame.getSeason());
-					LiveInputPanel newPanel = new LiveInputPanel(parentFrame, newMatch);
+					Match newMatch = InputModesController.newBatchMatch(homeTeam, awayTeam);
+					BatchInputPanel newPanel = new BatchInputPanel(parentFrame, newMatch);
 					parentFrame.changePanel(newPanel);
 				}
 			}
@@ -94,39 +96,21 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 		
 		add(btnLiveScorekeeping, "cell 1 4,grow");
 		
-		JLabel lblSelectMatch = new JLabel("Select Live Match");
-		lblSelectMatch.setForeground(SystemColor.text);
-		add(lblSelectMatch, "flowx,cell 1 6");
-		Match[] liveMatchesArray = InputModesController.getLiveMatchesArray(parentFrame.getSeason());
-		JComboBox comboBox3 = new JComboBox(new DefaultComboBoxModel(liveMatchesArray));
-		if (liveMatchesArray.length > 0) {
-			
-			comboBox3.setRenderer(new DefaultListCellRenderer() {
-			    @Override
-			    public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-			        Match match = (Match)value;
-			        value = match.getSummary();
-			        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-			    }
-			});
-			add(comboBox3, "cell 1 6,growx");
-		}
-		
-		
-		JButton btnLoadLiveMatch = new JButton("Load live match!");
-		btnLoadLiveMatch.addActionListener(new ActionListener() {
+		JButton btnWhatIsA = new JButton("What is a Batch Match?");
+		btnWhatIsA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (liveMatchesArray.length > 0) {
-					Match liveMatch = (Match)comboBox3.getSelectedItem();
-					LiveInputPanel newPanel = new LiveInputPanel(parentFrame, liveMatch);
-					parentFrame.changePanel(newPanel);
-				}
-				else {
-					JOptionPane.showMessageDialog(parentFrame, "There are no current Live Matches!", "ERROR!", JOptionPane.ERROR_MESSAGE);
-				}
+				JOptionPane.showMessageDialog(parentFrame, 
+					    "<html><body><p style='width: 300px;'>"
+					    + "The interface to a Batch Match is similar to that of a Live Match but the Batch"
+						+ " Match will only be saved once the entire created Match is submitted."
+						+ " This means that unlike a Live Match, Match Events added to the Batch Match"
+						+ " will not be viewable in Season Display until the Batch Match is submitted"
+						+ " and if the Batch Match mode is exited without submitting, it will not be saved."
+						+ "</p></body></html>", 
+						"What is a Batch Match?",  JOptionPane.INFORMATION_MESSAGE) ;
 			}
 		});
-		add(btnLoadLiveMatch, "cell 1 7,grow");
+		add(btnWhatIsA, "cell 1 6,grow");
 
 		
 	}
