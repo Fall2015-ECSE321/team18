@@ -19,7 +19,7 @@ This describes the deployment process for a clean build of the application. The 
   Note: The default login for administrator and scorekeeper are username: admin, password: admin
 
  1.	Clone from Github stable branch to local repository
- 2.	Navigate to the git repository (team18 directory) from a terminal and run `ant linkjar` The ant command as specified in build.xml will compile the source code and generate a runnable Java jar application in the build/jar directory.
+ 2.	Navigate to the git repository (team18 directory) from a terminal and run `ant linkApp` The ant command as specified in build.xml will compile the source code and generate a runnable Java jar application in the build/jar directory.
 
   Note: Must have Apache Ant installed to run command and a java JDK to compile
  3.	Navigate to the build/jar directory and double click SoccerStatsApp.jar to run
