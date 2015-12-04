@@ -3,14 +3,12 @@ package soccer;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import persistence.PersistenceXStream;
 
 import java.awt.GridLayout;
-import java.io.IOException;
 
 public class ApplicationWindow extends JFrame {
 

@@ -355,7 +355,7 @@ public class Match {
 			matchEventsSummary[count] = row;
 			count++;
 		}	
-		System.out.println(Arrays.deepToString(matchEventsSummary));
+		//System.out.println(Arrays.deepToString(matchEventsSummary));
 		return matchEventsSummary;
 	}
 

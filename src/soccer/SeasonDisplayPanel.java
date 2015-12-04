@@ -2,7 +2,6 @@ package soccer;
 
 import javax.swing.JPanel;
 
-import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Image;
 
@@ -14,22 +13,14 @@ import javax.swing.SwingConstants;
 
 import net.miginfocom.swing.MigLayout;
 
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-
 import javax.swing.JTable;
-import javax.swing.JProgressBar;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableColumn;
 import javax.swing.table.TableRowSorter;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 import java.awt.Color;
 import java.awt.SystemColor;
 import java.awt.Font;
@@ -37,8 +28,6 @@ import java.awt.Font;
 public class SeasonDisplayPanel extends JPanel {
 
 	ApplicationWindow parentFrame;
-	private Season season;
-	private JTable table;
 	/**
 	 * Create the panel.
 	 */

@@ -2,8 +2,6 @@ package soccer;
 
 import java.util.List;
 
-import persistence.PersistenceXStream;
-
 public class AdministratorCreateController {
 
 		public static void createTeam(Season season, Goalie newGoalie, Team newTeam) {

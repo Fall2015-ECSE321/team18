@@ -1,22 +1,15 @@
 package soccer;
 
-import java.util.UUID;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-
-import javax.swing.JLabel;
-import javax.swing.JTable;
-import javax.swing.SwingConstants;
-import javax.swing.table.DefaultTableCellRenderer;
 
 import persistence.PersistenceXStream;
 
 public class SeasonDisplayController {
 
 	public static String[][] getSeasonDataRows(Season season) {
+		season.getLeague().publishRankings();
 		String[][] seasonDataRows = season.getSubscribedSeasonDisplay().getSeasonData();
-		System.out.println(Arrays.deepToString(seasonDataRows));
+		//System.out.println(Arrays.deepToString(seasonDataRows));
 		return seasonDataRows;
 	}
 			

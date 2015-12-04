@@ -13,22 +13,13 @@ import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
-import javax.swing.SwingConstants;
 
 import net.miginfocom.swing.MigLayout;
 
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-
 import javax.swing.JTable;
-import javax.swing.JProgressBar;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableColumn;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.util.List;
 import java.awt.Color;
 
 import javax.swing.JLabel;
@@ -37,22 +28,17 @@ import java.awt.SystemColor;
 import java.awt.Font;
 
 import javax.swing.JComboBox;
-import javax.swing.JCheckBox;
 
 public class LiveInputPanel extends JPanel {
 
 	ApplicationWindow parentFrame;
-	private Season season;
 	private JTable table;
-	private Match match;
 	private Team homeTeam;
 	private Team awayTeam;
 	/**
 	 * Create the panel.
 	 */
 	public LiveInputPanel(ApplicationWindow parentFrame, Match match) {
-		this.parentFrame = parentFrame;
-		this.match = match;
 		homeTeam = match.getSubscribedHomeTeam();
 		awayTeam = match.getSubscribedAwayTeam();
 		

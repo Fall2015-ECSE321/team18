@@ -61,7 +61,6 @@ public class Season {
 	 * 					the season or not.
 	 */
 	public String addMatch(Match match) {
-		System.out.println("testa");
 		if (matches.contains(match)) {
 			return "this match has already been added to the season";
 		}

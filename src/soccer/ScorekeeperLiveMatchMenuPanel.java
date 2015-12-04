@@ -98,7 +98,6 @@ public class ScorekeeperLiveMatchMenuPanel extends JPanel {
 		lblSelectMatch.setForeground(SystemColor.text);
 		add(lblSelectMatch, "flowx,cell 1 6");
 		Match[] liveMatchesArray = LiveInputController.getLiveMatchesArray(parentFrame.getSeason());
-		System.out.println(liveMatchesArray);
 		JComboBox comboBox3 = new JComboBox(new DefaultComboBoxModel(liveMatchesArray));
 		if (liveMatchesArray.length > 0) {
 			

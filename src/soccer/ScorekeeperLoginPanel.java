@@ -12,8 +12,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
-import javax.swing.JSplitPane;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Dimension;
 import java.awt.SystemColor;
 import java.awt.Font;
@@ -21,7 +22,7 @@ import java.awt.Font;
 public class ScorekeeperLoginPanel extends JPanel {
 
 	ApplicationWindow parentFrame;
-	private JTextField textField_1;
+	private JTextField usernameField;
 	private JPasswordField passwordField;
 	/**
 	 * Create the panel.
@@ -55,30 +56,27 @@ public class ScorekeeperLoginPanel extends JPanel {
 		JButton button3 = new JButton("Login as Scorekeeper");
 		button3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ScorekeeperModeMenuPanel newPanel = new ScorekeeperModeMenuPanel(parentFrame);
-				parentFrame.changePanel(newPanel);
+				if (usernameField.getText().equals("admin") && String.valueOf(passwordField.getPassword()).equals("admin") ) {
+					ScorekeeperModeMenuPanel newPanel = new ScorekeeperModeMenuPanel(parentFrame);
+					parentFrame.changePanel(newPanel);
+				}
+				else {
+					JOptionPane.showMessageDialog(parentFrame, "Error: Username or Passoword are incorrect!");
+				}
 			}
 		});
 		add(button3, "cell 1 5,grow");
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		add(textField_1, "cell 1 2,grow");
+		usernameField = new JTextField();
+		usernameField.setColumns(10);
+		add(usernameField, "cell 1 2,grow");
 		
 		passwordField = new JPasswordField();
 		add(passwordField, "cell 1 3,grow");
 
 	}
 
-	
-//	@Override
-//	 protected void paintComponent(Graphics g) {
-//		ImageIcon bgImage = new ImageIcon(ImagePanel.class.getResource("/soccer/soccer-stadium-11840.jpg"));
-//		Image background = Toolkit.getDefaultToolkit().createImage("/soccer/soccer-stadium-11840.jpg");
-//	    super.paintComponent(g);
-//	        //g.drawImage(bgImage.getImage(), 0, 0, null);
-//	    g.drawImage(background, 0, 0, null);
-//	}
+
 	@Override
 	  protected void paintComponent(Graphics g) {
 

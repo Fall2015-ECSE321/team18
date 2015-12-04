@@ -36,7 +36,6 @@ public class AdministratorCreatePanel extends JPanel {
 	ApplicationWindow parentFrame;
 	private JTextField textFieldP2;
 	private JTextField textFieldP1;
-	private JTextField textField_2;
 	private JTextField textFieldT2;
 	private JTextField textFieldT3;
 	private JTextField textFieldT1;
@@ -106,6 +105,7 @@ public class AdministratorCreatePanel extends JPanel {
 					int playerNumber = (Integer) spinnerP3.getValue();
 					Team team = (Team)comboBoxP5.getSelectedItem();
 					AdministratorCreateController.createPlayer(parentFrame.getSeason(), playerFirstName, playerLastName, playerNumber, team);
+					JOptionPane.showMessageDialog(parentFrame, "Success: Player " + playerFirstName + " " + playerFirstName + " created and added to team " + team.getName() + "!");
 					AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
 					parentFrame.changePanel(newPanel);
 				}
@@ -121,6 +121,7 @@ public class AdministratorCreatePanel extends JPanel {
 					int goalieNumber = (Integer) spinnerP3.getValue();
 					Team team = (Team)comboBoxP5.getSelectedItem();
 					AdministratorCreateController.createGoalie(parentFrame.getSeason(), goalieFirstName, goalieLastName, goalieNumber, team);
+					JOptionPane.showMessageDialog(parentFrame, "Success:  Goalie " + goalieFirstName + " " + goalieLastName + " created and added to team " + team.getName() + "!");
 					AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
 					parentFrame.changePanel(newPanel);
 				}
@@ -172,6 +173,8 @@ public class AdministratorCreatePanel extends JPanel {
 				Goalie newGoalie = new Goalie(goalieFirstName, goalieLastName, goalieNumber);
 				Team newTeam = new Team(teamName);
 				AdministratorCreateController.createTeam(parentFrame.getSeason(), newGoalie, newTeam);
+				JOptionPane.showMessageDialog(parentFrame, "Success:  Goalie " + goalieFirstName + " " + goalieLastName + " created and added to newly created team " + newTeam.getName() + "!");
+
 				AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
 				parentFrame.changePanel(newPanel);
 			}

@@ -1,6 +1,5 @@
 package soccer;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import persistence.PersistenceXStream;
