@@ -57,74 +57,76 @@ public class AdministratorCreatePanel extends JPanel {
 		});
 		add(button0, "cell 2 0,grow");
 		
-		
-		JLabel labelP1 = new JLabel("First Name");
-		labelP1.setForeground(SystemColor.text);
-		add(labelP1, "flowx,cell 2 2");
-		textFieldP1 = new JTextField();
-		textFieldP1.setColumns(10);
-		add(textFieldP1, "cell 2 2,growx");
-		
-		
-		JLabel labelP2 = new JLabel("Last Name");
-		labelP2.setForeground(Color.WHITE);
-		add(labelP2, "flowx,cell 2 3");
-		textFieldP2 = new JTextField();
-		add(textFieldP2, "cell 2 3,growx");
-		textFieldP2.setColumns(10);
-		
-		
-		JLabel labelP3 = new JLabel("Number");
-		labelP3.setForeground(Color.WHITE);
-		add(labelP3, "flowx,cell 2 4");
-		JSpinner spinnerP3 = new JSpinner();
-		add(spinnerP3, "cell 2 4,growx");
-		
-		
-		JLabel labelP5 = new JLabel("Team");
-		labelP5.setForeground(SystemColor.text);
-		add(labelP5, "flowx,cell 2 5");
-		JComboBox comboBoxP5 = new JComboBox(new DefaultComboBoxModel(AdministratorCreateController.getTeamsArray(parentFrame.getSeason())));
-		comboBoxP5.setRenderer(new DefaultListCellRenderer() {
-		    @Override
-		    public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-		        Team team = (Team)value;
-		        value = team.getName();
-		        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-		    }
-		});
-		add(comboBoxP5, "cell 2 5,growx");
-		
-		
-		JButton buttonB = new JButton("Add new Player to Team");
-		buttonB.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String playerFirstName = textFieldP1.getText();
-				String playerLastName = textFieldP2.getText();
-				int playerNumber = (Integer) spinnerP3.getValue();
-				Team team = (Team)comboBoxP5.getSelectedItem();
-				AdministratorCreateController.createPlayer(parentFrame.getSeason(), playerFirstName, playerLastName, playerNumber, team);
-				AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
-				parentFrame.changePanel(newPanel);
-			}
-		});
-		add(buttonB, "cell 2 6,grow");
-
-		
-		JButton buttonP = new JButton("Add new Goalie to Team");
-		buttonP.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String goalieFirstName = textFieldP1.getText();
-				String goalieLastName = textFieldP2.getText();
-				int goalieNumber = (Integer) spinnerP3.getValue();
-				Team team = (Team)comboBoxP5.getSelectedItem();
-				AdministratorCreateController.createGoalie(parentFrame.getSeason(), goalieFirstName, goalieLastName, goalieNumber, team);
-				AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
-				parentFrame.changePanel(newPanel);
-			}
-		});
-		add(buttonP, "cell 2 7,grow");
-		
+		if (AdministratorCreateController.getTeamsArray(parentFrame.getSeason()).length > 0) {
+			
+			
+			JLabel labelP1 = new JLabel("First Name");
+			labelP1.setForeground(SystemColor.text);
+			add(labelP1, "flowx,cell 2 2");
+			textFieldP1 = new JTextField();
+			textFieldP1.setColumns(10);
+			add(textFieldP1, "cell 2 2,growx");
+			
+			
+			JLabel labelP2 = new JLabel("Last Name");
+			labelP2.setForeground(Color.WHITE);
+			add(labelP2, "flowx,cell 2 3");
+			textFieldP2 = new JTextField();
+			add(textFieldP2, "cell 2 3,growx");
+			textFieldP2.setColumns(10);
+			
+			
+			JLabel labelP3 = new JLabel("Number");
+			labelP3.setForeground(Color.WHITE);
+			add(labelP3, "flowx,cell 2 4");
+			JSpinner spinnerP3 = new JSpinner();
+			add(spinnerP3, "cell 2 4,growx");
+			
+			
+			JLabel labelP5 = new JLabel("Team");
+			labelP5.setForeground(SystemColor.text);
+			add(labelP5, "flowx,cell 2 5");
+			JComboBox comboBoxP5 = new JComboBox(new DefaultComboBoxModel(AdministratorCreateController.getTeamsArray(parentFrame.getSeason())));
+			comboBoxP5.setRenderer(new DefaultListCellRenderer() {
+			    @Override
+			    public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+			        Team team = (Team)value;
+			        value = team.getName();
+			        return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+			    }
+			});
+			add(comboBoxP5, "cell 2 5,growx");
+			
+			
+			JButton buttonB = new JButton("Add new Player to Team");
+			buttonB.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					String playerFirstName = textFieldP1.getText();
+					String playerLastName = textFieldP2.getText();
+					int playerNumber = (Integer) spinnerP3.getValue();
+					Team team = (Team)comboBoxP5.getSelectedItem();
+					AdministratorCreateController.createPlayer(parentFrame.getSeason(), playerFirstName, playerLastName, playerNumber, team);
+					AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
+					parentFrame.changePanel(newPanel);
+				}
+			});
+			add(buttonB, "cell 2 6,grow");
+	
+			
+			JButton buttonP = new JButton("Add new Goalie to Team");
+			buttonP.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					String goalieFirstName = textFieldP1.getText();
+					String goalieLastName = textFieldP2.getText();
+					int goalieNumber = (Integer) spinnerP3.getValue();
+					Team team = (Team)comboBoxP5.getSelectedItem();
+					AdministratorCreateController.createGoalie(parentFrame.getSeason(), goalieFirstName, goalieLastName, goalieNumber, team);
+					AdministratorCreatePanel newPanel = new AdministratorCreatePanel(parentFrame);
+					parentFrame.changePanel(newPanel);
+				}
+			});
+			add(buttonP, "cell 2 7,grow");
+		}
 		
 		
 		

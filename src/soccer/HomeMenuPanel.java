@@ -12,6 +12,9 @@ import net.miginfocom.swing.MigLayout;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JLabel;
+import java.awt.SystemColor;
+import java.awt.Font;
 
 public class HomeMenuPanel extends JPanel {
 
@@ -22,7 +25,7 @@ public class HomeMenuPanel extends JPanel {
 	public HomeMenuPanel(ApplicationWindow parentFrame) {
 		this.parentFrame = parentFrame;
 		setOpaque(false);
-		setLayout(new MigLayout("", "[100.00px,grow,left][278.00,grow 60,center][100.00,grow,right]", "[174.00px,grow][89.00][32.00][46.00][46.00][75.00]"));
+		setLayout(new MigLayout("", "[100.00px,grow,left][278.00,grow,center][100.00,grow,right]", "[40.00][77.00px,grow][77.00px,grow][45.00][89.00][32.00][46.00][46.00][75.00]"));
 		
 		JButton button1 = new JButton("Open SoccerStats");
 		button1.addMouseListener(new MouseAdapter() {
@@ -32,7 +35,17 @@ public class HomeMenuPanel extends JPanel {
 				parentFrame.changePanel(newPanel);
 			}
 		});
-		add(button1, "cell 1 1,grow");
+		
+		JLabel lblNewLabel = new JLabel("SOCCER");
+		lblNewLabel.setForeground(SystemColor.text);
+		lblNewLabel.setFont(new Font("Bell MT", Font.BOLD, 83));
+		add(lblNewLabel, "cell 1 1,aligny bottom");
+		
+		JLabel lblScorekeeper = new JLabel("SCOREKEEPER");
+		lblScorekeeper.setForeground(SystemColor.text);
+		lblScorekeeper.setFont(new Font("Bell MT", Font.BOLD, 58));
+		add(lblScorekeeper, "cell 1 2,aligny top");
+		add(button1, "cell 1 4,grow");
 		
 		JButton button2 = new JButton("Administrator Login");
 		button2.addMouseListener(new MouseAdapter() {
@@ -42,7 +55,7 @@ public class HomeMenuPanel extends JPanel {
 				parentFrame.changePanel(newPanel);
 			}
 		});
-		add(button2, "cell 1 3,grow");
+		add(button2, "cell 1 6,grow");
 		
 		JButton button3 = new JButton("Scorekeeper Login");
 		button3.addMouseListener(new MouseAdapter() {
@@ -52,7 +65,7 @@ public class HomeMenuPanel extends JPanel {
 				parentFrame.changePanel(newPanel);
 			}
 		});
-		add(button3, "cell 1 4,grow");
+		add(button3, "cell 1 7,grow");
 
 	}
 	

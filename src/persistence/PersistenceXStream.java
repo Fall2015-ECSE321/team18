@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import com.thoughtworks.xstream.XStream;
 
@@ -22,8 +23,8 @@ public class PersistenceXStream {
 			writer.close();
 			return true;
 		} catch(IOException e){
-			createNewFile(filename);
-			e.printStackTrace();
+			createNewFile();
+			//e.printStackTrace();
 			return false;
 		}
 	}
@@ -34,7 +35,8 @@ public class PersistenceXStream {
 			FileReader fileReader = new FileReader(filename);
 			return xstream.fromXML(fileReader);
 		} catch(IOException e){
-			e.printStackTrace();
+			createNewFile();
+			//e.printStackTrace();
 			return null;
 		}
 	}
@@ -47,11 +49,10 @@ public class PersistenceXStream {
 		filename = fn;
 	}
 	
-	public static void createNewFile(String fn){
-		filename = fn;
-		File f = new File(fn);
+	public static void createNewFile(){
 		try{
-			f.createNewFile();
+			PrintWriter writer = new PrintWriter(filename, "UTF-8");
+			writer.close();
 		} catch(IOException e){
 			e.printStackTrace();
 		}

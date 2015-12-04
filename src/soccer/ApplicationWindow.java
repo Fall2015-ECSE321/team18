@@ -3,6 +3,7 @@ package soccer;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -125,22 +126,14 @@ public class ApplicationWindow extends JFrame {
 	 */
 	public ApplicationWindow() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 800);
+		setBounds(100, 100, 900, 820);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(0, 1, 0, 0));
+		updateSeason();
 		
-		
-		try {
-			season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
-		}
-		catch (com.thoughtworks.xstream.io.StreamException e) {
-			System.out.println("test");
-			League league = new League("league");
-		    season = new Season("W_2015-2016", league);
-		    PersistenceXStream.saveToXMLwithXStream(season);  
-		}
+
 		
 		//debugging purpose
 //		System.out.println(season.toString());
@@ -154,15 +147,20 @@ public class ApplicationWindow extends JFrame {
 	}
 	
 	public void updateSeason() {
-		try {
-			season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+		
+		for (int i = 2; i > 0; i--) {
+			try {
+				season = (soccer.Season) PersistenceXStream.loadFromXMLwithXStream();
+			}
+			catch (com.thoughtworks.xstream.io.StreamException e) {
+				//JOptionPane.showMessageDialog(this, "Error: Data.xml was empty! ");
+				League league = new League("league");
+			    season = new Season("W_2015-2016", league);
+			    PersistenceXStream.saveToXMLwithXStream(season);  
+			}
 		}
-		catch (com.thoughtworks.xstream.io.StreamException e) {
-			System.out.println("test");
-			League league = new League("league");
-		    season = new Season("W_2015-2016", league);
-		    PersistenceXStream.saveToXMLwithXStream(season);  
-		}
+		    
+		
 	}
 
 }
