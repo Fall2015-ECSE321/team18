@@ -33,12 +33,11 @@ This describes the deployment process for a build of the application that alread
 
   Note: The default login for administrator and scorekeeper are username: admin, password: admin
 
-1.	Follow steps 1 and 2 above to build the Java jar application
-2.	Before navigating to the build/jar directory to access the generated jar application run 
-`ant runDemo2` from the terminal while in the team18 directory
+1.	Clone from Github stable branch to local repository
+2.		Navigate to the git repository (team18 directory) from a terminal and run `ant runDemo2` then `ant linkApp` from the terminal while in the team18 directory
 
   Note: Must have Apache Ant installed to run command, a java JDK to compile the Demo, and a JRE installed to run the Demo.
-3.	A data.xml file will be generated in the team18 directory. Copy this xml file to the build/jar directory and double click the SoccerStatsApp.jar to run with the demo data.
+3.	In addition to generating a runnable Java jar application in the build/jar directory a data.xml file will be generated in the team18 directory. Copy this xml file to the build/jar directory and double click the SoccerStatsApp.jar to run with the demo data.
 
   Note: Must have a JRE installed to run jar application
 
