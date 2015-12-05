@@ -5,8 +5,8 @@ Project for ECSE 321 at McGill
 
 Authors:
 Demetrios Koziris,
-Mitch Dumont
-Matthew Burdick
+Mitch Dumont,
+Matthew Burdick, and
 Emma Tang Yuk
 ___
 ##Unique Features
@@ -58,7 +58,7 @@ This describes the deployment process for a build of the application that alread
 2.  Navigate to the git repository (team18 directory) from a terminal and run `ant runDemo2` then `ant linkApp` from the terminal while in the team18 directory.
 
   Note: Must have [Apache Ant](https://ant.apache.org/bindownload.cgi) installed to run ant command, a java JDK to compile the Demo, and a JRE installed to run the Demo.
-3.	In addition to generating a runnable Java jar application in the build/jar directory a data.xml file will be generated in the team18 directory. Copy this xml file to the build/jar directory and double click the SoccerStatsApp.jar to run with the demo data or navigate to the build/jar directory in a terminal and run `java -jar SoccerStatsApp.jar`.
+3.	In addition to generating a runnable Java jar application in the build/jar directory a data.xml file will be generated in the team18 directory. Copy this xml file with the demo data to the build/jar directory and double click the SoccerStatsApp.jar to run or navigate to the build/jar directory in a terminal and run `java -jar SoccerStatsApp.jar`.
 
   Note: Must have a JRE installed to run jar application
 
