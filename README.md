@@ -42,8 +42,8 @@ This describes the deployment process for a clean build of the application. The 
  1.	Clone from Github stable branch to local repository
  2.	Navigate to the git repository (team18 directory) from a terminal and run `ant linkApp` The ant command as specified in build.xml will compile the source code and generate a runnable Java jar application in the build/jar directory.
 
-  Note: Must have Apache Ant installed to run command and a java JDK to compile
- 3.	Navigate to the build/jar directory and double click SoccerStatsApp.jar to run
+  Note: Must have [Apache Ant](https://ant.apache.org/bindownload.cgi) installed to run ant command and a java JDK to compile
+ 3.	Navigate to the build/jar directory and double click SoccerStatsApp.jar to run or navigate to the build/jar directory in a terminal and run `java -jar SoccerStatsApp.jar`
 
   Note: Must have a JRE installed to run jar application
 
@@ -57,8 +57,8 @@ This describes the deployment process for a build of the application that alread
 1.	Clone from Github stable branch to local repository
 2.  Navigate to the git repository (team18 directory) from a terminal and run `ant runDemo2` then `ant linkApp` from the terminal while in the team18 directory.
 
-  Note: Must have Apache Ant installed to run command, a java JDK to compile the Demo, and a JRE installed to run the Demo.
-3.	In addition to generating a runnable Java jar application in the build/jar directory a data.xml file will be generated in the team18 directory. Copy this xml file to the build/jar directory and double click the SoccerStatsApp.jar to run with the demo data.
+  Note: Must have [Apache Ant](https://ant.apache.org/bindownload.cgi) installed to run ant command, a java JDK to compile the Demo, and a JRE installed to run the Demo.
+3.	In addition to generating a runnable Java jar application in the build/jar directory a data.xml file will be generated in the team18 directory. Copy this xml file to the build/jar directory and double click the SoccerStatsApp.jar to run with the demo data or navigate to the build/jar directory in a terminal and run `java -jar SoccerStatsApp.jar`.
 
   Note: Must have a JRE installed to run jar application
 
