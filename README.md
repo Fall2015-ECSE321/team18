@@ -3,7 +3,7 @@
 Soccer Status Application 
 Project for ECSE 321 at McGill
 
-Authors:
+Team:
 Demetrios Koziris,
 Mitch Dumont,
 Matthew Burdick, and
@@ -63,10 +63,4 @@ This describes the deployment process for a build of the application that alread
   Note: Must have a JRE installed to run jar application
 
 ___
-##Deployment Process for SoccerStats Android App:
-
-Because this application is not able to compile using the JDK 1.7.0 it was not possible for us to port it to Android Studio for Android development as Android does not currently support Java 8.
-After importing our application jar and library jars into a new android studio project, attempting to run produces [the following errors](https://stackoverflow.com/questions/30863007/unexpected-top-level-exception-bad-class-file-magic-in-android).
-
-Not developing our application with a version of Java that is compatible with Android was an oversight during development that became too costly to fix and resulted in not being able to run our app on the Android platform.
 
