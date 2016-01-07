@@ -1,9 +1,8 @@
-# team18
 
-Soccer Status Application 
-Project for ECSE 321 at McGill
+#Soccer Score Keeping Application 
+##Project for Intro to Software Engineering (ECSE 321)  at McGill
 
-Team:
+Team 18:
 Demetrios Koziris,
 Mitch Dumont,
 Matthew Burdick, and
@@ -14,11 +13,11 @@ The following are unique features we were able to implement into our soccer scor
 
 ####Administrator Mode:
 * Administorator mode for adding new players and goalies to teams or creating new teams.
-* All input fieds are validated (names consisting of only letters without spaces and numbers being >0 and <100) when creating players, goalies, or teams in the administrator mode.
+* All input fields are validated (names consisting of only letters without spaces and numbers being >0 and <100) when creating players, goalies, or teams in the administrator mode.
 
 ####Season Display Mode and Rankings Modes
 * Season display mode (in addition to team and player rankings) that displays all matches in the season with their current results, stats as well as whether they are ongoing or completed.
-* Team and player statistics are generated from and therefore remain consistent with the season (matches and match events). When a match event is added to a match, the Season Display is updated immediately and once the Match is ended, the statistics results are published to all players of both teams that participated in the match. These statistics are then viewable from the rankings modes.
+* Team and player statistics are generated from, and therefore remain consistent with, the season (matches and match events). When a match event is added to a match, the Season Display is updated immediately and once the Match is ended, the statistics results are published to all players of both teams that participated in the match. These statistics are then viewable from the rankings modes.
 * All display modes (Season Display, Team Rankings, and Player Rankings) support ascending and descending sorting of any of their field columns with integer value columns sorted as integers and string value columnds sorted as strings.
 
 ####Live Input Mode:
